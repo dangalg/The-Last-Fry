@@ -5,14 +5,14 @@ using UnityEngine;
 public class HandController : MonoBehaviour
 {
 
-
     public GameObject targetFry;
-    [SerializeField] float moveSpeed = 3f;
+    public float moveSpeed = 3f;
+    public int pointsForHit = 1;
     [SerializeField] Sprite openHand;
     [SerializeField] Sprite closedHand;
 
     [SerializeField] List<Sprite> hurtHands;
-    [SerializeField] GameObject fry;
+    public int fryIndex = 0;
 
     SpriteRenderer sr;
 
@@ -31,6 +31,7 @@ public class HandController : MonoBehaviour
         sr = GetComponentInChildren<SpriteRenderer>();
 
         beginPosition = transform.position;
+        turnTowardsTarget(targetFry.transform.position);
     }
 
     // Update is called once per frame
@@ -57,9 +58,24 @@ public class HandController : MonoBehaviour
             {
                 gotFry = true;
                 sr.sprite = closedHand;
-                Destroy(targetFry);
+                targetFry.GetComponent<SpriteRenderer>().enabled = false;
             }
         }
+
+        if(transform.position == beginPosition)
+        {
+            if (gotFry){
+                // TODO lose life
+                FrySpawner.instance.DestroyFry(fryIndex);
+                Destroy(gameObject);
+            }
+
+            if(handHit){
+                Destroy(gameObject);
+            }
+        }
+
+
 
 #if UNITY_EDITOR
         if (Input.GetMouseButtonDown(0))
@@ -95,10 +111,14 @@ public class HandController : MonoBehaviour
                     sr.sprite = hurtHands[currentHit];
                     currentHit++;
 
+                    if(currentHit == 1){
+                        GameManager.instance.AddPoint(pointsForHit);
+                    }
+
                     if(gotFry)
                     {
                         gotFry = false;
-                        Instantiate(fry, transform.position, transform.rotation);
+                        targetFry.GetComponent<SpriteRenderer>().enabled = true;
                     }
                 }
 
@@ -106,15 +126,31 @@ public class HandController : MonoBehaviour
         }
     }
 
-    private void atemptTheft()
+    private void moveTowardsTarget(Vector3 target)
     {
         transform.position = Vector2.MoveTowards(new Vector2(transform.position.x, transform.position.y),
-                                                         targetFry.transform.position, moveSpeed * Time.deltaTime);
+                                                                 target, moveSpeed * Time.deltaTime);
+
+        if(gotFry){
+            targetFry.transform.position = transform.position;
+            targetFry.transform.rotation = transform.rotation;
+        }
+    }
+
+    private void turnTowardsTarget(Vector3 target)
+    {
+        transform.right = target - transform.position;
+        transform.eulerAngles = new Vector3(0, 0, transform.eulerAngles.z + 180);
+    }
+
+    private void atemptTheft()
+    {
+        turnTowardsTarget(targetFry.transform.position);
+        moveTowardsTarget(targetFry.transform.position);
     }
 
     private void runAway()
     {
-        transform.position = Vector2.MoveTowards(new Vector2(transform.position.x, transform.position.y),
-                                                         beginPosition, moveSpeed * Time.deltaTime);
+        moveTowardsTarget(beginPosition);
     }
 }
