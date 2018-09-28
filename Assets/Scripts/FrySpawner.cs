@@ -78,8 +78,6 @@ public class FrySpawner : MonoBehaviour {
 
     public void DestroyFry(int index){
         Destroy(Fries[index]);
-        Fries.RemoveAt(index);
-        takenFryIndexes.Remove(index);
     }
 
     public int GetRandomFreeFryIndex(){

@@ -30,14 +30,13 @@ public class HandSpawner : MonoBehaviour {
 
     public List<GameObject> Hands;
 
-    public float distance = 5f;
+    public float distanceX = 5f;
+    public float distanceY = 7f;
     public float minHandStartSpeed = 3f;
     public float maxHandStartSpeed = 7f;
     public int minTimeBetweenSpawns = 2;
     public int maxTimeBetweenSpawns = 5;
     public int numberOfHandsToSpawn = 3;
-
-    bool xOrY = true;
 
     // Use this for initialization
     void Start ()
@@ -47,21 +46,29 @@ public class HandSpawner : MonoBehaviour {
 
     private Vector3 SetupSpawnPoint()
     {
-        float randomDistance = Random.Range(-distance, distance);
+        float randomXDistance = Random.Range(0, distanceX);
+        float randomYDistance = Random.Range(0, distanceY);
 
-        int randomXOrY = Random.Range(0, 1);
+        int randomXOrY = Random.Range(0, 2);
+        int randomMinus = Random.Range(0, 2);
 
-        xOrY = randomXOrY == 1;
+        bool minus = randomMinus == 1;
+        bool xOrY = randomXOrY == 1;
 
         Vector3 returnPosition;
 
+        if(minus){
+            randomXDistance *= -1;
+            randomYDistance *= -1;
+        }
+
         if (xOrY)
         {
-            returnPosition = new Vector3(distance, randomDistance, 0);
+            returnPosition = new Vector3(distanceX, randomYDistance, 0);
         }
         else
         {
-            returnPosition = new Vector3(randomDistance, distance, 0);
+            returnPosition = new Vector3(randomXDistance, distanceY, 0);
         }
 
         return returnPosition;
