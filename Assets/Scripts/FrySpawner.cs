@@ -23,21 +23,19 @@ public class FrySpawner : MonoBehaviour {
 
         //Sets this to not be destroyed when reloading scene
         DontDestroyOnLoad(gameObject);
+
+        SpawnFries();
     }
 
     [SerializeField] GameObject FriesHolder;
     public List<GameObject> Fries;
+    readonly List<int> takenFryIndexes = new List<int>();
 
     [SerializeField] GameObject fry;
 
     public float distance = 1.7f;
     public int fryAmount = 10;
 
-    // Use this for initialization
-    void Start()
-    {
-        StartCoroutine(SpawnFries());
-    }
 
     private Vector3 SetupSpawnPoint()
     {
@@ -70,18 +68,40 @@ public class FrySpawner : MonoBehaviour {
         Fries.Add(fryObject);
     }
 
-    IEnumerator SpawnFries()
+    void SpawnFries()
     {
         for (int i = 0; i < fryAmount; i++)
         {
             SpwanFry();
-
-            yield return new WaitForSeconds(0.2f);
         }
     }
 
     public void DestroyFry(int index){
         Destroy(Fries[index]);
         Fries.RemoveAt(index);
+        takenFryIndexes.Remove(index);
+    }
+
+    public int GetRandomFreeFryIndex(){
+        List<int> freeFryIndexes = new List<int>();
+
+        for (int i = 0; i < Fries.Count; i++)
+        {
+            freeFryIndexes.Add(i);
+        }
+
+        foreach (var item in takenFryIndexes)
+        {
+            freeFryIndexes.Remove(item);
+        }
+
+        int randomfryToTake = Random.Range(0, freeFryIndexes.Count);
+
+        int freeFryIndex = freeFryIndexes[randomfryToTake];
+
+        takenFryIndexes.Add(freeFryIndex);
+
+        return freeFryIndex;
+
     }
 }

@@ -441,7 +441,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 89695ccad00af47a392f170038b4d3f9, type: 3}
   - {fileID: 21300000, guid: c3beed4e30d2b4a4ab51a6d1b906c5c4, type: 3}
   - {fileID: 21300000, guid: b144c23a461744941a4624fda757c0d1, type: 3}
-  fry: {fileID: 1312878988502602, guid: b1c8abdd731624459b4cb84f90fa1335, type: 2}
+  fryIndex: 0
 --- !u!212 &212439641225573988
 SpriteRenderer:
   m_ObjectHideFlags: 1

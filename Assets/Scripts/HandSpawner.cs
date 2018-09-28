@@ -70,7 +70,7 @@ public class HandSpawner : MonoBehaviour {
 
     private void SpwanHand()
     {
-        int randomfryToTake = Random.Range(0, FrySpawner.instance.Fries.Count);
+
 
         Vector3 spawnPoint = SetupSpawnPoint();
 
@@ -80,7 +80,9 @@ public class HandSpawner : MonoBehaviour {
         HandController handController = handObject.GetComponent<HandController>();
         float randomHandSpeed = Random.Range(minHandStartSpeed, maxHandStartSpeed);
         handController.moveSpeed = randomHandSpeed;
-        handController.targetFry = FrySpawner.instance.Fries[randomfryToTake];
+        int randomFreeFryIndex = FrySpawner.instance.GetRandomFreeFryIndex();
+        handController.targetFry = FrySpawner.instance.Fries[randomFreeFryIndex];
+        handController.fryIndex = randomFreeFryIndex;
 
         Hands.Add(handObject);
     }
