@@ -84,4 +84,4 @@ MonoBehaviour:
   Fries: []
   fry: {fileID: 1312878988502602, guid: b1c8abdd731624459b4cb84f90fa1335, type: 2}
   distance: 1.7
-  fryAmount: 10
+  fryAmount: 100

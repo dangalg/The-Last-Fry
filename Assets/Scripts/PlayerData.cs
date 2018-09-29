@@ -1,19 +1,27 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[Serializable]
 public class PlayerData {
 
-    const string SCORE = "score";
-
-    public int Score
+    public int Energy
     {
-        get{
-            return DataHandler.LoadIntFromDB(SCORE);
-        }
-        set{
-            DataHandler.SaveIntToDB(SCORE, value);
-        }
+        get;
+        set;
     }
-    
+
+    public int Record
+    {
+        get;
+        set;
+    }
+
+    public PlayerData()
+    {
+        Energy = 3;
+        Record = 0;
+    }
+
 }

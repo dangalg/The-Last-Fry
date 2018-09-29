@@ -31,7 +31,7 @@ public class HandController : MonoBehaviour
         sr = GetComponentInChildren<SpriteRenderer>();
 
         beginPosition = transform.position;
-        turnTowardsTarget(targetFry.transform.position); // TODO when no more fries an error occurs
+        turnTowardsTarget(targetFry.transform.position);
     }
 
     // Update is called once per frame
@@ -50,12 +50,7 @@ public class HandController : MonoBehaviour
 
         if (!gotFry && !handHit)
         {
-            if (transform.position != targetFry.transform.position) //TODO fix uassigned error 
-            /*
-             * UnassignedReferenceException: The variable targetFry of HandController has not been assigned.
-                You probably need to assign the targetFry variable of the HandController script in the inspector.
-                HandController.Update () (at Assets/Scripts/HandController.cs:53)
-             */
+            if (transform.position != targetFry.transform.position) 
             {
                 atemptTheft();
             }
@@ -80,53 +75,26 @@ public class HandController : MonoBehaviour
             }
         }
 
-
-
-#if UNITY_EDITOR
-        if (Input.GetMouseButtonDown(0))
-        {
-            ClickHand(Input.mousePosition);
-        }
-#else
-        if ((Input.touchCount > 0) && (Input.GetTouch(0).phase == TouchPhase.Began))
-        {
-            ClickHand(Input.GetTouch(0).position);
-        }
-#endif
-
-
     }
 
-    private void ClickHand(Vector3 hitPosition)
+    public void HitHand()
     {
-        //RaycastHit2D hit = Physics2D.Raycast(Input.mousePosition ,Vector2.zero,Mathf.Infinity); //Hit object that contains gameobject Information
-        RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(hitPosition), Vector2.zero);
-
-        if (hit.collider != null)
+        handHit = true;
+        if (currentHit < hurtHands.Count)
         {
-            Debug.Log("Something Hit");
+            // Display next hurt hand... It gets worse and worse!
+            sr.sprite = hurtHands[currentHit];
+            currentHit++;
 
-            if (hit.collider.CompareTag("ThiefHand"))
+            if (currentHit == 1)
             {
-                Debug.Log("Hand Hit");
-                handHit = true;
-                if(currentHit < hurtHands.Count)
-                {
-                    // Display next hurt hand... It gets worse and worse!
-                    sr.sprite = hurtHands[currentHit];
-                    currentHit++;
+                GameManager.instance.AddPoint(pointsForHit);
+            }
 
-                    if(currentHit == 1){
-                        GameManager.instance.AddPoint(pointsForHit);
-                    }
-
-                    if(gotFry)
-                    {
-                        gotFry = false;
-                        targetFry.GetComponent<SpriteRenderer>().enabled = true;
-                    }
-                }
-
+            if (gotFry)
+            {
+                gotFry = false;
+                targetFry.GetComponent<SpriteRenderer>().enabled = true;
             }
         }
     }

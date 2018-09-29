@@ -88,5 +88,5 @@ MonoBehaviour:
   minHandStartSpeed: 3
   maxHandStartSpeed: 11
   minTimeBetweenSpawns: 1
-  maxTimeBetweenSpawns: 6
+  maxTimeBetweenSpawns: 3
   numberOfHandsToSpawn: 100

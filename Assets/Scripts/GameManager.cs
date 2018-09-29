@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
@@ -10,7 +11,8 @@ public class GameManager : MonoBehaviour {
 //    private int level = 3;                                  //Current level number, expressed in game as "Day 1".
     private int points = 0;                                  //Current points owned by player
     [SerializeField] TMP_Text pointsText;
-    public PlayerData playerData;
+
+    PlayerData playerData;
 
 
     //Awake is always called before any Start functions
@@ -29,9 +31,7 @@ public class GameManager : MonoBehaviour {
             Destroy(gameObject);
 
         //Sets this to not be destroyed when reloading scene
-        DontDestroyOnLoad(gameObject);
-
-        playerData = new PlayerData();
+        //DontDestroyOnLoad(gameObject);
 
         //Call the InitGame function to initialize the first level 
         InitGame();
@@ -40,8 +40,44 @@ public class GameManager : MonoBehaviour {
     //Initializes the game for each level.
     void InitGame()
     {
+        playerData = DataHandler.LoadPlayerData();
 
+        points = 0;
+        displayPoints();
+    }
 
+    private void Update()
+    {
+#if UNITY_EDITOR
+        if (Input.GetMouseButtonDown(0))
+        {
+            HitHand(Input.mousePosition);
+        }
+#else
+        if ((Input.touchCount > 0) && (Input.GetTouch(0).phase == TouchPhase.Began))
+        {
+            ClickHand(Input.GetTouch(0).position);
+        }
+#endif
+    }
+
+    private void HitHand(Vector3 hitPosition)
+    {
+
+        RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(hitPosition), Vector2.zero);
+
+        //Converting Mouse Pos to 2D (vector2) World Pos
+        if (hit.collider != null)
+        {
+            Debug.Log("Something Hit");
+
+            if (hit.collider.CompareTag("ThiefHand"))
+            {
+                Debug.DrawLine(Vector2.zero, hitPosition, Color.white, 5f, false);
+                hit.collider.gameObject.GetComponent<HandController>().HitHand();
+
+            }
+        }
     }
 
     public void AddPoint(int pointsToAdd)
@@ -62,7 +98,12 @@ public class GameManager : MonoBehaviour {
     }
 
     public void EndGame(){
+        if(playerData.Record < points){
+            playerData.Record = points;
+        }
 
+        DataHandler.SavePlayerData(playerData);
+        SceneManager.LoadScene("MainMenu");
     }
 
 }
