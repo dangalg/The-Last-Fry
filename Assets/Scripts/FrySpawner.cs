@@ -29,7 +29,7 @@ public class FrySpawner : MonoBehaviour {
 
     [SerializeField] GameObject FriesHolder;
     public List<GameObject> Fries;
-    readonly List<int> takenFryIndexes = new List<int>();
+    public List<int> TakenFryIndexes = new List<int>();
 
     [SerializeField] GameObject fry;
 
@@ -88,21 +88,17 @@ public class FrySpawner : MonoBehaviour {
             freeFryIndexes.Add(i);
         }
 
-        foreach (var item in takenFryIndexes)
+        foreach (var item in TakenFryIndexes)
         {
             freeFryIndexes.Remove(item);
         }
 
         int randomfryToTake = Random.Range(0, freeFryIndexes.Count);
-        int freeFryIndex = 0;
-        // TODO check if any fries remain otherwise set record and give praise
-        if (freeFryIndexes.Count <= 0){
-            GameManager.instance.EndGame();
-        }else{
-            freeFryIndex = freeFryIndexes[randomfryToTake];
+        int freeFryIndex = -1;
 
-            takenFryIndexes.Add(freeFryIndex);
-        }
+        freeFryIndex = freeFryIndexes[randomfryToTake];
+
+        TakenFryIndexes.Add(freeFryIndex);
 
         return freeFryIndex;
 

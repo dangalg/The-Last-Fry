@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class HandController : MonoBehaviour
 {
@@ -22,6 +23,9 @@ public class HandController : MonoBehaviour
     bool handHit = false;
 
     int currentHit = 0;
+
+    public UnityAction handGotFry;
+    public UnityAction handGotHit;
 
 
     // Use this for initialization
@@ -67,10 +71,20 @@ public class HandController : MonoBehaviour
             if (gotFry){
                 // TODO lose life
                 FrySpawner.instance.DestroyFry(fryIndex);
+
+                if (handGotFry != null)
+                {
+                    handGotFry();
+                }
+
                 Destroy(gameObject);
             }
 
             if(handHit){
+                if (handGotHit != null)
+                {
+                    handGotHit();
+                }
                 Destroy(gameObject);
             }
         }
@@ -95,6 +109,7 @@ public class HandController : MonoBehaviour
             {
                 gotFry = false;
                 targetFry.GetComponent<SpriteRenderer>().enabled = true;
+                FrySpawner.instance.TakenFryIndexes.Remove(fryIndex);
             }
         }
     }

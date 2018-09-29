@@ -73,11 +73,12 @@ public class GameManager : MonoBehaviour {
 
             if (hit.collider.CompareTag("ThiefHand"))
             {
-                Debug.DrawLine(Vector2.zero, hitPosition, Color.white, 5f, false);
                 hit.collider.gameObject.GetComponent<HandController>().HitHand();
 
             }
         }
+
+       //TODO EndGame();
     }
 
     public void AddPoint(int pointsToAdd)

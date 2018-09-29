@@ -82,6 +82,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FriesHolder: {fileID: 1174914209627992}
   Fries: []
+  TakenFryIndexes: 
   fry: {fileID: 1312878988502602, guid: b1c8abdd731624459b4cb84f90fa1335, type: 2}
   distance: 1.7
-  fryAmount: 100
+  fryAmount: 10

@@ -80,6 +80,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5dc845b98cc04dd2a790cb3ebc573e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  handHitCounter: 0
+  handGotFryCounter: 0
   HandsHolder: {fileID: 1044099418052000}
   hand: {fileID: 1208100421849838, guid: bd56786490ca649cb8e69b9db8c63fba, type: 2}
   Hands: []
@@ -89,4 +91,4 @@ MonoBehaviour:
   maxHandStartSpeed: 11
   minTimeBetweenSpawns: 1
   maxTimeBetweenSpawns: 3
-  numberOfHandsToSpawn: 100
+  numberOfHandsToSpawn: 10
