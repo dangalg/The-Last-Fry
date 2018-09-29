@@ -94,11 +94,15 @@ public class FrySpawner : MonoBehaviour {
         }
 
         int randomfryToTake = Random.Range(0, freeFryIndexes.Count);
-
+        int freeFryIndex = 0;
         // TODO check if any fries remain otherwise set record and give praise
-        int freeFryIndex = freeFryIndexes[randomfryToTake]; 
+        if (freeFryIndexes.Count <= 0){
+            GameManager.instance.EndGame();
+        }else{
+            freeFryIndex = freeFryIndexes[randomfryToTake];
 
-        takenFryIndexes.Add(freeFryIndex);
+            takenFryIndexes.Add(freeFryIndex);
+        }
 
         return freeFryIndex;
 
