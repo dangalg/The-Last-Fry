@@ -31,7 +31,7 @@ public class HandController : MonoBehaviour
         sr = GetComponentInChildren<SpriteRenderer>();
 
         beginPosition = transform.position;
-        turnTowardsTarget(targetFry.transform.position);
+        turnTowardsTarget(targetFry.transform.position); // TODO when no more fries an error occurs
     }
 
     // Update is called once per frame
@@ -50,7 +50,12 @@ public class HandController : MonoBehaviour
 
         if (!gotFry && !handHit)
         {
-            if (transform.position != targetFry.transform.position)
+            if (transform.position != targetFry.transform.position) //TODO fix uassigned error 
+            /*
+             * UnassignedReferenceException: The variable targetFry of HandController has not been assigned.
+                You probably need to assign the targetFry variable of the HandController script in the inspector.
+                HandController.Update () (at Assets/Scripts/HandController.cs:53)
+             */
             {
                 atemptTheft();
             }

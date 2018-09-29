@@ -83,9 +83,10 @@ MonoBehaviour:
   HandsHolder: {fileID: 1044099418052000}
   hand: {fileID: 1208100421849838, guid: bd56786490ca649cb8e69b9db8c63fba, type: 2}
   Hands: []
-  distance: 5
+  distanceX: 5
+  distanceY: 7
   minHandStartSpeed: 3
-  maxHandStartSpeed: 7
-  minTimeBetweenSpawns: 2
-  maxTimeBetweenSpawns: 5
-  numberOfHandsToSpawn: 10
+  maxHandStartSpeed: 11
+  minTimeBetweenSpawns: 1
+  maxTimeBetweenSpawns: 6
+  numberOfHandsToSpawn: 100
