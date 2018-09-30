@@ -9,34 +9,17 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1208100421849838}
+  m_RootGameObject: {fileID: 1998713837153636}
   m_IsPrefabAsset: 1
---- !u!1 &1208100421849838
+--- !u!1 &1256132697006818
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4387958471621696}
-  - component: {fileID: 114213813517071810}
-  - component: {fileID: 60184442900147704}
-  m_Layer: 0
-  m_Name: Hand
-  m_TagString: ThiefHand
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1517951625430902
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4828882821603210}
-  - component: {fileID: 212439641225573988}
+  - component: {fileID: 4402417900352608}
+  - component: {fileID: 212543743254219348}
   m_Layer: 0
   m_Name: handImage
   m_TagString: ThiefHand
@@ -44,39 +27,56 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4387958471621696
+--- !u!1 &1998713837153636
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4129532331340112}
+  - component: {fileID: 114024558570954338}
+  - component: {fileID: 60433473337811128}
+  m_Layer: 0
+  m_Name: CowHand
+  m_TagString: ThiefHand
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4129532331340112
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1208100421849838}
+  m_GameObject: {fileID: 1998713837153636}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.8902488, y: 5, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children:
-  - {fileID: 4828882821603210}
+  - {fileID: 4402417900352608}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4828882821603210
+--- !u!4 &4402417900352608
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1517951625430902}
+  m_GameObject: {fileID: 1256132697006818}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.46, y: 2.27, z: 0}
+  m_LocalPosition: {x: 6.03, y: -0.41, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4387958471621696}
+  m_Father: {fileID: 4129532331340112}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &60184442900147704
+--- !u!60 &60433473337811128
 PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1208100421849838}
+  m_GameObject: {fileID: 1998713837153636}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -95,17 +95,18 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.09526411, y: 1.3810586}
-      - {x: -0.90342355, y: 0.83297247}
+    - - {x: -0.7745702, y: 1.3810586}
+      - {x: -1.2988042, y: -0.3136269}
       - {x: -0.25436002, y: -1.1900758}
-      - {x: 1.2070055, y: -0.47559097}
-      - {x: 1.1892174, y: 1.071132}
---- !u!114 &114213813517071810
+      - {x: 0.9219387, y: -1.3075049}
+      - {x: 1.8791494, y: -0.5942058}
+      - {x: 2.0590522, y: 1.0315942}
+--- !u!114 &114024558570954338
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1208100421849838}
+  m_GameObject: {fileID: 1998713837153636}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4415cd4ba314b48c39956211cc8e4a77, type: 3}
@@ -114,19 +115,19 @@ MonoBehaviour:
   targetFry: {fileID: 0}
   moveSpeed: 3.5047174
   pointsForHit: 1
-  openHand: {fileID: 21300000, guid: 5b68afd14b73947819b663cd82842c1a, type: 3}
-  closedHand: {fileID: 21300000, guid: 9cfc2d638d2e744a0ae7023b4dcd90ca, type: 3}
+  openHand: {fileID: 21300000, guid: fb6b640ea3e934b3a8d018127ee393f8, type: 3}
+  closedHand: {fileID: 21300000, guid: 2414389c800764713a19c84c35364e10, type: 3}
   hurtHands:
-  - {fileID: 21300000, guid: 89695ccad00af47a392f170038b4d3f9, type: 3}
-  - {fileID: 21300000, guid: c3beed4e30d2b4a4ab51a6d1b906c5c4, type: 3}
-  - {fileID: 21300000, guid: b144c23a461744941a4624fda757c0d1, type: 3}
+  - {fileID: 21300000, guid: e6c4c545cb87241508edcfebfcebcd56, type: 3}
+  - {fileID: 21300000, guid: e6c4c545cb87241508edcfebfcebcd56, type: 3}
+  - {fileID: 21300000, guid: e6c4c545cb87241508edcfebfcebcd56, type: 3}
   fryIndex: 0
---- !u!212 &212439641225573988
+--- !u!212 &212543743254219348
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1517951625430902}
+  m_GameObject: {fileID: 1256132697006818}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -156,7 +157,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: 5b68afd14b73947819b663cd82842c1a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fb6b640ea3e934b3a8d018127ee393f8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

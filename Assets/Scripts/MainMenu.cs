@@ -12,7 +12,7 @@ public class MainMenu : MonoBehaviour {
     public PlayerData playerData;
 
     [SerializeField] ResetLevelsButton resetButton;
-    [SerializeField] TMP_Text Record;
+    [SerializeField] TMP_Text Level;
     [SerializeField] TMP_Text Energy;
 
     //Awake is always called before any Start functions
@@ -45,13 +45,13 @@ public class MainMenu : MonoBehaviour {
 
     void onResetClicked()
     {
-        Record.text = playerData.Record.ToString();
+        Level.text = playerData.Level.ToString();
         Energy.text = playerData.Energy.ToString();
     }
 
     // Use this for initialization
     void Start () {
-        Record.text = playerData.Record.ToString();
+        Level.text = playerData.Level.ToString();
         Energy.text = playerData.Energy.ToString();
 	}
 

@@ -52,5 +52,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resetButton: {fileID: 0}
-  Record: {fileID: 0}
+  Level: {fileID: 0}
   Energy: {fileID: 0}

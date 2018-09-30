@@ -135,6 +135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointsText: {fileID: 114807571816103390}
   levelText: {fileID: 114731740822515226}
+  percentToPassLevel: 60
 --- !u!114 &114664084275786648
 MonoBehaviour:
   m_ObjectHideFlags: 1

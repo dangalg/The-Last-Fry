@@ -77,6 +77,8 @@ public class HandController : MonoBehaviour
                     handGotFry();
                 }
 
+                handGotFry = null;
+
                 Destroy(gameObject);
             }
 
@@ -85,6 +87,9 @@ public class HandController : MonoBehaviour
                 {
                     handGotHit();
                 }
+
+                handGotHit = null;
+
                 Destroy(gameObject);
             }
         }

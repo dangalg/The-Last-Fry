@@ -83,7 +83,10 @@ MonoBehaviour:
   handHitCounter: 0
   handGotFryCounter: 0
   HandsHolder: {fileID: 1044099418052000}
-  hand: {fileID: 1208100421849838, guid: bd56786490ca649cb8e69b9db8c63fba, type: 2}
+  handTypesOdds: 5000000064000000
+  handTypes:
+  - {fileID: 1208100421849838, guid: bd56786490ca649cb8e69b9db8c63fba, type: 2}
+  - {fileID: 1998713837153636, guid: 0a76cf26f1fec4d0abb1236adb9e6d26, type: 2}
   Hands: []
   distanceX: 5
   distanceY: 7
@@ -91,4 +94,4 @@ MonoBehaviour:
   maxHandStartSpeed: 11
   minTimeBetweenSpawns: 1
   maxTimeBetweenSpawns: 3
-  numberOfHandsToSpawn: 10
+  handAmount: 3

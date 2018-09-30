@@ -6,29 +6,33 @@ using UnityEngine;
 [Serializable]
 public class PlayerData {
 
+    private int energy;
+    private int points;
+    private int level;
+
     public int Energy
     {
-        get;
-        set;
+        get { return energy; }
+        set { energy = value; }
     }
 
-    public int Record
+    public int Points
     {
-        get;
-        set;
+        get { return points; }
+        set { points = value; }
     }
 
     public int Level
     {
-        get;
-        set;
+        get { return level; }
+        set { level = value; }
     }
 
     public PlayerData()
     {
-        Energy = 3;
-        Record = 0;
-        Level = 1;
+        energy = 3;
+        points = 0;
+        level = 1;
     }
 
 }

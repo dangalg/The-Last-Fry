@@ -33,7 +33,8 @@ public class HandSpawner : MonoBehaviour {
 
 
     [SerializeField] GameObject HandsHolder;
-    [SerializeField] GameObject hand;
+    public List<int> handTypesOdds;
+    public List<GameObject> handTypes;
 
     public List<GameObject> Hands;
 
@@ -80,7 +81,7 @@ public class HandSpawner : MonoBehaviour {
 
     void CheckEndGame(){
         if(handGotFryCounter + handHitCounter >= handAmount){
-            GameManager.instance.EndLevel();
+            GameManager.instance.NextLevel();
         }
     }
 
@@ -124,7 +125,7 @@ public class HandSpawner : MonoBehaviour {
         {
             Vector3 spawnPoint = SetupSpawnPoint();
 
-            GameObject handObject = Instantiate(hand, HandsHolder.transform);
+            GameObject handObject = Instantiate(GetRandomHandTypeIndex(), HandsHolder.transform);
             handObject.transform.position = spawnPoint;
 
             HandController handController = handObject.GetComponent<HandController>();
@@ -133,12 +134,29 @@ public class HandSpawner : MonoBehaviour {
 
             handController.targetFry = FrySpawner.instance.Fries[randomFreeFryIndex];
             handController.fryIndex = randomFreeFryIndex;
-            handController.handGotFry = onHandGotFry;
-            handController.handGotHit = onHandHit;
+            handController.handGotFry += onHandGotFry;
+            handController.handGotHit += onHandHit;
 
             Hands.Add(handObject);
         }
 
+    }
+
+    GameObject GetRandomHandTypeIndex(){
+
+        int maxNumber = handTypesOdds[handTypesOdds.Count - 1];
+
+        int randomHandType = Random.Range(0, maxNumber);
+
+        for (int i = 0; i < handTypesOdds.Count; i++)
+        {
+            if (handTypesOdds[i] > randomHandType)
+            {
+                return handTypes[i];
+            }
+        }
+
+        return null;
     }
 
     IEnumerator SpawnHands(){

@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour {
     [SerializeField] TMP_Text pointsText;
     [SerializeField] TMP_Text levelText;
 
+    [SerializeField] float percentToPassLevel = 70f;
+
     PlayerData playerData;
 
 
@@ -55,7 +57,10 @@ public class GameManager : MonoBehaviour {
 
         levelText.text = level.ToString() + " Hand";
 
-        yield return new WaitForSeconds(5f);
+        points = 0;
+        displayPoints();
+
+        yield return new WaitForSeconds(2f);
 
         levelText.enabled = false;
 
@@ -123,20 +128,28 @@ public class GameManager : MonoBehaviour {
         SceneManager.LoadScene("MainMenu");
     }
 
-    public void EndLevel(){
+    public void NextLevel(){
 
         Debug.Log("EndLevel");
 
-        playerData.Level++;
-
-        if (playerData.Record < points)
-        {
-            playerData.Record = points;
-        }
+        levelCalculation();
 
         DataHandler.SavePlayerData(playerData);
 
         StartCoroutine(SetupGame(playerData.Level));
+    }
+
+    void levelCalculation(){
+        int level = playerData.Level;
+
+        float percentOfFriesSaved = (((float)points) / ((float)level)) * 100f;
+
+        if (percentOfFriesSaved >= percentToPassLevel){
+            playerData.Level++;
+        }else{
+            EndGame();
+        }
+
     }
 
 }

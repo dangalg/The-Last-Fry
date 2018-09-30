@@ -8,25 +8,43 @@ public static class DataHandler{
 
 
     public static void SavePlayerData(PlayerData playerData){
-        BinaryFormatter bf = new BinaryFormatter();
-        FileStream file = File.Open(Application.persistentDataPath + "/playerInfo.dat", FileMode.OpenOrCreate);
 
-        bf.Serialize(file, playerData);
-        file.Close();
+        try
+        {
+            BinaryFormatter bf = new BinaryFormatter();
+            FileStream file = File.Open(Application.persistentDataPath + "/playerInfo.dat", FileMode.OpenOrCreate);
+
+            bf.Serialize(file, playerData);
+            file.Close();
+        }
+        catch (System.Exception ex)
+        {
+            Debug.LogWarning("Couldn't save player data: " + ex.Message);
+        }
+
+
     }
 
     public static PlayerData LoadPlayerData(){
 
-        if (File.Exists(Application.persistentDataPath + "/playerInfo.dat"))
+        try
         {
-            BinaryFormatter bf = new BinaryFormatter();
-            FileStream file = File.Open(Application.persistentDataPath + "/playerInfo.dat", FileMode.Open);
-            PlayerData playerData = (PlayerData)bf.Deserialize(file);
-            file.Close();
+            if (File.Exists(Application.persistentDataPath + "/playerInfo.dat"))
+            {
+                BinaryFormatter bf = new BinaryFormatter();
+                FileStream file = File.Open(Application.persistentDataPath + "/playerInfo.dat", FileMode.Open);
+                PlayerData playerData = (PlayerData)bf.Deserialize(file);
+                file.Close();
 
-            return playerData;
+                return playerData;
 
+            }
         }
+        catch (System.Exception ex)
+        {
+            Debug.LogError("Couldn't load player data: " + ex.Message);
+        }
+
 
         return new PlayerData();
     }
