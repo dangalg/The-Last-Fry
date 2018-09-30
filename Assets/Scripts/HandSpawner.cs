@@ -148,6 +148,8 @@ public class HandSpawner : MonoBehaviour {
 
         int randomHandType = Random.Range(0, maxNumber);
 
+        Debug.Log(randomHandType.ToString());
+
         for (int i = 0; i < handTypesOdds.Count; i++)
         {
             if (handTypesOdds[i] > randomHandType)

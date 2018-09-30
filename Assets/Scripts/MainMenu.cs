@@ -12,6 +12,7 @@ public class MainMenu : MonoBehaviour {
     public PlayerData playerData;
 
     [SerializeField] ResetLevelsButton resetButton;
+    [SerializeField] StartGameButton startButton;
     [SerializeField] TMP_Text Level;
     [SerializeField] TMP_Text Energy;
 
@@ -35,6 +36,8 @@ public class MainMenu : MonoBehaviour {
 
         resetButton.onFinishedReset = onResetClicked;
 
+        startButton.onFinishedAd = onFinishedAd;
+
         //Call the InitGame function to initialize the first level 
         InitMenu();
     }
@@ -46,6 +49,10 @@ public class MainMenu : MonoBehaviour {
     void onResetClicked()
     {
         Level.text = playerData.Level.ToString();
+        Energy.text = playerData.Energy.ToString();
+    }
+
+    void onFinishedAd(){
         Energy.text = playerData.Energy.ToString();
     }
 

@@ -55,7 +55,7 @@ public class GameManager : MonoBehaviour {
 
         levelText.enabled = true;
 
-        levelText.text = level.ToString() + " Hand";
+        levelText.text = level.ToString();
 
         points = 0;
         displayPoints();
@@ -82,9 +82,11 @@ public class GameManager : MonoBehaviour {
             HitHand(Input.mousePosition);
         }
 #else
-        if ((Input.touchCount > 0) && (Input.GetTouch(0).phase == TouchPhase.Began))
+        if (Input.touchCount > 0)
         {
-            ClickHand(Input.GetTouch(0).position);
+            if(Input.GetTouch(0).phase != TouchPhase.Ended){
+                HitHand(Input.GetTouch(0).position);
+            } 
         }
 #endif
     }
@@ -125,6 +127,9 @@ public class GameManager : MonoBehaviour {
     }
 
     public void EndGame(){
+
+        AdManager.instance.PlayAdvertisement();
+
         SceneManager.LoadScene("MainMenu");
     }
 
@@ -132,14 +137,21 @@ public class GameManager : MonoBehaviour {
 
         Debug.Log("EndLevel");
 
-        levelCalculation();
+        bool endGame = levelCalculation();
 
-        DataHandler.SavePlayerData(playerData);
+        if(!endGame){
 
-        StartCoroutine(SetupGame(playerData.Level));
+            DataHandler.SavePlayerData(playerData);
+
+            StartCoroutine(SetupGame(playerData.Level));
+
+        }
     }
 
-    void levelCalculation(){
+    bool levelCalculation(){
+
+        bool endGame = false;
+
         int level = playerData.Level;
 
         float percentOfFriesSaved = (((float)points) / ((float)level)) * 100f;
@@ -147,8 +159,11 @@ public class GameManager : MonoBehaviour {
         if (percentOfFriesSaved >= percentToPassLevel){
             playerData.Level++;
         }else{
+            endGame = true;
             EndGame();
         }
+
+        return endGame;
 
     }
 
