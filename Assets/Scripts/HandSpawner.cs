@@ -7,9 +7,6 @@ public class HandSpawner : MonoBehaviour {
 
     public static HandSpawner instance = null;
 
-    UnityAction handGotHit;
-    UnityAction handGotFry;
-
     public int handHitCounter = 0;
     public int handGotFryCounter = 0;
 
@@ -44,34 +41,46 @@ public class HandSpawner : MonoBehaviour {
     public float distanceY = 7f;
     public float minHandStartSpeed = 3f;
     public float maxHandStartSpeed = 7f;
-    public int minTimeBetweenSpawns = 2;
-    public int maxTimeBetweenSpawns = 5;
-    public int numberOfHandsToSpawn = 3;
+    public float minTimeBetweenSpawns = 2;
+    public float maxTimeBetweenSpawns = 5;
+    public int handAmount = 3;
 
-    // Use this for initialization
-    void Start ()
-    {
-        handGotHit = HandSpawner_HandHit;
-        handGotFry = HandSpawner_HandGotFry;
+    public void Setup(int level){
+
+        handAmount = level;
+
         StartCoroutine(SpawnHands());
     }
 
-    void HandSpawner_HandGotFry()
+    public void Reset()
+    {
+        Hands.Clear();
+
+        handGotFryCounter = 0;
+        handHitCounter = 0;
+
+        foreach (Transform child in HandsHolder.transform)
+        {
+            Destroy(child.gameObject);
+        }
+    }
+
+    void onHandGotFry()
     {
         handGotFryCounter++;
         CheckEndGame();
     }
 
 
-    void HandSpawner_HandHit()
+    void onHandHit()
     {
         handHitCounter++;
         CheckEndGame();
     }
 
     void CheckEndGame(){
-        if(handGotFryCounter + handHitCounter >= numberOfHandsToSpawn){
-            GameManager.instance.EndGame();
+        if(handGotFryCounter + handHitCounter >= handAmount){
+            GameManager.instance.EndLevel();
         }
     }
 
@@ -113,7 +122,6 @@ public class HandSpawner : MonoBehaviour {
 
         if (randomFreeFryIndex != -1)
         {
-            Debug.Log("Spawn Hand");
             Vector3 spawnPoint = SetupSpawnPoint();
 
             GameObject handObject = Instantiate(hand, HandsHolder.transform);
@@ -125,8 +133,8 @@ public class HandSpawner : MonoBehaviour {
 
             handController.targetFry = FrySpawner.instance.Fries[randomFreeFryIndex];
             handController.fryIndex = randomFreeFryIndex;
-            handController.handGotFry = handGotFry;
-            handController.handGotHit = handGotHit;
+            handController.handGotFry = onHandGotFry;
+            handController.handGotHit = onHandHit;
 
             Hands.Add(handObject);
         }
@@ -135,13 +143,11 @@ public class HandSpawner : MonoBehaviour {
 
     IEnumerator SpawnHands(){
 
-        yield return new WaitForSeconds(1);
-
-        for (int i = 0; i < numberOfHandsToSpawn; i++)
+        for (int i = 0; i < handAmount; i++)
         {
             SpwanHand();
 
-            int randomSpawnTime = Random.Range(minTimeBetweenSpawns, maxTimeBetweenSpawns);
+            float randomSpawnTime = Random.Range(minTimeBetweenSpawns, maxTimeBetweenSpawns);
 
             yield return new WaitForSeconds(randomSpawnTime);
         }

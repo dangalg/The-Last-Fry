@@ -2,12 +2,18 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour {
 
     public static MainMenu instance = null;
 
-    PlayerData playerData;
+    public PlayerData playerData;
+
+    [SerializeField] ResetLevelsButton resetButton;
+    [SerializeField] TMP_Text Record;
+    [SerializeField] TMP_Text Energy;
 
     //Awake is always called before any Start functions
     void Awake()
@@ -27,15 +33,20 @@ public class MainMenu : MonoBehaviour {
         //Sets this to not be destroyed when reloading scene
         //DontDestroyOnLoad(gameObject);
 
+        resetButton.onFinishedReset = onResetClicked;
+
         //Call the InitGame function to initialize the first level 
         InitMenu();
     }
 
-    [SerializeField] TMP_Text Record;
-    [SerializeField] TMP_Text Energy;
-
     void InitMenu(){
         playerData = DataHandler.LoadPlayerData();
+    }
+
+    void onResetClicked()
+    {
+        Record.text = playerData.Record.ToString();
+        Energy.text = playerData.Energy.ToString();
     }
 
     // Use this for initialization

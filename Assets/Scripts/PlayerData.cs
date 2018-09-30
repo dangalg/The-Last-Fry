@@ -18,10 +18,17 @@ public class PlayerData {
         set;
     }
 
+    public int Level
+    {
+        get;
+        set;
+    }
+
     public PlayerData()
     {
         Energy = 3;
         Record = 0;
+        Level = 1;
     }
 
 }

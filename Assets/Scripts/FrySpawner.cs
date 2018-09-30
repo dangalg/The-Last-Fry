@@ -24,7 +24,6 @@ public class FrySpawner : MonoBehaviour {
         //Sets this to not be destroyed when reloading scene
         //DontDestroyOnLoad(gameObject);
 
-        SpawnFries();
     }
 
     [SerializeField] GameObject FriesHolder;
@@ -47,6 +46,31 @@ public class FrySpawner : MonoBehaviour {
 
         return returnPosition;
 
+    }
+
+
+    public void Setup(int level){
+        StartCoroutine(SetupFries(level));
+    }
+
+    private IEnumerator SetupFries(int level){
+
+        yield return null;
+
+        fryAmount = level;
+
+        SpawnFries();
+    }
+
+    public void Reset()
+    {
+        Fries.Clear();
+        TakenFryIndexes.Clear();
+
+        foreach (Transform child in FriesHolder.transform)
+        {
+            Destroy(child.gameObject);
+        }
     }
 
     private void SpwanFry()

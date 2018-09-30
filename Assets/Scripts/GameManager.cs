@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
@@ -11,6 +10,7 @@ public class GameManager : MonoBehaviour {
 //    private int level = 3;                                  //Current level number, expressed in game as "Day 1".
     private int points = 0;                                  //Current points owned by player
     [SerializeField] TMP_Text pointsText;
+    [SerializeField] TMP_Text levelText;
 
     PlayerData playerData;
 
@@ -44,6 +44,29 @@ public class GameManager : MonoBehaviour {
 
         points = 0;
         displayPoints();
+
+        StartCoroutine(SetupGame(playerData.Level));
+
+    }
+
+    IEnumerator SetupGame(int level){
+
+        levelText.enabled = true;
+
+        levelText.text = level.ToString() + " Hand";
+
+        yield return new WaitForSeconds(5f);
+
+        levelText.enabled = false;
+
+        FrySpawner.instance.Reset();
+        HandSpawner.instance.Reset();
+
+        FrySpawner.instance.Setup(playerData.Level);
+
+        yield return new WaitForSeconds(1f);
+
+        HandSpawner.instance.Setup(playerData.Level);
     }
 
     private void Update()
@@ -77,8 +100,6 @@ public class GameManager : MonoBehaviour {
 
             }
         }
-
-       //TODO EndGame();
     }
 
     public void AddPoint(int pointsToAdd)
@@ -99,12 +120,23 @@ public class GameManager : MonoBehaviour {
     }
 
     public void EndGame(){
-        if(playerData.Record < points){
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void EndLevel(){
+
+        Debug.Log("EndLevel");
+
+        playerData.Level++;
+
+        if (playerData.Record < points)
+        {
             playerData.Record = points;
         }
 
         DataHandler.SavePlayerData(playerData);
-        SceneManager.LoadScene("MainMenu");
+
+        StartCoroutine(SetupGame(playerData.Level));
     }
 
 }
