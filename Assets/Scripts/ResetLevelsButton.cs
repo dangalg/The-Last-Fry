@@ -4,28 +4,33 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-public class ResetLevelsButton : MonoBehaviour {
-
-    public Button resetButton;
-
-    public UnityAction onFinishedReset;
-
-    private void Start()
+namespace TheLastFry
+{
+    public class ResetLevelsButton : MonoBehaviour
     {
-        resetButton = GetComponent<Button>();
 
-        resetButton.onClick.AddListener(ResetLevels);
-    }
+        public Button resetButton;
 
-    public void ResetLevels()
-    {
-        MainMenu.instance.playerData = new PlayerData();
+        public UnityAction onFinishedReset;
 
-        DataHandler.SavePlayerData(MainMenu.instance.playerData);
+        private void Start()
+        {
+            resetButton = GetComponent<Button>();
 
-        if(onFinishedReset != null){
-            onFinishedReset();
+            resetButton.onClick.AddListener(ResetLevels);
         }
 
+        public void ResetLevels()
+        {
+            MainMenu.instance.playerData = new PlayerData();
+
+            DataHandler.SavePlayerData(MainMenu.instance.playerData);
+
+            if (onFinishedReset != null)
+            {
+                onFinishedReset();
+            }
+
+        }
     }
 }

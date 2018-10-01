@@ -3,36 +3,40 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[Serializable]
-public class PlayerData {
-
-    private int energy;
-    private int points;
-    private int level;
-
-    public int Energy
+namespace TheLastFry
+{
+    [Serializable]
+    public class PlayerData
     {
-        get { return energy; }
-        set { energy = value; }
-    }
 
-    public int Points
-    {
-        get { return points; }
-        set { points = value; }
-    }
+        private int energy;
+        private int points;
+        private int level;
 
-    public int Level
-    {
-        get { return level; }
-        set { level = value; }
-    }
+        public int Energy
+        {
+            get { return energy; }
+            set { energy = value; }
+        }
 
-    public PlayerData()
-    {
-        energy = 3;
-        points = 0;
-        level = 1;
-    }
+        public int Points
+        {
+            get { return points; }
+            set { points = value; }
+        }
 
+        public int Level
+        {
+            get { return level; }
+            set { level = value; }
+        }
+
+        public PlayerData()
+        {
+            energy = 3;
+            points = 0;
+            level = 1;
+        }
+
+    }
 }

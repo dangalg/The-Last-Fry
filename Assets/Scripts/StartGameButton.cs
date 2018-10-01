@@ -6,57 +6,66 @@ using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class StartGameButton : MonoBehaviour {
-
-
-    private Button startButton;
-
-    public UnityAction onFinishedAd; 
-
-    private void Start()
+namespace TheLastFry
+{
+    public class StartGameButton : MonoBehaviour
     {
 
-        startButton = GetComponent<Button>();
 
+        private Button startButton;
 
+        public UnityAction onFinishedAd;
 
-        if (MainMenu.instance.playerData.Energy > 0)
+        private void Start()
         {
 
-            startButton.GetComponentInChildren<Text>().text = "Start";
+            startButton = GetComponent<Button>();
 
-        }
-        else
-        {
 
-            startButton.GetComponentInChildren<Text>().text = "Replenish Energy";
 
-        }
+            if (MainMenu.instance.playerData.Energy > 0)
+            {
 
-        startButton.onClick.AddListener(LoadGame);
-    }
+                startButton.GetComponentInChildren<Text>().text = "Start";
 
-    public void LoadGame(){
-        if(MainMenu.instance.playerData.Energy > 0){
+            }
+            else
+            {
 
-            MainMenu.instance.DecreaseEnergy(1);
-            SceneManager.LoadScene("Game");
+                startButton.GetComponentInChildren<Text>().text = "Replenish Energy";
 
-        }else{
-
-            AdManager.instance.PlayAdvertisement();
-
-            MainMenu.instance.playerData.Energy = 3;
-
-            DataHandler.SavePlayerData(MainMenu.instance.playerData);
-
-            if(onFinishedAd != null){
-                onFinishedAd();
             }
 
-            startButton.GetComponentInChildren<Text>().text = "Start";
-
+            startButton.onClick.AddListener(LoadGame);
         }
 
+        public void LoadGame()
+        {
+            if (MainMenu.instance.playerData.Energy > 0)
+            {
+
+                MainMenu.instance.DecreaseEnergy(1);
+                SceneManager.LoadScene("Game");
+
+            }
+            else
+            {
+
+                AdManager.instance.PlayAdvertisement();
+
+                MainMenu.instance.playerData.Energy = 3;
+
+                DataHandler.SavePlayerData(MainMenu.instance.playerData);
+
+                if (onFinishedAd != null)
+                {
+                    onFinishedAd();
+                }
+
+                startButton.GetComponentInChildren<Text>().text = "Start";
+
+            }
+
+        }
     }
 }
