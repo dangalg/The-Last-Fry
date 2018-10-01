@@ -91,26 +91,53 @@ public class HandSpawner : MonoBehaviour {
         float randomXDistance = Random.Range(0, distanceX);
         float randomYDistance = Random.Range(0, distanceY);
 
-        int randomXOrY = Random.Range(0, 2);
-        int randomMinus = Random.Range(0, 2);
+        float distanceXCaculated = distanceX;
+        float distanceYCaculated = distanceY;
 
-        bool minus = randomMinus == 1;
+        int randomXOrY = Random.Range(0, 2);
         bool xOrY = randomXOrY == 1;
+
+        int randomXMinus = Random.Range(0, 2);
+        int randomYMinus = Random.Range(0, 2);
+
+        bool minusX = randomXMinus == 1;
+        bool minusY = randomYMinus == 1;
+
+        int randomDistanceXMinus = Random.Range(0, 2);
+        int randomDistanceYMinus = Random.Range(0, 2);
+
+        bool minusDistanceX = randomDistanceXMinus == 1;
+        bool minusDistanceY = randomDistanceYMinus == 1;
+
 
         Vector3 returnPosition;
 
-        if(minus){
+        if(minusX){
             randomXDistance *= -1;
+        }
+
+        if (minusY)
+        {
             randomYDistance *= -1;
+        }
+
+        if (minusDistanceX)
+        {
+            distanceXCaculated *= -1;
+        }
+
+        if (minusDistanceY)
+        {
+            distanceYCaculated *= -1;
         }
 
         if (xOrY)
         {
-            returnPosition = new Vector3(distanceX, randomYDistance, 0);
+            returnPosition = new Vector3(distanceXCaculated, randomYDistance, 0);
         }
         else
         {
-            returnPosition = new Vector3(randomXDistance, distanceY, 0);
+            returnPosition = new Vector3(randomXDistance, distanceYCaculated, 0);
         }
 
         return returnPosition;
