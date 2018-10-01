@@ -80,9 +80,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41568acc4b4004702bb5e12333f304b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FriesHolder: {fileID: 1174914209627992}
-  Fries: []
+  distanceX: 1.7
+  distanceY: 1.7
+  minSpeed: 0
+  maxSpeed: 0
+  minTimeBetweenSpawns: 0
+  maxTimeBetweenSpawns: 0
+  Items: []
+  itemHolder: {fileID: 1174914209627992}
+  itemTypesOdds: 64000000
+  itemTypes:
+  - {fileID: 1312878988502602, guid: b1c8abdd731624459b4cb84f90fa1335, type: 2}
   TakenFryIndexes: 
-  fry: {fileID: 1312878988502602, guid: b1c8abdd731624459b4cb84f90fa1335, type: 2}
-  distance: 1.7
-  fryAmount: 10

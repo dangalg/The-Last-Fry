@@ -24,7 +24,7 @@ namespace TheLastFry
         // kProductIDSubscription - it has custom Apple and Google identifiers. We declare their store-
         // specific mapping to Unity Purchasing's AddProduct, below.
         public static string kProductIDConsumable = "consumable";
-        public static string kProductIDNonConsumable = "nonconsumable";
+        public static string kProductIDRemoveAds = "com.galdada.pigs.removeads";
         public static string kProductIDSubscription = "subscription";
 
         // Apple App Store-specific product identifier for the subscription product.
@@ -59,7 +59,7 @@ namespace TheLastFry
             // with its store-specific identifiers.
             builder.AddProduct(kProductIDConsumable, ProductType.Consumable);
             // Continue adding the non-consumable product.
-            builder.AddProduct(kProductIDNonConsumable, ProductType.NonConsumable);
+            builder.AddProduct(kProductIDRemoveAds, ProductType.NonConsumable);
             // And finish adding the subscription product. Notice this uses store-specific IDs, illustrating
             // if the Product ID was configured differently between Apple and Google stores. Also note that
             // one uses the general kProductIDSubscription handle inside the game - the store-specific IDs 
@@ -94,7 +94,7 @@ namespace TheLastFry
         {
             // Buy the non-consumable product using its general identifier. Expect a response either 
             // through ProcessPurchase or OnPurchaseFailed asynchronously.
-            BuyProductID(kProductIDNonConsumable);
+            BuyProductID(kProductIDRemoveAds);
         }
 
 
@@ -165,7 +165,8 @@ namespace TheLastFry
                 var apple = m_StoreExtensionProvider.GetExtension<IAppleExtensions>();
                 // Begin the asynchronous process of restoring purchases. Expect a confirmation response in 
                 // the Action<bool> below, and ProcessPurchase if there are previously purchased products to restore.
-                apple.RestoreTransactions((result) => {
+                apple.RestoreTransactions((result) =>
+                {
                     // The first phase of restoration. If no more responses are received on ProcessPurchase then 
                     // no purchases are available to be restored.
                     Debug.Log("RestorePurchases continuing: " + result + ". If no further messages, no purchases available to restore.");
@@ -213,10 +214,15 @@ namespace TheLastFry
                 //ScoreManager.score += 100;
             }
             // Or ... a non-consumable product has been purchased by this user.
-            else if (String.Equals(args.purchasedProduct.definition.id, kProductIDNonConsumable, StringComparison.Ordinal))
+            else if (String.Equals(args.purchasedProduct.definition.id, kProductIDRemoveAds, StringComparison.Ordinal))
             {
                 Debug.Log(string.Format("ProcessPurchase: PASS. Product: '{0}'", args.purchasedProduct.definition.id));
                 // TODO: The non-consumable item has been successfully purchased, grant this item to the player.
+                if (args.purchasedProduct.definition.id == "com.galdada.pigs.removeads")
+                {
+                    MainMenu.instance.playerData.RemoveAds = true;
+                    DataHandler.SavePlayerData(MainMenu.instance.playerData);
+                }
             }
             // Or ... a subscription product has been purchased by this user.
             else if (String.Equals(args.purchasedProduct.definition.id, kProductIDSubscription, StringComparison.Ordinal))
@@ -247,10 +253,16 @@ namespace TheLastFry
         // Add all methods you need.
         // Call methods from js using SendMessage().
 
-        public void RestoreAndroidPurchases()
-        {
-            //if (AndroidInAppPurchaseManager.instance.inventory.IsProductPurchased("abcd12345"))
-             // Remove ads
-     }
+        public void CheckPurchased(){
+            Product product = m_StoreController.products.WithID(kProductIDRemoveAds);
+            if (product != null && product.hasReceipt)
+            {
+                // Owned Non Consumables and Subscriptions should always have receipts.
+                // So here the Non Consumable product has already been bought.
+                MainMenu.instance.playerData.RemoveAds = true;
+                DataHandler.SavePlayerData(MainMenu.instance.playerData);
+            }
+        }
+
     }
 }

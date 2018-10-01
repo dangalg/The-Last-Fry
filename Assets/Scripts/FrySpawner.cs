@@ -4,10 +4,12 @@ using UnityEngine;
 
 namespace TheLastFry
 {
-    public class FrySpawner : MonoBehaviour
+    public class FrySpawner : Spawner
     {
 
         public static FrySpawner instance = null;
+
+        public List<int> TakenFryIndexes = new List<int>();
 
         //Awake is always called before any Start functions
         void Awake()
@@ -29,50 +31,23 @@ namespace TheLastFry
 
         }
 
-        [SerializeField] GameObject FriesHolder;
-        public List<GameObject> Fries;
-        public List<int> TakenFryIndexes = new List<int>();
-
-        [SerializeField] GameObject fry;
-
-        public float distance = 1.7f;
-        public int fryAmount = 10;
-
-
-        private Vector3 SetupSpawnPoint()
-        {
-            float randomXDistance = Random.Range(-distance, distance);
-            float randomYDistance = Random.Range(-distance, distance);
-
-            Vector3 returnPosition;
-            returnPosition = new Vector3(randomXDistance, randomYDistance, 0);
-
-            return returnPosition;
-
-        }
-
-
-        public void Setup(int level)
-        {
-            StartCoroutine(SetupFries(level));
-        }
-
-        private IEnumerator SetupFries(int level)
+        protected override IEnumerator SpawnItems()
         {
 
             yield return null;
 
-            fryAmount = level;
-
-            SpawnFries();
+            for (int i = 0; i < itemAmount; i++)
+            {
+                SpwanFry();
+            }
         }
 
-        public void Reset()
+        public override void Reset()
         {
-            Fries.Clear();
+            Items.Clear();
             TakenFryIndexes.Clear();
 
-            foreach (Transform child in FriesHolder.transform)
+            foreach (Transform child in itemHolder.transform)
             {
                 Destroy(child.gameObject);
             }
@@ -87,34 +62,26 @@ namespace TheLastFry
                 eulerAngles = new Vector3(0, 0, randomfryRotation)
             };
 
-            Vector3 frySpawnPosition = SetupSpawnPoint();
+            Vector3 frySpawnPosition = SetupSpawnPoint(false);
 
-            GameObject fryObject = Instantiate(fry, FriesHolder.transform);
+            GameObject fryObject = Instantiate(GetRandomItemTypeIndex(), itemHolder.transform);
 
             fryObject.transform.position = frySpawnPosition;
             fryObject.transform.rotation = randomRotation;
 
-            Fries.Add(fryObject);
-        }
-
-        void SpawnFries()
-        {
-            for (int i = 0; i < fryAmount; i++)
-            {
-                SpwanFry();
-            }
+            Items.Add(fryObject);
         }
 
         public void DestroyFry(int index)
         {
-            Destroy(Fries[index]);
+            Destroy(Items[index]);
         }
 
         public int GetRandomFreeFryIndex()
         {
             List<int> freeFryIndexes = new List<int>();
 
-            for (int i = 0; i < Fries.Count; i++)
+            for (int i = 0; i < Items.Count; i++)
             {
                 freeFryIndexes.Add(i);
             }

@@ -41,7 +41,7 @@ namespace TheLastFry
 
         public void LoadGame()
         {
-            if (MainMenu.instance.playerData.Energy > 0)
+            if (MainMenu.instance.playerData.RemoveAds || MainMenu.instance.playerData.Energy > 0)
             {
 
                 MainMenu.instance.DecreaseEnergy(1);

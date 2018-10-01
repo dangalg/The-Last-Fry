@@ -9,88 +9,84 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1913459563957606}
+  m_RootGameObject: {fileID: 1853581265744406}
   m_IsPrefabAsset: 1
---- !u!1 &1044099418052000
+--- !u!1 &1853581265744406
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4809822483630260}
+  - component: {fileID: 4917625245819966}
+  - component: {fileID: 114868545157315504}
   m_Layer: 0
-  m_Name: Hands
+  m_Name: UntouchableSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1913459563957606
+--- !u!1 &1917035420078164
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4359753481497114}
-  - component: {fileID: 114531372016070054}
+  - component: {fileID: 4644690705919440}
   m_Layer: 0
-  m_Name: HandSpawner
+  m_Name: Untouchables
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4359753481497114
+--- !u!4 &4644690705919440
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1913459563957606}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 4809822483630260}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4809822483630260
-Transform:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1044099418052000}
+  m_GameObject: {fileID: 1917035420078164}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4359753481497114}
+  m_Father: {fileID: 4917625245819966}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114531372016070054
+--- !u!4 &4917625245819966
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1853581265744406}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 89.87681, y: 493.28284, z: -3.115703}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4644690705919440}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114868545157315504
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1913459563957606}
+  m_GameObject: {fileID: 1853581265744406}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5dc845b98cc04dd2a790cb3ebc573e9, type: 3}
+  m_Script: {fileID: 11500000, guid: 120fdb201fec340f691efc5465d54612, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   distanceX: 5
   distanceY: 7
   minSpeed: 3
   maxSpeed: 7
-  minTimeBetweenSpawns: 1
-  maxTimeBetweenSpawns: 6
+  minTimeBetweenSpawns: 2
+  maxTimeBetweenSpawns: 5
   Items: []
-  itemHolder: {fileID: 1044099418052000}
-  itemTypesOdds: 5000000064000000
-  itemTypes:
-  - {fileID: 1208100421849838, guid: bd56786490ca649cb8e69b9db8c63fba, type: 2}
-  - {fileID: 1998713837153636, guid: 0a76cf26f1fec4d0abb1236adb9e6d26, type: 2}
-  handHitCounter: 0
-  handGotFryCounter: 0
+  itemHolder: {fileID: 0}
+  itemTypesOdds: 
+  itemTypes: []

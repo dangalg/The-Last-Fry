@@ -11,10 +11,10 @@ namespace TheLastFry
 
 
         public static GameManager instance = null;              //Static instance of GameManager which allows it to be accessed by any other script.
-                                                                //    private int level = 3;                                  //Current level number, expressed in game as "Day 1".
-        private int points = 0;                                  //Current points owned by player
+         
         [SerializeField] TMP_Text pointsText;
         [SerializeField] TMP_Text levelText;
+        [SerializeField] TMP_Text lifeText;
 
         [SerializeField] float percentToPassLevel = 70f;
 
@@ -48,8 +48,8 @@ namespace TheLastFry
         {
             playerData = DataHandler.LoadPlayerData();
 
-            points = 0;
-            displayPoints();
+            playerData.Points = 0;
+            displayStats();
 
             StartCoroutine(SetupGame(playerData.Level));
 
@@ -62,8 +62,10 @@ namespace TheLastFry
 
             levelText.text = level.ToString();
 
-            points = 0;
-            displayPoints();
+            playerData.Points = 0;
+            playerData.Life = 3;
+
+            displayStats();
 
             yield return new WaitForSeconds(2f);
 
@@ -71,12 +73,14 @@ namespace TheLastFry
 
             FrySpawner.instance.Reset();
             HandSpawner.instance.Reset();
+            //UntouchableSpawner.instance.Reset();
 
             FrySpawner.instance.Setup(playerData.Level);
 
             yield return new WaitForSeconds(1f);
 
             HandSpawner.instance.Setup(playerData.Level);
+           //UntouchableSpawner.instance.Setup(playerData.Level);
         }
 
         private void Update()
@@ -116,25 +120,27 @@ namespace TheLastFry
 
         public void AddPoint(int pointsToAdd)
         {
-            points += pointsToAdd;
-            displayPoints();
+            playerData.Points += pointsToAdd;
+            displayStats();
         }
 
         public void SubtractPoints(int pointsToAdd)
         {
-            points -= pointsToAdd;
-            displayPoints();
+            playerData.Points -= pointsToAdd;
+            displayStats();
         }
 
-        private void displayPoints()
+        private void displayStats()
         {
-            pointsText.text = points.ToString();
+            pointsText.text = playerData.Points.ToString();
+            lifeText.text = playerData.Life.ToString();
         }
 
         public void EndGame()
         {
-
-            AdManager.instance.PlayAdvertisement();
+            if(!playerData.RemoveAds){
+                AdManager.instance.PlayAdvertisement();
+            }
 
             SceneManager.LoadScene("MainMenu");
         }
@@ -163,7 +169,7 @@ namespace TheLastFry
 
             int level = playerData.Level;
 
-            float percentOfFriesSaved = (((float)points) / ((float)level)) * 100f;
+            float percentOfFriesSaved = (((float)playerData.Points) / ((float)level)) * 100f;
 
             if (percentOfFriesSaved >= percentToPassLevel)
             {
