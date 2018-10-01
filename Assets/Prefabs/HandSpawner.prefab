@@ -82,8 +82,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distanceX: 5
   distanceY: 7
-  minSpeed: 3
-  maxSpeed: 7
+  minSpeed: 0.7
+  maxSpeed: 1.2
   minTimeBetweenSpawns: 1
   maxTimeBetweenSpawns: 6
   Items: []
@@ -94,3 +94,4 @@ MonoBehaviour:
   - {fileID: 1998713837153636, guid: 0a76cf26f1fec4d0abb1236adb9e6d26, type: 2}
   handHitCounter: 0
   handGotFryCounter: 0
+  handMovementType: 3

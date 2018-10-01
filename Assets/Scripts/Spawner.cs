@@ -38,8 +38,6 @@ namespace TheLastFry
 
             int randomItemType = Random.Range(0, maxNumber);
 
-            Debug.Log(randomItemType.ToString());
-
             for (int i = 0; i < itemTypesOdds.Count; i++)
             {
                 if (itemTypesOdds[i] > randomItemType)

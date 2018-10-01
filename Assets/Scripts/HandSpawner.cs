@@ -13,6 +13,8 @@ namespace TheLastFry
         public int handHitCounter = 0;
         public int handGotFryCounter = 0;
 
+        [SerializeField] LeanTweenType handMovementType;
+
         //Awake is always called before any Start functions
         void Awake()
         {
@@ -96,6 +98,7 @@ namespace TheLastFry
                 HandController handController = handObject.GetComponent<HandController>();
                 float randomHandSpeed = Random.Range(minSpeed, maxSpeed);
                 handController.moveSpeed = randomHandSpeed;
+                handController.handMovementType = handMovementType;
 
                 handController.targetFry = FrySpawner.instance.Items[randomFreeFryIndex];
                 handController.fryIndex = randomFreeFryIndex;

@@ -15,6 +15,8 @@ namespace TheLastFry
         [SerializeField] Sprite openHand;
         [SerializeField] Sprite closedHand;
 
+        public LeanTweenType handMovementType;
+
         [SerializeField] List<Sprite> hurtHands;
         public int fryIndex = 0;
 
@@ -30,6 +32,11 @@ namespace TheLastFry
         public UnityAction handGotFry;
         public UnityAction handGotHit;
 
+        bool atemptingTheft = false;
+        bool runningAway = false;
+
+        int atemptTheftTween;
+        int runAwayTween;
 
         // Use this for initialization
         void Start()
@@ -45,13 +52,9 @@ namespace TheLastFry
         void Update()
         {
 
-            if (gotFry)
+            if ((gotFry || handHit) && !runningAway)
             {
-                runAway();
-            }
-
-            if (handHit)
-            {
+                runningAway = true;
                 runAway();
             }
 
@@ -59,7 +62,11 @@ namespace TheLastFry
             {
                 if (transform.position != targetFry.transform.position)
                 {
-                    atemptTheft();
+                    if(!atemptingTheft){
+                        atemptingTheft = true;
+                        atemptTheft();
+                    }
+
                 }
                 else
                 {
@@ -145,12 +152,13 @@ namespace TheLastFry
         private void atemptTheft()
         {
             turnTowardsTarget(targetFry.transform.position);
-            moveTowardsTarget(targetFry.transform.position);
+            atemptTheftTween = LeanTween.move(gameObject, targetFry.transform.position, moveSpeed).setEase(handMovementType).id;
         }
 
         private void runAway()
         {
-            moveTowardsTarget(beginPosition);
+            LeanTween.cancel(atemptTheftTween);
+            runAwayTween = LeanTween.move(gameObject, beginPosition, moveSpeed).setEase(handMovementType).id;
         }
     }
 }

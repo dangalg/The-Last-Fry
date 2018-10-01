@@ -108,7 +108,6 @@ namespace TheLastFry
             //Converting Mouse Pos to 2D (vector2) World Pos
             if (hit.collider != null)
             {
-                Debug.Log("Something Hit");
 
                 if (hit.collider.CompareTag("ThiefHand"))
                 {
@@ -147,9 +146,7 @@ namespace TheLastFry
 
         public void NextLevel()
         {
-
-            Debug.Log("EndLevel");
-
+        
             bool endGame = levelCalculation();
 
             if (!endGame)
