@@ -80,7 +80,7 @@ namespace TheLastFry
                 if (gotFry)
                 {
                     // TODO lose life
-                    FrySpawner.instance.DestroyFry(fryIndex);
+                    FoodSpawner.instance.DestroyFry(fryIndex);
 
                     if (handGotFry != null)
                     {
@@ -125,7 +125,7 @@ namespace TheLastFry
                 {
                     gotFry = false;
                     targetFry.GetComponent<SpriteRenderer>().enabled = true;
-                    FrySpawner.instance.TakenFryIndexes.Remove(fryIndex);
+                    FoodSpawner.instance.TakenFryIndexes.Remove(fryIndex);
                 }
             }
         }

@@ -113,48 +113,36 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &363115450
-Prefab:
+--- !u!1 &27427890
+GameObject:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4359753481497114, guid: 6ffc12083cbf54101a77ed83b2192095, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4359753481497114, guid: 6ffc12083cbf54101a77ed83b2192095, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4359753481497114, guid: 6ffc12083cbf54101a77ed83b2192095, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4359753481497114, guid: 6ffc12083cbf54101a77ed83b2192095, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4359753481497114, guid: 6ffc12083cbf54101a77ed83b2192095, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4359753481497114, guid: 6ffc12083cbf54101a77ed83b2192095, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4359753481497114, guid: 6ffc12083cbf54101a77ed83b2192095, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4359753481497114, guid: 6ffc12083cbf54101a77ed83b2192095, type: 2}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6ffc12083cbf54101a77ed83b2192095, type: 2}
-  m_IsPrefabAsset: 0
+  m_CorrespondingSourceObject: {fileID: 1174914209627992, guid: 0090c55dd0dda4ceeada2750f5b3897e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1501728573}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 27427891}
+  m_Layer: 0
+  m_Name: Fries
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &27427891
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4427514944902206, guid: 0090c55dd0dda4ceeada2750f5b3897e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1501728573}
+  m_GameObject: {fileID: 27427890}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 817618609}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -231,6 +219,67 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &817618607
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1873934108605140, guid: 0090c55dd0dda4ceeada2750f5b3897e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1501728573}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 817618609}
+  m_Layer: 0
+  m_Name: FoodSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &817618609
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4042788574610494, guid: 0090c55dd0dda4ceeada2750f5b3897e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1501728573}
+  m_GameObject: {fileID: 817618607}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 27427891}
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &833400664
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1044099418052000, guid: 6ffc12083cbf54101a77ed83b2192095,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 833400665}
+  m_Layer: 0
+  m_Name: Hands
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &833400665
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4809822483630260, guid: 6ffc12083cbf54101a77ed83b2192095,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 833400664}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1791317745}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1092982750
 Prefab:
@@ -316,6 +365,10 @@ Prefab:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1146133673288592, guid: 400f0ce1032a6427dbe144e38193920a, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 400f0ce1032a6427dbe144e38193920a, type: 2}
   m_IsPrefabAsset: 0
@@ -364,7 +417,17 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114879307644379750, guid: 0090c55dd0dda4ceeada2750f5b3897e,
+        type: 2}
+      propertyPath: CoinCounterTarget
+      value: 
+      objectReference: {fileID: 2138796951}
+    - target: {fileID: 1873934108605140, guid: 0090c55dd0dda4ceeada2750f5b3897e, type: 2}
+      propertyPath: m_Name
+      value: FoodSpawner
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 0090c55dd0dda4ceeada2750f5b3897e, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1663209676
@@ -471,6 +534,65 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f58dfc50e5c647ecae0b61afbbce851, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1791317743
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1913459563957606, guid: 6ffc12083cbf54101a77ed83b2192095,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1791317745}
+  - component: {fileID: 1791317744}
+  m_Layer: 0
+  m_Name: ThiefSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1791317744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114531372016070054, guid: 6ffc12083cbf54101a77ed83b2192095,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1791317743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5dc845b98cc04dd2a790cb3ebc573e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceX: 5
+  distanceY: 7
+  minSpeed: 0.7
+  maxSpeed: 1.2
+  minTimeBetweenSpawns: 1
+  maxTimeBetweenSpawns: 6
+  Items: []
+  itemHolder: {fileID: 833400664}
+  itemTypesOdds: 5000000064000000
+  itemTypes:
+  - {fileID: 1208100421849838, guid: bd56786490ca649cb8e69b9db8c63fba, type: 2}
+  - {fileID: 1998713837153636, guid: 0a76cf26f1fec4d0abb1236adb9e6d26, type: 2}
+  handHitCounter: 0
+  handGotFryCounter: 0
+  handMovementType: 3
+--- !u!4 &1791317745
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4359753481497114, guid: 6ffc12083cbf54101a77ed83b2192095,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1791317743}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 833400665}
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1958222067
 Prefab:
   m_ObjectHideFlags: 0
@@ -513,3 +635,8 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b308dfab10fe64c1598e5a63b2632b88, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &2138796951 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1864080448074602, guid: 400f0ce1032a6427dbe144e38193920a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1092982750}

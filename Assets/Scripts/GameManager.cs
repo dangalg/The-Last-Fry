@@ -71,15 +71,15 @@ namespace TheLastFry
 
             levelText.enabled = false;
 
-            FrySpawner.instance.Reset();
-            HandSpawner.instance.Reset();
+            FoodSpawner.instance.Reset();
+            ThiefSpawner.instance.Reset();
             //UntouchableSpawner.instance.Reset();
 
-            FrySpawner.instance.Setup(playerData.Level);
+            FoodSpawner.instance.Setup(playerData.Level);
 
             yield return new WaitForSeconds(1f);
 
-            HandSpawner.instance.Setup(playerData.Level);
+            ThiefSpawner.instance.Setup(playerData.Level);
            //UntouchableSpawner.instance.Setup(playerData.Level);
         }
 
@@ -142,7 +142,7 @@ namespace TheLastFry
 
         IEnumerator EndGameRoutine(){
 
-            foreach (var item in FrySpawner.instance.Items)
+            foreach (var item in FoodSpawner.instance.Items)
             {
 
             }
