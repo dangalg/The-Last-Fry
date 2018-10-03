@@ -9,12 +9,19 @@ namespace TheLastFry
     public class PlayerData
     {
 
+        private int coins;
         private int energy;
         private int points;
         private int record;
         private int level;
         private int life;
         private bool removeAds;
+
+        public int Coins
+        {
+            get { return coins; }
+            set { coins = value; }
+        }
 
         public int Energy
         {
@@ -55,6 +62,7 @@ namespace TheLastFry
         public PlayerData()
         {
             energy = 3;
+            coins = 10;
             points = 0;
             record = 0;
             level = 1;

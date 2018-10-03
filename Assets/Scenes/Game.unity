@@ -271,6 +271,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114511252428736640, guid: 400f0ce1032a6427dbe144e38193920a,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1195609642}
     - target: {fileID: 114807571816103390, guid: 400f0ce1032a6427dbe144e38193920a,
         type: 2}
       propertyPath: m_havePropertiesChanged
@@ -291,6 +296,16 @@ Prefab:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114668429344593994, guid: 400f0ce1032a6427dbe144e38193920a,
+        type: 2}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114668429344593994, guid: 400f0ce1032a6427dbe144e38193920a,
+        type: 2}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 114467629400110882, guid: 400f0ce1032a6427dbe144e38193920a,
         type: 2}
       propertyPath: m_havePropertiesChanged
@@ -300,25 +315,16 @@ Prefab:
         type: 2}
       propertyPath: m_isInputParsingRequired
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224769332628961084, guid: 400f0ce1032a6427dbe144e38193920a,
-        type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224875193161785956, guid: 400f0ce1032a6427dbe144e38193920a,
-        type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: -52.600098
-      objectReference: {fileID: 0}
-    - target: {fileID: 224119194614984448, guid: 400f0ce1032a6427dbe144e38193920a,
-        type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: -55.149902
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 400f0ce1032a6427dbe144e38193920a, type: 2}
   m_IsPrefabAsset: 0
+--- !u!114 &1195609642 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114008508718229530, guid: 0f58dfc50e5c647ecae0b61afbbce851,
+    type: 2}
+  m_PrefabInternal: {fileID: 1781900113}
+  m_Script: {fileID: 11500000, guid: 18522ed4c97854966b61e8041e3b3603, type: 3}
 --- !u!1001 &1501728573
 Prefab:
   m_ObjectHideFlags: 0

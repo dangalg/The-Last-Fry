@@ -11,6 +11,11 @@ namespace TheLastFry
 
         public List<int> TakenFryIndexes = new List<int>();
 
+        [SerializeField] GameObject CoinCounterTarget;
+        [SerializeField] Sprite Coin;
+        [SerializeField] float coinMoveSpeed = 2f;
+        [SerializeField] LeanTweenType coinFlyEaseType = LeanTweenType.easeInOutCubic;
+
         //Awake is always called before any Start functions
         void Awake()
         {
@@ -69,12 +74,24 @@ namespace TheLastFry
             fryObject.transform.position = frySpawnPosition;
             fryObject.transform.rotation = randomRotation;
 
+            FryController fryController = fryObject.GetComponent<FryController>();
+            fryController.CoinCounterTarget = CoinCounterTarget;
+            fryController.Coin = Coin;
+            fryController.fryFlyEaseType = coinFlyEaseType;
+            fryController.moveSpeed = coinMoveSpeed;
+            fryController.onCoinFlyComplete = onCoinConsumed;
+
             Items.Add(fryObject);
+        }
+
+        void onCoinConsumed(){
+
         }
 
         public void DestroyFry(int index)
         {
             Destroy(Items[index]);
+            Items.RemoveAt(index);
         }
 
         public int GetRandomFreeFryIndex()

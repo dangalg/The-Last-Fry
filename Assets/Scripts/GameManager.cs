@@ -137,11 +137,20 @@ namespace TheLastFry
 
         public void EndGame()
         {
-            if(!playerData.RemoveAds){
-                AdManager.instance.PlayAdvertisement();
+
+        }
+
+        IEnumerator EndGameRoutine(){
+
+            foreach (var item in FrySpawner.instance.Items)
+            {
+
             }
 
+
             SceneManager.LoadScene("MainMenu");
+
+            yield return null;
         }
 
         public void NextLevel()

@@ -35,8 +35,7 @@ namespace TheLastFry
         bool atemptingTheft = false;
         bool runningAway = false;
 
-        int atemptTheftTween;
-        int runAwayTween;
+        int atemptTheftTween = 0;
 
         // Use this for initialization
         void Start()
@@ -158,7 +157,7 @@ namespace TheLastFry
         private void runAway()
         {
             LeanTween.cancel(atemptTheftTween);
-            runAwayTween = LeanTween.move(gameObject, beginPosition, moveSpeed).setEase(handMovementType).id;
+            LeanTween.move(gameObject, beginPosition, moveSpeed).setEase(handMovementType);
         }
     }
 }
