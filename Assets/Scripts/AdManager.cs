@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Advertisements;
+using UnityEngine.Events;
 
 namespace TheLastFry 
 {
@@ -10,6 +11,12 @@ namespace TheLastFry
     {
 
         public static AdManager instance = null;
+
+        [SerializeField] string gameID = "2822484";
+
+        public UnityAction onFinishedAd;
+        public UnityAction onSkippedAd;
+        public UnityAction onFailedAd;
 
         //Awake is always called before any Start functions
         void Awake()
@@ -28,15 +35,57 @@ namespace TheLastFry
 
             //Sets this to not be destroyed when reloading scene
             //DontDestroyOnLoad(gameObject);
+            Advertisement.Initialize(gameID, true);
 
         }
 
-        public void PlayAdvertisement()
+
+
+        public void ShowAd(string zone = "rewardedVideo")
         {
-            if (Advertisement.IsReady("rewardedVideo"))
+#if UNITY_EDITOR
+            StartCoroutine(WaitForAd());
+#endif
+
+            if (string.Equals(zone, ""))
+                zone = null;
+
+            ShowOptions options = new ShowOptions();
+            options.resultCallback = AdCallbackhandler;
+
+            if (Advertisement.IsReady(zone))
+                Advertisement.Show(zone, options);
+        }
+
+        void AdCallbackhandler(ShowResult result)
+        {
+            switch (result)
             {
-                Advertisement.Show("rewardedVideo");
+                case ShowResult.Finished:
+                    Debug.Log("Ad Finished. Rewarding player...");
+                    if (onFinishedAd != null) onFinishedAd();
+                    break;
+                case ShowResult.Skipped:
+                    Debug.Log("Ad skipped. Son, I am dissapointed in you");
+                    if (onSkippedAd != null) onSkippedAd();
+                    break;
+                case ShowResult.Failed:
+                    Debug.Log("I swear this has never happened to me before");
+                    if (onFailedAd != null) onFailedAd();
+                    break;
             }
+        }
+
+        IEnumerator WaitForAd()
+        {
+            float currentTimeScale = Time.timeScale;
+            Time.timeScale = 0f;
+            yield return null;
+
+            while (Advertisement.isShowing)
+                yield return null;
+
+            Time.timeScale = currentTimeScale;
         }
     }
 }

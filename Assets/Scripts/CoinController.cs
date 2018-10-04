@@ -3,26 +3,36 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class CoinController : MonoBehaviour {
-
-    public GameObject CoinCounterTarget;
-    public Sprite Coin;
-    public float moveSpeed = 2f;
-    public LeanTweenType fryFlyEaseType = LeanTweenType.easeInOutCubic;
-    public UnityAction onCoinFlyComplete;
-
-
-    public void GoToCoinCounter()
+namespace TheLastFry
+{
+    public class CoinController : MonoBehaviour
     {
-        LeanTween.move(gameObject, CoinCounterTarget.transform, moveSpeed).setEase(fryFlyEaseType).setOnComplete(onCompleteTween);
-    }
 
-    void onCompleteTween()
-    {
-        if (onCoinFlyComplete != null)
+        public int coinAmount = 1;
+        public GameObject CoinCounterTarget;
+        public float moveSpeed = 2f;
+        public LeanTweenType flyEaseType = LeanTweenType.easeInOutCubic;
+        public UnityAction<int> onCoinFlyComplete;
+
+        [SerializeField] AudioClip pickup;
+        [SerializeField] AudioClip drop;
+
+
+        public void GoToCoinCounter()
         {
-            onCoinFlyComplete();
+            SoundManager.instance.PlaySingle(pickup);
+
+            LeanTween.move(gameObject, CoinCounterTarget.transform, moveSpeed).setEase(flyEaseType).setOnComplete(onCompleteTween);
         }
-        Destroy(gameObject);
+
+        void onCompleteTween()
+        {
+            SoundManager.instance.PlaySingle(drop);
+            if (onCoinFlyComplete != null)
+            {
+                onCoinFlyComplete(coinAmount);
+            }
+            Destroy(gameObject);
+        }
     }
 }

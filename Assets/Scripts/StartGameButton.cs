@@ -14,8 +14,6 @@ namespace TheLastFry
 
         private Button startButton;
 
-        public UnityAction onFinishedAd;
-
         private void Start()
         {
 
@@ -36,36 +34,8 @@ namespace TheLastFry
 
             }
 
-            startButton.onClick.AddListener(LoadGame);
         }
 
-        public void LoadGame()
-        {
-            if (MainMenu.instance.playerData.RemoveAds || MainMenu.instance.playerData.Energy > 0)
-            {
 
-                MainMenu.instance.DecreaseEnergy(1);
-                SceneManager.LoadScene("Game");
-
-            }
-            else
-            {
-
-                AdManager.instance.PlayAdvertisement();
-
-                MainMenu.instance.playerData.Energy = 3;
-
-                DataHandler.SavePlayerData(MainMenu.instance.playerData);
-
-                if (onFinishedAd != null)
-                {
-                    onFinishedAd();
-                }
-
-                startButton.GetComponentInChildren<Text>().text = "Start";
-
-            }
-
-        }
     }
 }

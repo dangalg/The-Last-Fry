@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace TheLastFry
@@ -14,8 +15,6 @@ namespace TheLastFry
 
         public PlayerData playerData;
 
-        [SerializeField] ResetLevelsButton resetButton;
-        [SerializeField] StartGameButton startButton;
         [SerializeField] TMP_Text Level;
         [SerializeField] TMP_Text Energy;
 
@@ -37,10 +36,6 @@ namespace TheLastFry
             //Sets this to not be destroyed when reloading scene
             //DontDestroyOnLoad(gameObject);
 
-            resetButton.onFinishedReset = onResetClicked;
-
-            startButton.onFinishedAd = onFinishedAd;
-
             //Call the InitGame function to initialize the first level 
             InitMenu();
         }
@@ -50,22 +45,13 @@ namespace TheLastFry
             playerData = DataHandler.LoadPlayerData();
         }
 
-        void onResetClicked()
-        {
-            Level.text = playerData.Level.ToString();
-            Energy.text = playerData.Energy.ToString();
-        }
-
-        void onFinishedAd()
-        {
-            Energy.text = playerData.Energy.ToString();
-        }
-
         // Use this for initialization
         void Start()
         {
             Level.text = playerData.Level.ToString();
             Energy.text = playerData.Energy.ToString();
+
+            AdManager.instance.onFinishedAd = onFinishedAd;
         }
 
         public void DecreaseEnergy(int amount)
@@ -85,5 +71,33 @@ namespace TheLastFry
             DataHandler.SavePlayerData(playerData);
         }
 
+        public void LoadGame()
+        {
+            if (playerData.RemoveAds || playerData.Energy > 0)
+            {
+
+                DecreaseEnergy(1);
+                StartGame();
+            }
+            else
+            {
+
+                AdManager.instance.ShowAd();
+            }
+
+        }
+
+        void onFinishedAd(){
+            playerData.Energy = 3;
+            playerData.Life = 3;
+            StartGame();
+        }
+
+        void StartGame(){
+
+            playerData.Level = 1;
+            DataHandler.SavePlayerData(playerData);
+            SceneManager.LoadScene("Game");
+        }
     }
 }

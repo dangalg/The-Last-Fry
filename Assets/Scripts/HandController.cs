@@ -12,6 +12,7 @@ namespace TheLastFry
         public GameObject targetFry;
         public float moveSpeed = 3f;
         public int pointsForHit = 1;
+        public int lifeForFoodStolen = 1;
         [SerializeField] Sprite openHand;
         [SerializeField] Sprite closedHand;
 
@@ -36,6 +37,7 @@ namespace TheLastFry
         bool runningAway = false;
 
         int atemptTheftTween = 0;
+        private object l;
 
         // Use this for initialization
         void Start()
@@ -79,7 +81,8 @@ namespace TheLastFry
             {
                 if (gotFry)
                 {
-                    // TODO lose life
+                    // lose life
+                    GameManager.instance.LoseLife(lifeForFoodStolen);
                     FoodSpawner.instance.DestroyFry(fryIndex);
 
                     if (handGotFry != null)
@@ -130,18 +133,6 @@ namespace TheLastFry
             }
         }
 
-        private void moveTowardsTarget(Vector3 target)
-        {
-            transform.position = Vector2.MoveTowards(new Vector2(transform.position.x, transform.position.y),
-                                                                     target, moveSpeed * Time.deltaTime);
-
-            if (gotFry)
-            {
-                targetFry.transform.position = transform.position;
-                targetFry.transform.rotation = transform.rotation;
-            }
-        }
-
         private void turnTowardsTarget(Vector3 target)
         {
             transform.right = target - transform.position;
@@ -157,7 +148,18 @@ namespace TheLastFry
         private void runAway()
         {
             LeanTween.cancel(atemptTheftTween);
-            LeanTween.move(gameObject, beginPosition, moveSpeed).setEase(handMovementType);
+            LeanTween.move(gameObject, beginPosition, moveSpeed).setEase(handMovementType).setOnUpdate(HandleAction);
+
         }
+
+        void HandleAction(float obj)
+        {
+            if (gotFry)
+            {
+                targetFry.transform.position = transform.position;
+                targetFry.transform.rotation = transform.rotation;
+            }
+        }
+
     }
 }

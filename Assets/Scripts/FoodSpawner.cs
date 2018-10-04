@@ -12,7 +12,7 @@ namespace TheLastFry
         public List<int> TakenFryIndexes = new List<int>();
 
         [SerializeField] GameObject CoinCounterTarget;
-        [SerializeField] Sprite Coin;
+        [SerializeField] GameObject Coin;
         [SerializeField] float coinMoveSpeed = 2f;
         [SerializeField] LeanTweenType coinFlyEaseType = LeanTweenType.easeInOutCubic;
 
@@ -80,14 +80,38 @@ namespace TheLastFry
             Items.Add(fryObject);
         }
 
-        void onCoinConsumed(){
+        public IEnumerator NextLevelRoutine(){
+            foreach (var item in FoodSpawner.instance.Items)
+            {
 
+                if (item != null)
+                {
+
+                    GameObject coinObject = Instantiate(Coin, item.transform.position, item.transform.rotation);
+                    CoinController coinController = coinObject.GetComponent<CoinController>();
+                    GameObject temp = new GameObject();
+                    coinController.CoinCounterTarget = CoinCounterTarget;
+                    coinController.moveSpeed = coinMoveSpeed;
+                    coinController.flyEaseType = coinFlyEaseType;
+                    coinController.GoToCoinCounter();
+                    coinController.onCoinFlyComplete = consumeCoin;
+
+                    Destroy(item);
+                }
+
+                yield return new WaitForSeconds(0.5f);
+            }
+        }
+
+        void consumeCoin(int coins){
+            GameManager.instance.AddCoin(coins);
         }
 
         public void DestroyFry(int index)
         {
-            Destroy(Items[index]);
-            Items.RemoveAt(index);
+            if(Items.Count > index){
+                Destroy(Items[index]);
+            }
         }
 
         public int GetRandomFreeFryIndex()

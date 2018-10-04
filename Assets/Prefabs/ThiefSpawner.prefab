@@ -82,16 +82,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distanceX: 5
   distanceY: 7
-  minSpeed: 3
-  maxSpeed: 7
+  minSpeed: 1
+  maxSpeed: 1.5
   minTimeBetweenSpawns: 2
   maxTimeBetweenSpawns: 5
   Items: []
   itemHolder: {fileID: 1859378031400882}
-  itemTypesOdds: 5000000014000000
+  itemTypesOdds: 19000000320000004b00000064000000
   itemTypes:
   - {fileID: 1208100421849838, guid: bd56786490ca649cb8e69b9db8c63fba, type: 2}
   - {fileID: 1998713837153636, guid: 0a76cf26f1fec4d0abb1236adb9e6d26, type: 2}
+  - {fileID: 1709479737352226, guid: 4241e9d93c9d94d869d5c9e94010d79a, type: 2}
+  - {fileID: 1686271869712860, guid: 0757104107cd849678c78cb6be4bc4cc, type: 2}
   handHitCounter: 0
   handGotFryCounter: 0
-  handMovementType: 7
+  handMovementType: 4

@@ -9,89 +9,62 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1770160272971530}
+  m_RootGameObject: {fileID: 1931732629219516}
   m_IsPrefabAsset: 1
---- !u!1 &1157083212006268
+--- !u!1 &1931732629219516
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4201124951503338}
-  - component: {fileID: 212200861681634678}
+  - component: {fileID: 4917874820238574}
+  - component: {fileID: 212833563664705458}
+  - component: {fileID: 95889836595785484}
   m_Layer: 0
-  m_Name: CoinImage
+  m_Name: Salt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1770160272971530
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4242655243585556}
-  - component: {fileID: 114200824527870816}
-  m_Layer: 0
-  m_Name: Coin
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4201124951503338
+--- !u!4 &4917874820238574
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1157083212006268}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_GameObject: {fileID: 1931732629219516}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4242655243585556}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4242655243585556
-Transform:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1770160272971530}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.05, y: 0.76, z: 0}
-  m_LocalScale: {x: 0.07, y: 0.07, z: 1}
-  m_Children:
-  - {fileID: 4201124951503338}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114200824527870816
-MonoBehaviour:
+--- !u!95 &95889836595785484
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1770160272971530}
+  m_GameObject: {fileID: 1931732629219516}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed758471eb2aa470f8d17e836777aefb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CoinCounterTarget: {fileID: 0}
-  moveSpeed: 1
-  flyEaseType: 7
-  pickup: {fileID: 8300000, guid: f571fd369d8d143ff85ba68229363559, type: 3}
-  drop: {fileID: 8300000, guid: c15222c5ca26f4aafb9292b97fe7c038, type: 3}
---- !u!212 &212200861681634678
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dab5f5db8d4a946a2a50d93ee3f05548, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!212 &212833563664705458
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1157083212006268}
+  m_GameObject: {fileID: 1931732629219516}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -121,12 +94,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8d3ea81ee98554ed2a9fc828bc053dde, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a30149157999443eb89cfaf48cc83dd3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 7.93, y: 8.2}
+  m_Size: {x: 2.9, y: 1.6}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

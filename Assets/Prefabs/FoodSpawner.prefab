@@ -93,6 +93,6 @@ MonoBehaviour:
   - {fileID: 1312878988502602, guid: b1c8abdd731624459b4cb84f90fa1335, type: 2}
   TakenFryIndexes: 
   CoinCounterTarget: {fileID: 0}
-  Coin: {fileID: 0}
+  Coin: {fileID: 1770160272971530, guid: 7232a151abc1b47bd897dc0c53bc8546, type: 2}
   coinMoveSpeed: 2
   coinFlyEaseType: 7

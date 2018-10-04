@@ -65,7 +65,8 @@ namespace TheLastFry
 
         void CheckEndGame()
         {
-            if (handGotFryCounter + handHitCounter >= itemAmount)
+        
+            if (itemAmount > 0 && handGotFryCounter + handHitCounter >= itemAmount)
             {
                 GameManager.instance.NextLevel();
             }

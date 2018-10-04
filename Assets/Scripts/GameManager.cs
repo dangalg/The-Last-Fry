@@ -2,6 +2,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace TheLastFry
 {
@@ -12,14 +13,23 @@ namespace TheLastFry
 
         public static GameManager instance = null;              //Static instance of GameManager which allows it to be accessed by any other script.
          
-        [SerializeField] TMP_Text pointsText;
+        [SerializeField] TMP_Text coinsText;
         [SerializeField] TMP_Text levelText;
         [SerializeField] TMP_Text lifeText;
+
+        [SerializeField] Button AdButton;
+        [SerializeField] Button CoinButton;
+        [SerializeField] Text AdButtonText;
+        [SerializeField] Text CoinButtonText;
+
+        [SerializeField] GameObject ContinuePanel;
+
 
         [SerializeField] float percentToPassLevel = 70f;
 
         PlayerData playerData;
 
+        public int coinsForNextLevel = 50;
 
         //Awake is always called before any Start functions
         void Awake()
@@ -53,17 +63,30 @@ namespace TheLastFry
 
             StartCoroutine(SetupGame(playerData.Level));
 
+            CoinButtonText.text = coinsForNextLevel.ToString() + " Coins";
+
         }
+
+        private void Start()
+        {
+            AdManager.instance.onSkippedAd = DecideEndorContinue;
+            AdManager.instance.onFailedAd = DecideEndorContinue;
+            AdManager.instance.onFinishedAd = ContinueAd;
+
+        }
+
+
 
         IEnumerator SetupGame(int level)
         {
+
+            yield return FoodSpawner.instance.NextLevelRoutine();
 
             levelText.enabled = true;
 
             levelText.text = level.ToString();
 
             playerData.Points = 0;
-            playerData.Life = 3;
 
             displayStats();
 
@@ -120,34 +143,55 @@ namespace TheLastFry
         public void AddPoint(int pointsToAdd)
         {
             playerData.Points += pointsToAdd;
-            displayStats();
         }
 
         public void SubtractPoints(int pointsToAdd)
         {
             playerData.Points -= pointsToAdd;
+        }
+
+        public void GainLife(int lifeToAdd)
+        {
+            playerData.Life += lifeToAdd;
+            displayStats();
+        }
+
+        public void LoseLife(int lifeToLose)
+        {
+            playerData.Life -= lifeToLose;
+
+            if (playerData.Life <= 0){
+                playerData.Life = 0;
+                DecideEndorContinue();
+            }
+
             displayStats();
         }
 
         private void displayStats()
         {
-            pointsText.text = playerData.Points.ToString();
+            coinsText.text = playerData.Coins.ToString();
             lifeText.text = playerData.Life.ToString();
+        }
+
+        public void DecideEndorContinue(){
+
+            StopGame();
+            ContinuePanel.SetActive(true);
+        }
+
+        void StopGame(){
+            FoodSpawner.instance.Reset();
+            ThiefSpawner.instance.Reset();
         }
 
         public void EndGame()
         {
-
+            StartCoroutine(EndGameRoutine());
         }
 
         IEnumerator EndGameRoutine(){
-
-            foreach (var item in FoodSpawner.instance.Items)
-            {
-
-            }
-
-
+        
             SceneManager.LoadScene("MainMenu");
 
             yield return null;
@@ -155,40 +199,46 @@ namespace TheLastFry
 
         public void NextLevel()
         {
-        
-            bool endGame = levelCalculation();
 
-            if (!endGame)
-            {
+            playerData.Level++;
+            StartLevel();
 
-                DataHandler.SavePlayerData(playerData);
-
-                StartCoroutine(SetupGame(playerData.Level));
-
-            }
         }
 
-        bool levelCalculation()
+        private void StartLevel()
         {
+            DataHandler.SavePlayerData(playerData);
 
-            bool endGame = false;
+            StartCoroutine(SetupGame(playerData.Level));
+        }
 
-            int level = playerData.Level;
+        public void AddCoin(int coins){
+            playerData.Coins += coins;
+            displayStats();
+        }
 
-            float percentOfFriesSaved = (((float)playerData.Points) / ((float)level)) * 100f;
+        public void LoseCoin(int coins)
+        {
+            playerData.Coins -= coins;
+            displayStats();
+        }
 
-            if (percentOfFriesSaved >= percentToPassLevel)
-            {
-                playerData.Level++;
-            }
-            else
-            {
-                endGame = true;
-                EndGame();
-            }
+        public void ContinueCoins(){
+            ContinuePanel.SetActive(false);
+            LoseCoin(coinsForNextLevel);
+            playerData.Life = 1;
+            StartLevel();
+        }
 
-            return endGame;
+        public void WatchAdd(){
+            AdManager.instance.ShowAd();
+        }
 
+        public void ContinueAd()
+        {
+            ContinuePanel.SetActive(false);
+            playerData.Life = 1;
+            StartLevel();
         }
 
     }
