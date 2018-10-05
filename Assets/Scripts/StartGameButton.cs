@@ -17,19 +17,20 @@ namespace TheLastFry
         private void Start()
         {
 
+            // start button
             startButton = GetComponent<Button>();
 
 
-
+            // if out of energy display replenish otherwise display start
             if (MainMenu.instance.playerData.Energy > 0)
             {
-
+                // start game
                 startButton.GetComponentInChildren<Text>().text = "Start";
 
             }
             else
             {
-
+                // display 
                 startButton.GetComponentInChildren<Text>().text = "Replenish Energy";
 
             }

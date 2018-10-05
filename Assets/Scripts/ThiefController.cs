@@ -138,7 +138,7 @@ namespace TheLastFry
                 // did I steal food?
                 if (gotFood)
                 {
-                    // lose life for player TODO should be through action
+                    // lose life for player
                     GameManager.instance.LoseLife(lifeForFoodStolen);
                     FoodSpawner.instance.DestroyFood(foodIndex);
 

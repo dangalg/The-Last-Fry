@@ -62,7 +62,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1853581265744406}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 89.87681, y: 493.28284, z: -3.115703}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4644690705919440}
@@ -87,6 +87,7 @@ MonoBehaviour:
   minTimeBetweenSpawns: 2
   maxTimeBetweenSpawns: 5
   Items: []
-  itemHolder: {fileID: 0}
-  itemTypesOdds: 
-  itemTypes: []
+  itemHolder: {fileID: 1917035420078164}
+  itemTypesOdds: 64000000
+  itemTypes:
+  - {fileID: 1931732629219516, guid: e12ec23d3d5de46af86a23ada7147da1, type: 2}

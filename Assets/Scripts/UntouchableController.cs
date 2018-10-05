@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace TheLastFry
 {
-    public class UntouchableController : Spawner
+    public class UntouchableController : MonoBehaviour
     {
 
         public float DistanceToFloat = 1.7f;
@@ -23,14 +23,5 @@ namespace TheLastFry
 
         }
 
-        public override void Reset()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        protected override IEnumerator SpawnItems()
-        {
-            throw new System.NotImplementedException();
-        }
     }
 }

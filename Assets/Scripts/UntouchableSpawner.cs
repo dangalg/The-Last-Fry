@@ -35,31 +35,60 @@ namespace TheLastFry
         {
         }
 
+        /// <summary>
+        /// Spawns the items.
+        /// </summary>
+        /// <returns>The items.</returns>
         protected override IEnumerator SpawnItems()
         {
-
+            // spawn all untouchables one by one at spawn time
             for (int i = 0; i < itemAmount; i++)
             {
+                // spawn untouchable
                 SpwanUntouchable();
 
+                // get random spawn time
                 float randomSpawnTime = Random.Range(minTimeBetweenSpawns, maxTimeBetweenSpawns);
 
                 yield return new WaitForSeconds(randomSpawnTime);
             }
         }
 
+        /// <summary>
+        /// Create one thief and sets it's target food
+        /// </summary>
         private void SpwanUntouchable()
         {
-            int randomFreeFryIndex = FoodSpawner.instance.GetRandomFreeFoodIndex();
+            // get a random free food as the target for theft
+            int randomFreeFoodIndex = FoodSpawner.instance.GetRandomFreeFoodIndex();
 
-            if (randomFreeFryIndex != -1)
+            // if a random food has been returned
+            if (randomFreeFoodIndex != -1)
             {
+                // set a random spawn point
                 Vector3 spawnPoint = SetupSpawnPoint(true);
 
-                GameObject itemObject = Instantiate(GetRandomItemTypeIndex(), itemHolder.transform);
-                itemObject.transform.position = spawnPoint;
+                // Create thief
+                GameObject untouchableObject = Instantiate(GetRandomItemTypeIndex(), itemHolder.transform);
 
-                Items.Add(itemObject);
+                // set his spawn point
+                untouchableObject.transform.position = spawnPoint;
+
+                // set thief properties
+                UntouchableController untouchableontroller = untouchableObject.GetComponent<UntouchableController>();
+
+                // set random speed
+                float randomHandSpeed = Random.Range(minSpeed, maxSpeed);
+                //untouchableontroller.moveSpeed = randomHandSpeed;
+
+                // set target food to steal
+                //untouchableontroller.targetFood = FoodSpawner.instance.Items[randomFreeFoodIndex];
+
+                // set food index to steal
+                //untouchableontroller.foodIndex = randomFreeFoodIndex;
+
+                // add thief to thieves list
+                Items.Add(untouchableObject);
             }
 
         }

@@ -142,23 +142,23 @@ namespace TheLastFry
                 thiefObject.transform.position = spawnPoint;
 
                 // set thief properties
-                ThiefController handController = thiefObject.GetComponent<ThiefController>();
+                ThiefController thiefController = thiefObject.GetComponent<ThiefController>();
 
                 // set random speed
                 float randomHandSpeed = Random.Range(minSpeed, maxSpeed);
-                handController.moveSpeed = randomHandSpeed;
+                thiefController.moveSpeed = randomHandSpeed;
 
                 // set target food to steal
-                handController.targetFood = FoodSpawner.instance.Items[randomFreeFoodIndex];
+                thiefController.targetFood = FoodSpawner.instance.Items[randomFreeFoodIndex];
 
                 // set food index to steal
-                handController.foodIndex = randomFreeFoodIndex;
+                thiefController.foodIndex = randomFreeFoodIndex;
 
                 // set the function to call on thief stole food successfully
-                handController.thiefGotFood += onThiefStoleFood;
+                thiefController.thiefGotFood += onThiefStoleFood;
 
                 // set the function to call on thief got hit
-                handController.thiefGotHit += onThiefHit;
+                thiefController.thiefGotHit += onThiefHit;
 
                 // add thief to thieves list
                 Items.Add(thiefObject);
