@@ -88,6 +88,7 @@ MonoBehaviour:
   maxTimeBetweenSpawns: 5
   Items: []
   itemHolder: {fileID: 1917035420078164}
-  itemTypesOdds: 64000000
+  itemTypesOdds: 3200000032000000
   itemTypes:
-  - {fileID: 1931732629219516, guid: e12ec23d3d5de46af86a23ada7147da1, type: 2}
+  - {fileID: 1608280787296894, guid: e12ec23d3d5de46af86a23ada7147da1, type: 2}
+  - {fileID: 1811291037770262, guid: 8a147e0c27e1f44e4b6a5f5f30ebc037, type: 2}

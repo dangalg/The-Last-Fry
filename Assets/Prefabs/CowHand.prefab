@@ -124,19 +124,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 1998713837153636}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4415cd4ba314b48c39956211cc8e4a77, type: 3}
+  m_Script: {fileID: 11500000, guid: 48f8b7e3ad22c4077898f6ddf3285ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetFry: {fileID: 0}
-  moveSpeed: 3.5047174
+  targetFood: {fileID: 0}
+  foodIndex: 0
+  moveSpeed: 3
   pointsForHit: 1
+  lifeForFoodStolen: 1
+  hitToDropFoodOn: 1
   openHand: {fileID: 21300000, guid: fb6b640ea3e934b3a8d018127ee393f8, type: 3}
   closedHand: {fileID: 21300000, guid: 2414389c800764713a19c84c35364e10, type: 3}
+  handMovementType: 0
   hurtHands:
   - {fileID: 21300000, guid: e6c4c545cb87241508edcfebfcebcd56, type: 3}
-  - {fileID: 21300000, guid: e6c4c545cb87241508edcfebfcebcd56, type: 3}
-  - {fileID: 21300000, guid: e6c4c545cb87241508edcfebfcebcd56, type: 3}
-  fryIndex: 0
+  - {fileID: 21300000, guid: 929cd912a9d674bdfbce2687af2b04a7, type: 3}
 --- !u!212 &212543743254219348
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -138,13 +138,13 @@ namespace TheLastFry
 #if UNITY_EDITOR
             if (Input.GetMouseButtonDown(0))
             {
-                HitHand(Input.mousePosition);
+                TryToHit(Input.mousePosition);
             }
 #else
         if (Input.touchCount > 0)
         {
             if(Input.GetTouch(0).phase != TouchPhase.Ended){
-                HitHand(Input.GetTouch(0).position);
+                TryToHit(Input.GetTouch(0).position);
             } 
         }
 #endif
@@ -154,7 +154,7 @@ namespace TheLastFry
         /// Hits the hand.
         /// </summary>
         /// <param name="hitPosition">Hit position.</param>
-        private void HitHand(Vector3 hitPosition)
+        private void TryToHit(Vector3 hitPosition)
         {
             // get the hit hand position on screen
             RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(hitPosition), Vector2.zero);
@@ -168,6 +168,17 @@ namespace TheLastFry
                 {
                     // call hit hand function
                     hit.collider.gameObject.GetComponent<ThiefController>().HitHand();
+
+                }
+
+                // Am I hitting an Untouchable?
+                if (hit.collider.CompareTag("Untouchable"))
+                {
+                    // call hit hand function
+                    UntouchableController controller = hit.collider.gameObject.GetComponent<UntouchableController>();
+
+                    // lose life
+                    controller.onHitUntouchable(controller.lifeToLose);
 
                 }
             }

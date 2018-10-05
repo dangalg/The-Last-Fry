@@ -51,7 +51,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1208100421849838}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.8902488, y: 5, z: 0}
+  m_LocalPosition: {x: -1.8902488, y: 6.24, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children:
   - {fileID: 4828882821603210}
@@ -122,20 +122,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 1208100421849838}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4415cd4ba314b48c39956211cc8e4a77, type: 3}
+  m_Script: {fileID: 11500000, guid: 48f8b7e3ad22c4077898f6ddf3285ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetFry: {fileID: 0}
-  moveSpeed: 3.5047174
+  targetFood: {fileID: 0}
+  foodIndex: 0
+  moveSpeed: 3
   pointsForHit: 1
+  lifeForFoodStolen: 1
+  hitToDropFoodOn: 1
   openHand: {fileID: 21300000, guid: 5b68afd14b73947819b663cd82842c1a, type: 3}
   closedHand: {fileID: 21300000, guid: 9cfc2d638d2e744a0ae7023b4dcd90ca, type: 3}
-  handMovementType: 7
+  handMovementType: 0
   hurtHands:
   - {fileID: 21300000, guid: 89695ccad00af47a392f170038b4d3f9, type: 3}
   - {fileID: 21300000, guid: c3beed4e30d2b4a4ab51a6d1b906c5c4, type: 3}
-  - {fileID: 21300000, guid: b144c23a461744941a4624fda757c0d1, type: 3}
-  fryIndex: 0
 --- !u!212 &212439641225573988
 SpriteRenderer:
   m_ObjectHideFlags: 1

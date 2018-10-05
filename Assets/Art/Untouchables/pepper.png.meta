@@ -1,13 +1,14 @@
 fileFormatVersion: 2
-guid: 336f50c7ff6ea40f592621820924759b
+guid: be7dcbeb5bad5498e84f4003b9e6ce98
 TextureImporter:
   fileIDToRecycleName:
-    21300000: salt_0
-    21300002: salt_1
-    21300004: salt_2
-    21300006: salt_3
-    21300008: salt_4
-    21300010: salt_5
+    21300000: pepper_0
+    21300002: pepper_1
+    21300004: pepper_2
+    21300006: pepper_3
+    21300008: pepper_4
+    21300010: pepper_5
+    21300012: pepper_6
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -134,7 +135,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: salt_0
+      name: pepper_0
       rect:
         serializedVersion: 2
         x: 0
@@ -148,13 +149,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 36fa8d65044ab4dd4927e04f1858febc
+      spriteID: 83476093b963f436191e29894d3eec9f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: salt_1
+      name: pepper_1
       rect:
         serializedVersion: 2
         x: 240
@@ -168,13 +169,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c41d639057d1244bd9227f708b8e5415
+      spriteID: 94abfbded97cc45c4927356664b2d970
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: salt_2
+      name: pepper_2
       rect:
         serializedVersion: 2
         x: 480
@@ -188,13 +189,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37d20369701584e8ba3d1c9af6e2612e
+      spriteID: 5212a3a926cdd4e89a25424f3c55c38e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: salt_3
+      name: pepper_3
       rect:
         serializedVersion: 2
         x: 720
@@ -208,13 +209,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe28160253c0a4e57bbbdad37b2d2eb6
+      spriteID: 21bdb43e6f5f14e739a15cbbeab1dac0
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: salt_4
+      name: pepper_4
       rect:
         serializedVersion: 2
         x: 960
@@ -228,13 +229,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8552cce0e8de2481e8de36640cd96ecd
+      spriteID: b58eb29df348749f2a32cdc2246aaae0
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: salt_5
+      name: pepper_5
       rect:
         serializedVersion: 2
         x: 1200
@@ -248,7 +249,27 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb4d1399dfb7e4495a789b8d266a6024
+      spriteID: 3ee3e0b188c994fbc8ffc7877c12552f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pepper_6
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 0
+        width: 240
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42b37c07d19a343cbb934cf8b5cc9de2
       vertices: []
       indices: 
       edges: []
@@ -256,7 +277,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 4fe3953dc3c564e0695ce6976da96a82
+    spriteID: fcfee008891914157acd42497ed0395d
     vertices: []
     indices: 
     edges: []

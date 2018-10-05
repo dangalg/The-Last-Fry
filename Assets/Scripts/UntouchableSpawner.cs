@@ -9,7 +9,8 @@ namespace TheLastFry
 
         public static UntouchableSpawner instance = null;
 
-
+        // The index to know what untouchable has already been spawned
+        int untouchableSpawnedIndex = 0;
 
         //Awake is always called before any Start functions
         void Awake()
@@ -33,6 +34,18 @@ namespace TheLastFry
 
         public override void Reset()
         {
+            // clear items
+            itemAmount = 0;
+            Items.Clear();
+
+            // clear counters
+            untouchableSpawnedIndex = 0;
+
+            // destroy Items
+            foreach (Transform child in itemHolder.transform)
+            {
+                Destroy(child.gameObject);
+            }
         }
 
         /// <summary>
@@ -42,7 +55,9 @@ namespace TheLastFry
         protected override IEnumerator SpawnItems()
         {
             // spawn all untouchables one by one at spawn time
-            for (int i = 0; i < itemAmount; i++)
+            // in untouchables We spawn items by the item amount specified 
+            // if they are destroyed we spawn the next item amount
+            for (int i = 0; i < itemTypes.Count; i++)
             {
                 // spawn untouchable
                 SpwanUntouchable();
@@ -59,37 +74,65 @@ namespace TheLastFry
         /// </summary>
         private void SpwanUntouchable()
         {
-            // get a random free food as the target for theft
-            int randomFreeFoodIndex = FoodSpawner.instance.GetRandomFreeFoodIndex();
 
-            // if a random food has been returned
-            if (randomFreeFoodIndex != -1)
-            {
-                // set a random spawn point
-                Vector3 spawnPoint = SetupSpawnPoint(true);
+            // set a random spawn point
+            Vector3 spawnPoint = SetupSpawnPoint(true);
 
-                // Create thief
-                GameObject untouchableObject = Instantiate(GetRandomItemTypeIndex(), itemHolder.transform);
+            // Create thief
+            GameObject untouchableObject = Instantiate(itemTypes[untouchableSpawnedIndex], itemHolder.transform);
 
-                // set his spawn point
-                untouchableObject.transform.position = spawnPoint;
+            // up the index to get the next untouchable next spawn time
+            untouchableSpawnedIndex++;
 
-                // set thief properties
-                UntouchableController untouchableontroller = untouchableObject.GetComponent<UntouchableController>();
+            // set his spawn point
+            untouchableObject.transform.position = spawnPoint;
 
-                // set random speed
-                float randomHandSpeed = Random.Range(minSpeed, maxSpeed);
-                //untouchableontroller.moveSpeed = randomHandSpeed;
+            // set Item properties
+            UntouchableController untouchableontroller = untouchableObject.GetComponent<UntouchableController>();
 
-                // set target food to steal
-                //untouchableontroller.targetFood = FoodSpawner.instance.Items[randomFreeFoodIndex];
+            // set random speed
+            float randomHandSpeed = Random.Range(minSpeed, maxSpeed);
+            untouchableontroller.moveSpeed = randomHandSpeed;
 
-                // set food index to steal
-                //untouchableontroller.foodIndex = randomFreeFoodIndex;
+            // set callback for item
+            untouchableontroller.onCompleteFloat = onUntouchableCompleteFlight;
 
-                // add thief to thieves list
-                Items.Add(untouchableObject);
-            }
+            // set callback for item hit
+            untouchableontroller.onHitUntouchable = onHitUntouchable;
+
+            // start floating untouchable
+            untouchableontroller.floatToTraget(SetupSpawnPoint(true));
+
+            // add thief to thieves list
+            Items.Add(untouchableObject);
+
+            // store index for future reference
+            untouchableontroller.indexOfUntouchableInList = Items.Count - 1;
+
+        }
+
+        /// <summary>
+        /// untouchable complete flight.
+        /// </summary>
+        /// <param name="indexOfUntouchableInList">Index of untouchable in list.</param>
+        void onUntouchableCompleteFlight(int indexOfUntouchableInList){
+
+            // get contoroller of item
+            UntouchableController untouchableontroller = Items[indexOfUntouchableInList].GetComponent<UntouchableController>();
+
+            // float to target
+            untouchableontroller.floatToTraget(SetupSpawnPoint(false));
+
+        }
+
+        /// <summary>
+        /// hit untouchable.
+        /// </summary>
+        /// <param name="amountOfLifeToLose">Amount of life to lose.</param>
+        void onHitUntouchable(int amountOfLifeToLose){
+
+            // lose life when hitting untouchable
+            GameManager.instance.LoseLife(amountOfLifeToLose);
 
         }
 
