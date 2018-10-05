@@ -83,7 +83,7 @@ namespace TheLastFry
                 {
                     // lose life
                     GameManager.instance.LoseLife(lifeForFoodStolen);
-                    FoodSpawner.instance.DestroyFry(fryIndex);
+                    FoodSpawner.instance.DestroyFood(fryIndex);
 
                     if (handGotFry != null)
                     {
@@ -128,7 +128,7 @@ namespace TheLastFry
                 {
                     gotFry = false;
                     targetFry.GetComponent<SpriteRenderer>().enabled = true;
-                    FoodSpawner.instance.TakenFryIndexes.Remove(fryIndex);
+                    FoodSpawner.instance.TakenFoodIndexes.Remove(fryIndex);
                 }
             }
         }

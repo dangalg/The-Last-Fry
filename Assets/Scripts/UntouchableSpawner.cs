@@ -50,7 +50,7 @@ namespace TheLastFry
 
         private void SpwanUntouchable()
         {
-            int randomFreeFryIndex = FoodSpawner.instance.GetRandomFreeFryIndex();
+            int randomFreeFryIndex = FoodSpawner.instance.GetRandomFreeFoodIndex();
 
             if (randomFreeFryIndex != -1)
             {

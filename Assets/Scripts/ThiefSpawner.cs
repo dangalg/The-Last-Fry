@@ -36,14 +36,18 @@ namespace TheLastFry
 
         }
 
+        // Reset Spawner to beginning
         public override void Reset()
         {
+            // clear items
             itemAmount = 0;
             Items.Clear();
 
+            // clear counters
             handGotFryCounter = 0;
             handHitCounter = 0;
 
+            // destroy Items
             foreach (Transform child in itemHolder.transform)
             {
                 Destroy(child.gameObject);
@@ -87,7 +91,7 @@ namespace TheLastFry
 
         private void SpwanHand()
         {
-            int randomFreeFryIndex = FoodSpawner.instance.GetRandomFreeFryIndex();
+            int randomFreeFryIndex = FoodSpawner.instance.GetRandomFreeFoodIndex();
 
             if (randomFreeFryIndex != -1)
             {
