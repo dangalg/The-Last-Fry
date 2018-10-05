@@ -10,10 +10,11 @@ namespace TheLastFry
 
         public static ThiefSpawner instance = null;
 
-        public int handHitCounter = 0;
-        public int handGotFryCounter = 0;
+        // counter for thieves hit
+        public int thiefHitCounter = 0;
 
-        [SerializeField] LeanTweenType handMovementType;
+        // counter for food stolen
+        public int thiefGotFoodCounter = 0;
 
         //Awake is always called before any Start functions
         void Awake()
@@ -36,7 +37,9 @@ namespace TheLastFry
 
         }
 
-        // Reset Spawner to beginning
+        /// <summary>
+        /// Reset Spawner to beginning
+        /// </summary>
         public override void Reset()
         {
             // clear items
@@ -44,8 +47,8 @@ namespace TheLastFry
             Items.Clear();
 
             // clear counters
-            handGotFryCounter = 0;
-            handHitCounter = 0;
+            thiefGotFoodCounter = 0;
+            thiefHitCounter = 0;
 
             // destroy Items
             foreach (Transform child in itemHolder.transform)
@@ -54,63 +57,111 @@ namespace TheLastFry
             }
         }
 
-        void onHandGotFry()
+        /// <summary>
+        /// Called when a thief steals food
+        /// </summary>
+        void onThiefStoleFood()
         {
-            handGotFryCounter++;
+            // increment thief got food counter
+            thiefGotFoodCounter++;
+
+            // check to see if level has ended
             CheckEndGame();
         }
 
-
-        void onHandHit()
+        /// <summary>
+        /// Called when a thief gets hit
+        /// </summary>
+        void onThiefHit()
         {
-            handHitCounter++;
+
+            // increment thief got hit counter
+            thiefHitCounter++;
+
+            // check to see if level has ended
             CheckEndGame();
         }
 
+        /// <summary>
+        /// Check to see if game has ended
+        /// </summary>
         void CheckEndGame()
         {
-        
-            if (itemAmount > 0 && handGotFryCounter + handHitCounter >= itemAmount)
+
+            // all thieves for level have either stolen successfully or have been hit
+            bool noMoreThieves = thiefGotFoodCounter + thiefHitCounter >= itemAmount;
+
+            // level has been reset if there are no items in the list
+            bool levelHasNotBeenReset = itemAmount > 0;
+
+            // if the level has not been reset and there are no more thieves 
+            if (levelHasNotBeenReset && noMoreThieves)
             {
+                // move to next level
                 GameManager.instance.NextLevel();
             }
         }
 
+        /// <summary>
+        /// Create many thieves
+        /// </summary>
+        /// <returns>The items.</returns>
         protected override IEnumerator SpawnItems()
         {
 
             for (int i = 0; i < itemAmount; i++)
             {
-                SpwanHand();
+                // create one thief
+                SpwanThief();
 
+                // set a random spawn time until next thief
                 float randomSpawnTime = Random.Range(minTimeBetweenSpawns, maxTimeBetweenSpawns);
 
                 yield return new WaitForSeconds(randomSpawnTime);
             }
         }
 
-        private void SpwanHand()
+        /// <summary>
+        /// Create one thief and sets it's target food
+        /// </summary>
+        private void SpwanThief()
         {
-            int randomFreeFryIndex = FoodSpawner.instance.GetRandomFreeFoodIndex();
+            // get a random free food as the target for theft
+            int randomFreeFoodIndex = FoodSpawner.instance.GetRandomFreeFoodIndex();
 
-            if (randomFreeFryIndex != -1)
+            // if a random food has been returned
+            if (randomFreeFoodIndex != -1)
             {
+                // set a random spawn point
                 Vector3 spawnPoint = SetupSpawnPoint(true);
 
-                GameObject handObject = Instantiate(GetRandomItemTypeIndex(), itemHolder.transform);
-                handObject.transform.position = spawnPoint;
+                // Create thief
+                GameObject thiefObject = Instantiate(GetRandomItemTypeIndex(), itemHolder.transform);
 
-                HandController handController = handObject.GetComponent<HandController>();
+                // set his spawn point
+                thiefObject.transform.position = spawnPoint;
+
+                // set thief properties
+                ThiefController handController = thiefObject.GetComponent<ThiefController>();
+
+                // set random speed
                 float randomHandSpeed = Random.Range(minSpeed, maxSpeed);
                 handController.moveSpeed = randomHandSpeed;
-                handController.handMovementType = handMovementType;
 
-                handController.targetFry = FoodSpawner.instance.Items[randomFreeFryIndex];
-                handController.fryIndex = randomFreeFryIndex;
-                handController.handGotFry += onHandGotFry;
-                handController.handGotHit += onHandHit;
+                // set target food to steal
+                handController.targetFood = FoodSpawner.instance.Items[randomFreeFoodIndex];
 
-                Items.Add(handObject);
+                // set food index to steal
+                handController.foodIndex = randomFreeFoodIndex;
+
+                // set the function to call on thief stole food successfully
+                handController.thiefGotFood += onThiefStoleFood;
+
+                // set the function to call on thief got hit
+                handController.thiefGotHit += onThiefHit;
+
+                // add thief to thieves list
+                Items.Add(thiefObject);
             }
 
         }

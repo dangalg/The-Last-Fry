@@ -10,16 +10,25 @@ namespace TheLastFry
     public static class DataHandler
     {
 
-
+        /// <summary>
+        /// Saves the player data.
+        /// </summary>
+        /// <param name="playerData">Player data.</param>
         public static void SavePlayerData(PlayerData playerData)
         {
 
             try
             {
+                // create the formatter
                 BinaryFormatter bf = new BinaryFormatter();
+
+                // open or create the file
                 FileStream file = File.Open(Application.persistentDataPath + "/playerInfo.dat", FileMode.OpenOrCreate);
 
+                // save the player data to the file
                 bf.Serialize(file, playerData);
+
+                // close the file
                 file.Close();
             }
             catch (System.Exception ex)
@@ -30,18 +39,31 @@ namespace TheLastFry
 
         }
 
+        /// <summary>
+        /// Loads the player data.
+        /// </summary>
+        /// <returns>The player data.</returns>
         public static PlayerData LoadPlayerData()
         {
 
             try
             {
+                // open the file if it exists
                 if (File.Exists(Application.persistentDataPath + "/playerInfo.dat"))
                 {
+                    // create the formatter
                     BinaryFormatter bf = new BinaryFormatter();
+
+                    // open the file
                     FileStream file = File.Open(Application.persistentDataPath + "/playerInfo.dat", FileMode.Open);
+
+                    // get player data from file
                     PlayerData playerData = (PlayerData)bf.Deserialize(file);
+
+                    // close the file
                     file.Close();
 
+                    // return player data
                     return playerData;
 
                 }
@@ -55,6 +77,7 @@ namespace TheLastFry
             return new PlayerData();
         }
 
+        #region playerprefs
         public static void SaveStringToDB(string name, string data)
         {
             PlayerPrefs.SetString(name, data);
@@ -87,6 +110,8 @@ namespace TheLastFry
         {
             return PlayerPrefs.GetFloat(name);
         }
+
+        #endregion playerprefs
 
 
     }

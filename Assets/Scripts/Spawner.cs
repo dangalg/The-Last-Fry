@@ -7,15 +7,22 @@ namespace TheLastFry
     public abstract class Spawner : MonoBehaviour
     {
 
+        // distance to set spawn point at
         public float distanceX = 5f;
         public float distanceY = 7f;
 
+        // speed to move
         public float minSpeed = 3f;
         public float maxSpeed = 7f;
+
+        // time between spawns
         public float minTimeBetweenSpawns = 2;
         public float maxTimeBetweenSpawns = 5;
+
+        // amount to create
         protected int itemAmount = 0;
 
+        // 
         public List<GameObject> Items;
         [SerializeField] protected GameObject itemHolder;
         public List<int> itemTypesOdds;

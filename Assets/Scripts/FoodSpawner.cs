@@ -9,11 +9,19 @@ namespace TheLastFry
 
         public static FoodSpawner instance = null;
 
+        // list of already chosen food items
         public List<int> TakenFoodIndexes = new List<int>();
 
+        // a target for the coins to go to
         [SerializeField] GameObject CoinCounterTarget;
+
+        // a coin prefab for creating new coins
         [SerializeField] GameObject Coin;
+
+        // the coin move speed
         [SerializeField] float coinMoveSpeed = 2f;
+
+        // the ease fly type for the coins
         [SerializeField] LeanTweenType coinFlyEaseType = LeanTweenType.easeInOutCubic;
 
         //Awake is always called before any Start functions
@@ -36,7 +44,10 @@ namespace TheLastFry
 
         }
 
-        // Generate Food
+        /// <summary>
+        /// Generate Food
+        /// </summary>
+        /// <returns>The items.</returns>
         protected override IEnumerator SpawnItems()
         {
 
@@ -49,7 +60,9 @@ namespace TheLastFry
             }
         }
 
-        // Reset Spawner to beginning
+        /// <summary>
+        /// Reset Spawner to beginning
+        /// </summary>
         public override void Reset()
         {
             // clear items
@@ -63,7 +76,9 @@ namespace TheLastFry
             }
         }
 
-        // Spawn one Item
+        /// <summary>
+        /// Spwans the item.
+        /// </summary>
         private void SpwanItem()
         {
             // get random rotation
@@ -90,7 +105,10 @@ namespace TheLastFry
             Items.Add(fryObject);
         }
 
-        // Go to next level
+        /// <summary>
+        /// Go to next level
+        /// </summary>
+        /// <returns>The level routine.</returns>
         public IEnumerator NextLevelRoutine(){
 
             // for every food item
@@ -110,7 +128,10 @@ namespace TheLastFry
             }
         }
 
-        // Create a coin
+        /// <summary>
+        /// Creates the coin.
+        /// </summary>
+        /// <param name="item">Item.</param>
         private void createCoin(GameObject item)
         {
             // create the object
@@ -136,12 +157,18 @@ namespace TheLastFry
 
         }
 
-        // Add coin to player
+        /// <summary>
+        /// Add coin to player
+        /// </summary>
+        /// <param name="coins">Coins.</param>
         void consumeCoin(int coins){
             GameManager.instance.AddCoin(coins);
         }
 
-        // Destroy a food that has been stolen
+        /// <summary>
+        /// Destroys the food that has been stolen.
+        /// </summary>
+        /// <param name="index">Index.</param>
         public void DestroyFood(int index)
         {
             // does the food still exist?
@@ -154,7 +181,10 @@ namespace TheLastFry
             }
         }
 
-        // Get a random food from the list
+        /// <summary>
+        /// Gets the random index of a free food.
+        /// </summary>
+        /// <returns>The random free food index.</returns>
         public int GetRandomFreeFoodIndex()
         {
             // make a list for foods that havn't already been selected

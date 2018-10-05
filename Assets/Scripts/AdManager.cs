@@ -14,6 +14,7 @@ namespace TheLastFry
 
         [SerializeField] string gameID = "2822484";
 
+        // Callbacks
         public UnityAction onFinishedAd;
         public UnityAction onSkippedAd;
         public UnityAction onFailedAd;
@@ -40,7 +41,10 @@ namespace TheLastFry
         }
 
 
-
+        /// <summary>
+        /// Shows the ad.
+        /// </summary>
+        /// <param name="zone">The type of ad</param>
         public void ShowAd(string zone = "rewardedVideo")
         {
 #if UNITY_EDITOR
@@ -53,10 +57,15 @@ namespace TheLastFry
             ShowOptions options = new ShowOptions();
             options.resultCallback = AdCallbackhandler;
 
+            // start the advertisement
             if (Advertisement.IsReady(zone))
                 Advertisement.Show(zone, options);
         }
 
+        /// <summary>
+        /// callbackhandler for the ad
+        /// </summary>
+        /// <param name="result">Result.</param>
         void AdCallbackhandler(ShowResult result)
         {
             switch (result)
@@ -76,6 +85,10 @@ namespace TheLastFry
             }
         }
 
+        /// <summary>
+        /// Waits for ad in the unity editor
+        /// </summary>
+        /// <returns>The for ad.</returns>
         IEnumerator WaitForAd()
         {
             float currentTimeScale = Time.timeScale;

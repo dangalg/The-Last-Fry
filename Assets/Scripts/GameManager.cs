@@ -134,7 +134,7 @@ namespace TheLastFry
 
                 if (hit.collider.CompareTag("ThiefHand"))
                 {
-                    hit.collider.gameObject.GetComponent<HandController>().HitHand();
+                    hit.collider.gameObject.GetComponent<ThiefController>().HitHand();
 
                 }
             }
