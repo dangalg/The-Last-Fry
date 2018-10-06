@@ -49,13 +49,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1312878988502602}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d4eb084af01749ed83dc656a349d1be, type: 3}
+  m_Script: {fileID: 11500000, guid: e78c1729d92f54a0bba433e10c10d937, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CoinCounterTarget: {fileID: 0}
-  Coin: {fileID: 0}
-  moveSpeed: 2
-  fryFlyEaseType: 7
 --- !u!212 &212042997049339006
 SpriteRenderer:
   m_ObjectHideFlags: 1
