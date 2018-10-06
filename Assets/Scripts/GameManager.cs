@@ -95,10 +95,8 @@ namespace TheLastFry
 
         IEnumerator SetupGame(int level)
         {
-
-            // setup food next level
-            yield return FoodSpawner.instance.NextLevelRoutine();
-
+            Debug.Log("lastfry : Setup Game");
+            
             //enabled level text
             levelText.enabled = true;
 
@@ -116,21 +114,31 @@ namespace TheLastFry
             // disable level text
             levelText.enabled = false;
 
+            Debug.Log("lastfry : Reseting spawners");
+
             // reset the spawners
             FoodSpawner.instance.Reset();
             ThiefSpawner.instance.Reset();
             UntouchableSpawner.instance.Reset();
 
+            Debug.Log("lastfry : Reset spawners");
+
             // setup food spawner
             FoodSpawner.instance.Setup(playerData.Level);
+
+            Debug.Log("lastfry : setup food spawner");
 
             yield return new WaitForSeconds(1f);
 
             // set up thief spawner
             ThiefSpawner.instance.Setup(playerData.Level);
 
+            Debug.Log("lastfry : setup thief spawner");
+
             // set up thief spawner
             UntouchableSpawner.instance.Setup(playerData.Level);
+
+            Debug.Log("lastfry : setup untouchable spawner");
         }
 
         private void Update()
@@ -294,8 +302,15 @@ namespace TheLastFry
         /// <summary>
         /// Go to Next level.
         /// </summary>
-        public void NextLevel()
+        public IEnumerator NextLevel()
         {
+            // stop the game but do not reset food spawner because the fries are needed
+            ThiefSpawner.instance.Reset();
+            UntouchableSpawner.instance.Reset();
+
+            // give the coins
+            yield return StartCoroutine(FoodSpawner.instance.NextLevelRoutine());
+
             // up the level for player
             playerData.Level++;
 

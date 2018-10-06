@@ -98,7 +98,7 @@ namespace TheLastFry
             if (levelHasNotBeenReset && noMoreThieves)
             {
                 // move to next level
-                GameManager.instance.NextLevel();
+                StartCoroutine(GameManager.instance.NextLevel());
             }
         }
 

@@ -9,6 +9,9 @@ namespace TheLastFry
 
         public static UntouchableSpawner instance = null;
 
+        // reset check
+        bool reset = false;
+
         // The index to know what untouchable has already been spawned
         int untouchableSpawnedIndex = 0;
 
@@ -34,6 +37,8 @@ namespace TheLastFry
 
         public override void Reset()
         {
+            reset = true;
+
             // clear items
             itemAmount = 0;
             Items.Clear();
@@ -54,18 +59,22 @@ namespace TheLastFry
         /// <returns>The items.</returns>
         protected override IEnumerator SpawnItems()
         {
+            reset = false;
             // spawn all untouchables one by one at spawn time
             // in untouchables We spawn items by the item amount specified 
             // if they are destroyed we spawn the next item amount
             for (int i = 0; i < itemTypes.Count; i++)
             {
-                // spawn untouchable
-                SpwanUntouchable();
+                if (!reset)
+                {
+                    // spawn untouchable
+                    SpwanUntouchable();
 
-                // get random spawn time
-                float randomSpawnTime = Random.Range(minTimeBetweenSpawns, maxTimeBetweenSpawns);
+                    // get random spawn time
+                    float randomSpawnTime = Random.Range(minTimeBetweenSpawns, maxTimeBetweenSpawns);
 
-                yield return new WaitForSeconds(randomSpawnTime);
+                    yield return new WaitForSeconds(randomSpawnTime);
+                }
             }
         }
 
