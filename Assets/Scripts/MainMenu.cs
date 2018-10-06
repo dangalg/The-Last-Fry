@@ -20,6 +20,9 @@ namespace TheLastFry
         [SerializeField] TMP_Text Level;
         [SerializeField] TMP_Text Energy;
 
+        // buttons on screen
+        [SerializeField] Button startButton;
+
         //Awake is always called before any Start functions
         void Awake()
         {
@@ -60,6 +63,26 @@ namespace TheLastFry
 
             // sign in for callback from ad manager
             AdManager.instance.onFinishedAd = onFinishedAd;
+
+            SetupStartButton();
+        }
+
+        void SetupStartButton()
+        {
+
+            // if out of energy display replenish otherwise display start
+            if (MainMenu.instance.playerData.Energy > 0)
+            {
+                // start game
+                startButton.GetComponentInChildren<Text>().text = "Start";
+
+            }
+            else
+            {
+                // display 
+                startButton.GetComponentInChildren<Text>().text = "Replenish Energy";
+
+            }
         }
 
         /// <summary>

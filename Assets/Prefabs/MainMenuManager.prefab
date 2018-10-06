@@ -432,6 +432,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Level: {fileID: 114328970102913004}
   Energy: {fileID: 114965336894988820}
+  startButton: {fileID: 114065251884192758}
 --- !u!114 &114273776684935034
 MonoBehaviour:
   m_ObjectHideFlags: 1
