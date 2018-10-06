@@ -34,14 +34,18 @@ namespace TheLastFry
         // the prefabs for item types to instantiate objects from
         public List<GameObject> itemTypes;
 
+        // the level the game is on
+        protected int level = 1;
+
         /// <summary>
         /// Setup the specified level.
         /// </summary>
         /// <param name="level">Level.</param>
-        public void Setup(int level)
+        public void Setup(int gameLevel)
         {
             // the amount of hands is based on the level TODO think how to change this it is stupid
-            itemAmount = level;
+            itemAmount = gameLevel;
+            level = gameLevel;
 
             // start game
             StartCoroutine(SpawnItems());
@@ -81,7 +85,8 @@ namespace TheLastFry
         /// </summary>
         /// <returns>The spawn point.</returns>
         /// <param name="onlyOnEdges">If set to <c>true</c> only on edges.</param>
-        protected Vector3 SetupSpawnPoint(bool onlyOnEdges)
+        /// <param name="overrideYMinusOrPlus">If this is true y will always be positive, if false y will be negative.</param>
+        protected Vector3 SetupSpawnPoint(bool onlyOnEdges, bool? overrideYMinusOrPlus = null)
         {
             // get random distance
             float randomXDistance = Random.Range(0, distanceX);
@@ -110,6 +115,21 @@ namespace TheLastFry
             // convert ints to bool for no apparent reason can be in one line.. 
             bool minusDistanceX = randomDistanceXMinus == 1;
             bool minusDistanceY = randomDistanceYMinus == 1;
+
+            // override xOrY by user
+            if (overrideYMinusOrPlus != null)
+            {
+                if((bool)overrideYMinusOrPlus)
+                {
+                    minusDistanceY = false;
+                    minusY = false;
+                }
+                else
+                {
+                    minusDistanceY = true;
+                    minusY = true;
+                }
+            }
 
             // the random position to return
             Vector3 returnPosition;

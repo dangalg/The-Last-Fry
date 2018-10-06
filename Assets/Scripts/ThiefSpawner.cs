@@ -16,6 +16,9 @@ namespace TheLastFry
         // counter for food stolen
         public int thiefGotFoodCounter = 0;
 
+        // the multiplier that makes level and spawn time faster for every level
+        float levelMultiplier = 1f;
+
         //Awake is always called before any Start functions
         void Awake()
         {
@@ -109,13 +112,16 @@ namespace TheLastFry
         protected override IEnumerator SpawnItems()
         {
 
+            // set a level multiplier to make hands faster for each level
+            levelMultiplier = 1.0f - (((float)level) * 0.001f);
+
             for (int i = 0; i < itemAmount; i++)
             {
                 // create one thief
                 SpwanThief();
 
                 // set a random spawn time until next thief
-                float randomSpawnTime = Random.Range(minTimeBetweenSpawns, maxTimeBetweenSpawns);
+                float randomSpawnTime = Random.Range(minTimeBetweenSpawns * levelMultiplier, maxTimeBetweenSpawns * levelMultiplier);
 
                 yield return new WaitForSeconds(randomSpawnTime);
             }
@@ -132,20 +138,27 @@ namespace TheLastFry
             // if a random food has been returned
             if (randomFreeFoodIndex != -1)
             {
+
+                // get food target position and set y positive or negative based on its position
+                // this is so that thief will come into screen from the closest direction to the food
+
                 // set a random spawn point
                 Vector3 spawnPoint = SetupSpawnPoint(true);
 
                 // Create thief
                 GameObject thiefObject = Instantiate(GetRandomItemTypeIndex(), itemHolder.transform);
 
-                // set his spawn point
-                thiefObject.transform.position = spawnPoint;
-
                 // set thief properties
                 ThiefController thiefController = thiefObject.GetComponent<ThiefController>();
 
+                // set begin position
+                thiefController.beginPosition = spawnPoint;
+
+                // set end position
+                thiefController.endPosition = spawnPoint;
+
                 // set random speed
-                float randomHandSpeed = Random.Range(minSpeed, maxSpeed);
+                float randomHandSpeed = Random.Range(minSpeed * levelMultiplier, maxSpeed * levelMultiplier);
                 thiefController.moveSpeed = randomHandSpeed;
 
                 // set target food to steal
@@ -159,6 +172,9 @@ namespace TheLastFry
 
                 // set the function to call on thief got hit
                 thiefController.thiefGotHit += onThiefHit;
+
+                // setupThief
+                thiefController.Setup();
 
                 // add thief to thieves list
                 Items.Add(thiefObject);

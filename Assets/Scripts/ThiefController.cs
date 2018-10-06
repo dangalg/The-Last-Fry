@@ -47,10 +47,10 @@ namespace TheLastFry
         SpriteRenderer sr;
 
         // begin position target for stealing
-        Vector3 beginPosition;
+        public Vector3 beginPosition;
 
         // end position target for run away
-        Vector3 endPosition;
+        public Vector3 endPosition;
 
         // do i have food?
         bool gotFood = false;
@@ -75,12 +75,14 @@ namespace TheLastFry
         {
             // get the sprite renderer
             sr = GetComponentInChildren<SpriteRenderer>();
+        }
 
-            // set beginPosition
-            beginPosition = transform.position;
-
-            // set end position
-            endPosition = transform.position;
+        /// <summary>
+        /// Setup this instance.
+        /// </summary>
+        public void Setup(){
+            // set position
+            transform.position = beginPosition;
 
             // face target
             turnTowardsTarget(targetFood.transform.position);

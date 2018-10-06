@@ -144,9 +144,6 @@ namespace TheLastFry
             // refill player energy
             playerData.Energy = 3;
 
-            // refill life
-            playerData.Life = 3;
-
             // start game
             StartGame();
         }
@@ -155,6 +152,9 @@ namespace TheLastFry
         {
             // set player to level 1
             playerData.Level = 1;
+
+            // refill life
+            playerData.Life = 3;
 
             // save player data
             DataHandler.SavePlayerData(playerData);

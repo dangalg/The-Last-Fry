@@ -110,14 +110,13 @@ namespace TheLastFry
         /// </summary>
         /// <returns>The level routine.</returns>
         public IEnumerator NextLevelRoutine(){
-            Debug.Log("NextLevelRoutine in");
+
             // for every food item
             foreach (var item in FoodSpawner.instance.Items)
             {
 
                 if (item != null)
                 {
-                    Debug.Log("createCoin");
                     // create a coin in the food item position and rotation and set it's properties
                     createCoin(item);
 
@@ -137,27 +136,21 @@ namespace TheLastFry
         /// <param name="item">Item.</param>
         private void createCoin(GameObject item)
         {
-            Debug.Log("Instantiate");
             // create the object
             GameObject coinObject = Instantiate(Coin, item.transform.position, item.transform.rotation);
 
-            Debug.Log("coinController");
             // get the script controller
             CoinController coinController = coinObject.GetComponent<CoinController>();
 
-            Debug.Log("CoinCounterTarget");
             // set the target for the coin to fly to
             coinController.CoinCounterTarget = CoinCounterTarget;
 
-            Debug.Log("moveSpeed");
             // set coin move speed
             coinController.moveSpeed = coinMoveSpeed;
 
-            Debug.Log("flyEaseType");
             // set coin fly type
             coinController.flyEaseType = coinFlyEaseType;
 
-            Debug.Log("onCoinFlyComplete");
             // set the function for calling when coin completes flight
             coinController.onCoinFlyComplete = consumeCoin;
 
