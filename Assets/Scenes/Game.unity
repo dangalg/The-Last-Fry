@@ -224,7 +224,7 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1156211609}
+      objectReference: {fileID: 474002490}
     - target: {fileID: 114754372031746630, guid: 7b2bf467401f14603963a6d6bfd39e68,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -349,6 +349,11 @@ Prefab:
     - target: {fileID: 1173954805514952, guid: 7b2bf467401f14603963a6d6bfd39e68, type: 2}
       propertyPath: m_Name
       value: ChestOfGems
+      objectReference: {fileID: 0}
+    - target: {fileID: 114752941314830688, guid: 7b2bf467401f14603963a6d6bfd39e68,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b2bf467401f14603963a6d6bfd39e68, type: 2}
@@ -493,6 +498,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40b9d485a4674451cbab3fc9b7b35c01, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &474002490 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1070908760191544, guid: 40b9d485a4674451cbab3fc9b7b35c01,
+    type: 2}
+  m_PrefabInternal: {fileID: 474002489}
 --- !u!114 &814256745 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114997436735576668, guid: 7b2bf467401f14603963a6d6bfd39e68,
