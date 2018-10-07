@@ -9,30 +9,30 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1678224438360846}
+  m_RootGameObject: {fileID: 1070908760191544}
   m_IsPrefabAsset: 1
---- !u!1 &1678224438360846
+--- !u!1 &1070908760191544
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4838367221264844}
-  - component: {fileID: 114149422832006328}
+  - component: {fileID: 4087182812349282}
+  - component: {fileID: 114060354891553484}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: ShopManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4838367221264844
+--- !u!4 &4087182812349282
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1678224438360846}
+  m_GameObject: {fileID: 1070908760191544}
   m_LocalRotation: {x: -0, y: -0, z: 0.08072058, w: -0.99673676}
   m_LocalPosition: {x: 11.2, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -40,24 +40,14 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114149422832006328
+--- !u!114 &114060354891553484
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1678224438360846}
+  m_GameObject: {fileID: 1070908760191544}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f45b1ffc7218443da992e94c57215699, type: 3}
+  m_Script: {fileID: 11500000, guid: e9877d9759b8e4c708cd589a77af9f51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinsText: {fileID: 0}
-  levelText: {fileID: 0}
-  lifeText: {fileID: 0}
-  AdButton: {fileID: 0}
-  CoinButton: {fileID: 0}
-  AdButtonText: {fileID: 0}
-  CoinButtonText: {fileID: 0}
-  ContinuePanel: {fileID: 0}
-  coinsForNextLevel: 50
-  lifeForContinue: 1

@@ -53,6 +53,23 @@ namespace TheLastFry
 
             // float to given position
             floatToTargetTweenId = LeanTween.move(gameObject, targetPosition, moveSpeed).setEase(LeanTweenType.animationCurve).setOnComplete(onComplete).id;
+
+            // turn to target
+            turnTowardsTarget(targetPosition);
+        }
+
+        /// <summary>
+        /// Turns the towards target.
+        /// </summary>
+        /// <param name="target">Target.</param>
+        private void turnTowardsTarget(Vector3 target)
+        {
+            // get the right from the target
+            transform.right = target - transform.position;
+
+            // spin the transform to face the target
+            LeanTween.rotateZ(gameObject, transform.eulerAngles.z - 90f, 0.5f);
+          
         }
 
         /// <summary>
