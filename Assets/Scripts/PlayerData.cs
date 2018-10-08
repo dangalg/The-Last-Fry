@@ -9,6 +9,7 @@ namespace TheLastFry
     public class PlayerData
     {
 
+        private int gems;
         private int coins;
         private int energy;
         private int points;
@@ -16,6 +17,12 @@ namespace TheLastFry
         private int level;
         private int life;
         private bool removeAds;
+
+        public int Gems
+        {
+            get { return gems; }
+            set { gems = value; }
+        }
 
         public int Coins
         {

@@ -142,8 +142,13 @@ namespace TheLastFry
                 // get food target position and set y positive or negative based on its position
                 // this is so that thief will come into screen from the closest direction to the food
 
+                // get random target for thief
+                GameObject targetFood = FoodSpawner.instance.Items[randomFreeFoodIndex];
+
+                bool targetYIsPositive = targetFood.transform.position.y > 0; 
+
                 // set a random spawn point
-                Vector3 spawnPoint = SetupSpawnPoint(true);
+                Vector3 spawnPoint = SetupSpawnPoint(true, targetYIsPositive);
 
                 // Create thief
                 GameObject thiefObject = Instantiate(GetRandomItemTypeIndex(), itemHolder.transform);
@@ -162,7 +167,7 @@ namespace TheLastFry
                 thiefController.moveSpeed = randomHandSpeed;
 
                 // set target food to steal
-                thiefController.targetFood = FoodSpawner.instance.Items[randomFreeFoodIndex];
+                thiefController.targetFood = targetFood;
 
                 // set food index to steal
                 thiefController.foodIndex = randomFreeFoodIndex;

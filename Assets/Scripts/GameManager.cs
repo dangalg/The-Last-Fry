@@ -22,6 +22,9 @@ namespace TheLastFry
         [SerializeField] Button AdButton;
         [SerializeField] Button CoinButton;
 
+        // the shop buttons
+        [SerializeField] GameObject ShopPanel;
+
         // the button texts
         [SerializeField] Text AdButtonText;
         [SerializeField] Text CoinButtonText;
@@ -37,6 +40,9 @@ namespace TheLastFry
 
         // life to give player back for continueing 
         public int lifeForContinue = 1;
+
+        // level for testing
+        public int levelForTesting = 0;
 
         //Awake is always called before any Start functions
         void Awake()
@@ -68,6 +74,12 @@ namespace TheLastFry
             // load the player data
             playerData = DataHandler.LoadPlayerData();
 
+            // set level for testing
+            if(levelForTesting > 0)
+            {
+                playerData.Level = levelForTesting;
+            }
+
             // set points to zero -- used to calculate when the level ends
             playerData.Points = 0;
 
@@ -77,6 +89,10 @@ namespace TheLastFry
             // show the coins
             CoinButtonText.text = coinsForNextLevel.ToString() + " Coins";
 
+            // sign in to shopManager
+            ShopManager.instance.onPurchaseGemsAction = onPurchaseGems;
+            ShopManager.instance.onPurchaseFailedAction = onPurchaseFailed;
+
             // setup the game
             StartCoroutine(SetupGame(playerData.Level));
 
@@ -84,11 +100,41 @@ namespace TheLastFry
 
         private void Start()
         {
+
             // sign in to ad manager callbacks
             AdManager.instance.onSkippedAd = DecideEndorContinue;
             AdManager.instance.onFailedAd = DecideEndorContinue;
             AdManager.instance.onFinishedAd = ContinueAd;
 
+        }
+
+
+        void onPurchaseGems(ShopManager.GemAmount gemAmount)
+        {
+            // give gems to player TODO make exciting animation
+            switch (gemAmount)
+            {
+                case ShopManager.GemAmount.HANDFUL:
+                    playerData.Gems += 10;
+                    break;
+                case ShopManager.GemAmount.PILE:
+                    playerData.Gems += 20;
+                    break;
+                case ShopManager.GemAmount.SACK:
+                    playerData.Gems += 100;
+                    break;
+                case ShopManager.GemAmount.BAG:
+                    playerData.Gems += 200;
+                    break;
+                case ShopManager.GemAmount.CHEST:
+                    playerData.Gems += 500;
+                    break;
+            }
+        }
+
+        void onPurchaseFailed()
+        {
+            // TODO show purchase failed screen
         }
 
 

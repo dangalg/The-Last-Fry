@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Purchasing;
 
 // Placing the Purchaser class in the CompleteProject namespace allows it to interact with ScoreManager, 
@@ -32,12 +33,8 @@ namespace TheLastFry
         public static string kProductIDSubscription = "subscription";
 
         // Callbacks
-        public Action onHandfulOfGemsBought;
-        public Action onPileOfGemsBought;
-        public Action onSackOfGemsBought;
-        public Action onBagOfGemsBought;
-        public Action onChestOfGemsBought;
-        public Action onPurchaseFailed;
+        public UnityAction<ShopManager.GemAmount> onPurchaseGems;
+        public UnityAction onPurchaseFailed;
 
         // Apple App Store-specific product identifier for the subscription product.
         private static string kProductNameAppleSubscription = "com.unity3d.subscription.new";
@@ -250,8 +247,8 @@ namespace TheLastFry
                 Debug.Log(string.Format("ProcessPurchase: PASS. Product: '{0}'", args.purchasedProduct.definition.id));
                 // The consumable item has been successfully purchased, add 100 coins to the player's in-game score.
 
-                if(onHandfulOfGemsBought != null){
-                    onHandfulOfGemsBought();
+                if(onPurchaseGems != null){
+                    onPurchaseGems(ShopManager.GemAmount.HANDFUL);
                 }
 
             }
@@ -260,9 +257,9 @@ namespace TheLastFry
                 Debug.Log(string.Format("ProcessPurchase: PASS. Product: '{0}'", args.purchasedProduct.definition.id));
                 // The consumable item has been successfully purchased, add 100 coins to the player's in-game score.
 
-                if (onPileOfGemsBought != null)
+                if (onPurchaseGems != null)
                 {
-                    onPileOfGemsBought();
+                    onPurchaseGems(ShopManager.GemAmount.PILE);
                 }
             }
             else if (String.Equals(args.purchasedProduct.definition.id, kProductIDSackOfGems, StringComparison.Ordinal))
@@ -270,9 +267,9 @@ namespace TheLastFry
                 Debug.Log(string.Format("ProcessPurchase: PASS. Product: '{0}'", args.purchasedProduct.definition.id));
                 // The consumable item has been successfully purchased, add 100 coins to the player's in-game score.
 
-                if (onSackOfGemsBought != null)
+                if (onPurchaseGems != null)
                 {
-                    onSackOfGemsBought();
+                    onPurchaseGems(ShopManager.GemAmount.SACK);
                 }
             }
             else if (String.Equals(args.purchasedProduct.definition.id, kProductIDBagOfGems, StringComparison.Ordinal))
@@ -280,9 +277,9 @@ namespace TheLastFry
                 Debug.Log(string.Format("ProcessPurchase: PASS. Product: '{0}'", args.purchasedProduct.definition.id));
                 // The consumable item has been successfully purchased, add 100 coins to the player's in-game score.
 
-                if (onBagOfGemsBought != null)
+                if (onPurchaseGems != null)
                 {
-                    onBagOfGemsBought();
+                    onPurchaseGems(ShopManager.GemAmount.BAG);
                 }
             }
             else if (String.Equals(args.purchasedProduct.definition.id, kProductIDChestOfGems, StringComparison.Ordinal))
@@ -290,9 +287,9 @@ namespace TheLastFry
                 Debug.Log(string.Format("ProcessPurchase: PASS. Product: '{0}'", args.purchasedProduct.definition.id));
                 // The consumable item has been successfully purchased, add 100 coins to the player's in-game score.
 
-                if (onChestOfGemsBought != null)
+                if (onPurchaseGems != null)
                 {
-                    onChestOfGemsBought();
+                    onPurchaseGems(ShopManager.GemAmount.CHEST);
                 }
             }
             // Or ... a non-consumable product has been purchased by this user.

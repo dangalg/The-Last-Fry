@@ -59,5 +59,6 @@ MonoBehaviour:
   AdButtonText: {fileID: 0}
   CoinButtonText: {fileID: 0}
   ContinuePanel: {fileID: 0}
-  coinsForNextLevel: 50
-  lifeForContinue: 1
+  coinsForNextLevel: 1000
+  lifeForContinue: 101
+  levelForTesting: 100
