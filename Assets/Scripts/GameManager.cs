@@ -137,8 +137,6 @@ namespace TheLastFry
             // TODO show purchase failed screen
         }
 
-
-
         IEnumerator SetupGame(int level)
         {
             
