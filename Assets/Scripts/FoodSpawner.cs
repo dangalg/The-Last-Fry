@@ -19,7 +19,8 @@ namespace TheLastFry
         [SerializeField] GameObject Coin;
 
         // the coin move speed
-        [SerializeField] float coinMoveSpeed = 2f;
+        [SerializeField] float coinMoveSpeed = 1f;
+        [SerializeField] float coinSpawnSpeed = 0.1f;
 
         // the ease fly type for the coins
         [SerializeField] LeanTweenType coinFlyEaseType = LeanTweenType.easeInOutCubic;
@@ -124,7 +125,7 @@ namespace TheLastFry
                     Destroy(item);
                 }
 
-                yield return new WaitForSeconds(0.5f);
+                yield return new WaitForSeconds(coinSpawnSpeed);
             }
 
             yield return new WaitForSeconds(coinMoveSpeed);

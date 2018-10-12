@@ -82,10 +82,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distanceX: 5
   distanceY: 7
-  minSpeed: 1
+  minSpeed: 5
   maxSpeed: 1.5
-  minTimeBetweenSpawns: 0.2
-  maxTimeBetweenSpawns: 2
+  minTimeBetweenSpawns: 0.1
+  maxTimeBetweenSpawns: 1
   Items: []
   itemHolder: {fileID: 1859378031400882}
   itemTypesOdds: 19000000320000004b00000064000000

@@ -56,9 +56,10 @@ MonoBehaviour:
   lifeText: {fileID: 0}
   AdButton: {fileID: 0}
   CoinButton: {fileID: 0}
+  ShopPanel: {fileID: 0}
   AdButtonText: {fileID: 0}
   CoinButtonText: {fileID: 0}
   ContinuePanel: {fileID: 0}
-  coinsForNextLevel: 1000
-  lifeForContinue: 101
-  levelForTesting: 100
+  coinsForNextLevel: 50
+  lifeForContinue: 10
+  levelForTesting: 0
