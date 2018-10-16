@@ -193,6 +193,9 @@ namespace TheLastFry
                 {
                     // then add points
                     GameManager.instance.AddPoint(pointsForHit);
+
+                    // make food available to other thiefs again
+                    FoodSpawner.instance.TakenFoodIndexes.Remove(foodIndex);
                 }
 
                 // if the thief has a food
@@ -204,8 +207,6 @@ namespace TheLastFry
                     // drop the food
                     targetFood.GetComponent<SpriteRenderer>().enabled = true;
 
-                    // make food available to other thiefs again
-                    FoodSpawner.instance.TakenFoodIndexes.Remove(foodIndex);
                 }
             }
         }

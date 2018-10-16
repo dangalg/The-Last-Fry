@@ -8,6 +8,8 @@ namespace TheLastFry
     public class FoodController : MonoBehaviour
     {
 
+        public int index = 0;
+
         private void Start()
         {
 

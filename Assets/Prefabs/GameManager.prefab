@@ -59,7 +59,9 @@ MonoBehaviour:
   ShopPanel: {fileID: 0}
   AdButtonText: {fileID: 0}
   CoinButtonText: {fileID: 0}
+  Message: {fileID: 0}
   ContinuePanel: {fileID: 0}
-  coinsForNextLevel: 50
+  MessagePanel: {fileID: 0}
+  coinsForNextLevel: 300
   lifeForContinue: 10
   levelForTesting: 0

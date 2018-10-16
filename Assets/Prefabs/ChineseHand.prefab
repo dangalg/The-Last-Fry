@@ -9,34 +9,17 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1208100421849838}
+  m_RootGameObject: {fileID: 1384751168363224}
   m_IsPrefabAsset: 1
---- !u!1 &1208100421849838
+--- !u!1 &1069192041879394
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4387958471621696}
-  - component: {fileID: 114213813517071810}
-  - component: {fileID: 60184442900147704}
-  m_Layer: 0
-  m_Name: Hand
-  m_TagString: ThiefHand
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1517951625430902
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4828882821603210}
-  - component: {fileID: 212439641225573988}
+  - component: {fileID: 4615716462321834}
+  - component: {fileID: 212629666623027058}
   m_Layer: 0
   m_Name: handImage
   m_TagString: ThiefHand
@@ -44,39 +27,56 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4387958471621696
+--- !u!1 &1384751168363224
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4836582323417700}
+  - component: {fileID: 114979737149623032}
+  - component: {fileID: 60023290167638510}
+  m_Layer: 0
+  m_Name: ChineseHand
+  m_TagString: ThiefHand
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4615716462321834
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1208100421849838}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.8902488, y: 6.24, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
-  m_Children:
-  - {fileID: 4828882821603210}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4828882821603210
-Transform:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1517951625430902}
+  m_GameObject: {fileID: 1069192041879394}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.46, y: 2.27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4387958471621696}
+  m_Father: {fileID: 4836582323417700}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &60184442900147704
+--- !u!4 &4836582323417700
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1384751168363224}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.8902488, y: 6.24, z: 0}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_Children:
+  - {fileID: 4615716462321834}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &60023290167638510
 PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1208100421849838}
+  m_GameObject: {fileID: 1384751168363224}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -114,12 +114,12 @@ PolygonCollider2D:
       - {x: 16.413368, y: 5.492124}
       - {x: 6.335017, y: 2.2962885}
       - {x: 1.6913834, y: 1.2719979}
---- !u!114 &114213813517071810
+--- !u!114 &114979737149623032
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1208100421849838}
+  m_GameObject: {fileID: 1384751168363224}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 48f8b7e3ad22c4077898f6ddf3285ec7, type: 3}
@@ -139,12 +139,12 @@ MonoBehaviour:
   - {fileID: 21300000, guid: c3beed4e30d2b4a4ab51a6d1b906c5c4, type: 3}
   beginPosition: {x: 0, y: 0, z: 0}
   endPosition: {x: 0, y: 0, z: 0}
---- !u!212 &212439641225573988
+--- !u!212 &212629666623027058
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1517951625430902}
+  m_GameObject: {fileID: 1069192041879394}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0

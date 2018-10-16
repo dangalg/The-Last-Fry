@@ -17,11 +17,14 @@ namespace TheLastFry
         public PlayerData playerData;
 
         // the texts on screen
-        [SerializeField] TMP_Text Level;
-        [SerializeField] TMP_Text Energy;
+        [SerializeField] TMP_Text Message;
 
         // buttons on screen
         [SerializeField] Button startButton;
+
+        // panels on screen
+        [SerializeField] GameObject MessagePanel;
+        [SerializeField] GameObject InstructionsPanel;
 
         //Awake is always called before any Start functions
         void Awake()
@@ -57,14 +60,60 @@ namespace TheLastFry
         // Use this for initialization
         void Start()
         {
-            // display texts on screen
-            Level.text = playerData.Level.ToString();
-            Energy.text = playerData.Energy.ToString();
 
             // sign in for callback from ad manager
             AdManager.instance.onFinishedAd = onFinishedAd;
 
+            ShopManager.instance.onRemoveAds = onRemoveAds;
+            ShopManager.instance.onPurchaseFailedAction = onPurchaseFailed;
+
             SetupStartButton();
+        }
+
+        /// <summary>
+        /// Shows the instructions.
+        /// </summary>
+        public void ShowInstructions()
+        {
+            InstructionsPanel.SetActive(true);
+        }
+
+        /// <summary>
+        /// Hides the instructions panel.
+        /// </summary>
+        public void HideInstructionsPanel()
+        {
+            // close Instructions Panel
+            InstructionsPanel.SetActive(false);
+        }
+
+        /// <summary>
+        /// Ons the remove ads.
+        /// </summary>
+        void onRemoveAds()
+        {
+            // thank user for his purchase
+            Message.text = "Thank You For Your Purchase!";
+            MessagePanel.SetActive(true);
+        }
+
+        /// <summary>
+        /// Clicks the message panel.
+        /// </summary>
+        public void clickMessagePanel()
+        {
+            // close message panel
+            MessagePanel.SetActive(false);
+        }
+
+        /// <summary>
+        /// Ons the purchase failed.
+        /// </summary>
+        void onPurchaseFailed(){
+
+            // notify user of something wrong with purchase
+            Message.text = "Something Went Wrong Please Try Again Later..";
+            MessagePanel.SetActive(true);
         }
 
         void SetupStartButton()

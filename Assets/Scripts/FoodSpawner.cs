@@ -102,6 +102,8 @@ namespace TheLastFry
             // get the controller script of the item
             FoodController fryController = fryObject.GetComponent<FoodController>();
 
+            fryController.index = Items.Count;
+
             // add item to list
             Items.Add(fryObject);
         }
@@ -118,11 +120,17 @@ namespace TheLastFry
 
                 if (item != null)
                 {
-                    // create a coin in the food item position and rotation and set it's properties
-                    createCoin(item);
 
-                    // destroy food item
-                    Destroy(item);
+                    // get the controller script of the item
+                    FoodController fryController = item.GetComponent<FoodController>();
+
+                    if(!TakenFoodIndexes.Contains(fryController.index)){
+                        // create a coin in the food item position and rotation and set it's properties
+                        createCoin(item);
+
+                        // destroy food item
+                        Destroy(item);
+                    }
                 }
 
                 yield return new WaitForSeconds(coinSpawnSpeed);

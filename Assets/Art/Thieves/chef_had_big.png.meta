@@ -1,18 +1,10 @@
 fileFormatVersion: 2
-guid: 79fdd0f422b574d0ca6b0cbab8351fe8
+guid: b50906565eeb74f8daa7ed8c9bd725e4
 TextureImporter:
   fileIDToRecycleName:
-    21300000: tomato_float_0
-    21300002: tomato_float_1
-    21300004: tomato_float_2
-    21300006: tomato_float_3
-    21300008: tomato_float_4
-    21300010: tomato_float_5
-    21300012: tomato_float_6
-    21300014: tomato_float_7
-    21300016: tomato_float_8
-    21300018: tomato_float_9
-    21300020: tomato_float_10
+    21300000: chef_had_big_0
+    21300002: chef_had_big_1
+    21300004: chef_had_big_2
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -139,13 +131,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tomato_float_0
+      name: chef_had_big_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 10
-        width: 96
-        height: 78
+        x: 10
+        y: 488
+        width: 496
+        height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,19 +145,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 336f6e00bc56747c2b9e361be7fab046
+      spriteID: 7ed987ef0dde9455c83e1555905cd353
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tomato_float_1
+      name: chef_had_big_1
       rect:
         serializedVersion: 2
-        x: 96
-        y: 10
-        width: 96
-        height: 78
+        x: 10
+        y: 256
+        width: 496
+        height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,19 +165,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 277363597879b4628b17353a3b7af955
+      spriteID: 71a1a754d9e9e4ced9f9d19486bfb29a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tomato_float_2
+      name: chef_had_big_2
       rect:
         serializedVersion: 2
-        x: 192
-        y: 10
-        width: 96
-        height: 78
+        x: 11
+        y: 23
+        width: 498
+        height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,147 +185,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a456f4d7dd2264f3093e3a8fd6d530ff
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tomato_float_3
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 10
-        width: 96
-        height: 78
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 36f06bb5503824cd0b6782a4869a0369
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tomato_float_4
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 10
-        width: 96
-        height: 78
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 113647f9e0c5f4620a5ea7096c63281e
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tomato_float_5
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 10
-        width: 96
-        height: 78
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 15868a8e231484f9583e657451c345c3
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tomato_float_6
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 10
-        width: 96
-        height: 78
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: be5cf61edecf4481b9c9c3de8c7f770f
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tomato_float_7
-      rect:
-        serializedVersion: 2
-        x: 672
-        y: 10
-        width: 96
-        height: 78
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 982521f8655e0479aa6aef86604bbf24
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tomato_float_8
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 10
-        width: 96
-        height: 78
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a2658f90627694fd58b9bcf4844a7726
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tomato_float_9
-      rect:
-        serializedVersion: 2
-        x: 864
-        y: 10
-        width: 96
-        height: 78
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8d6be51d7d193435bb588d7600c522eb
+      spriteID: 95fde3150bf6d4f36adbcc1821d94bfb
       vertices: []
       indices: 
       edges: []
@@ -341,7 +193,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 3230eac231d7d4994a8cd1bf2ec0032d
+    spriteID: 4c94e2b711f6f4e2188a78732104c29e
     vertices: []
     indices: 
     edges: []

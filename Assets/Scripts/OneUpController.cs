@@ -12,7 +12,7 @@ public class OneUpController : MonoBehaviour {
     public float moveSpeed = 3;
 
     // amount of life to lose when touching this
-    public int gainToLose = 1;
+    public int lifeToGain = 1;
 
     // The index of untouchable in list.
     public int indexOfOneUpInList = 0;
@@ -93,7 +93,7 @@ public class OneUpController : MonoBehaviour {
         {
 
             // hit me
-            onHitOneUp(gainToLose);
+            onHitOneUp(lifeToGain);
         }
 
         Destroy(gameObject, 1f);

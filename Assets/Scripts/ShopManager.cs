@@ -10,7 +10,7 @@ namespace TheLastFry
     public class ShopManager : MonoBehaviour
     {
 
-        public enum GemAmount
+        public enum CoinAmount
         {
             HANDFUL,
             PILE,
@@ -25,7 +25,8 @@ namespace TheLastFry
         Purchaser purchaser = new Purchaser();
 
         // callbacks
-        public UnityAction<GemAmount> onPurchaseGemsAction;
+        public UnityAction<CoinAmount> onPurchaseCoinsAction;
+        public UnityAction onRemoveAds;
         public UnityAction onPurchaseFailedAction;
 
         //Awake is always called before any Start functions
@@ -45,46 +46,56 @@ namespace TheLastFry
 
             //Sets this to not be destroyed when reloading scene
             //DontDestroyOnLoad(gameObject);
+
+            // initialze shop manager
+            Init();
+        }
+
+        private void Init()
+        {
+            purchaser.onRemoveAds = onRemoveAds;
+            purchaser.onPurchaseCoins = onPurchaseCoins;
+            purchaser.onPurchaseFailed = onPurchaseFailed;
         }
 
         /// <summary>
         /// Buy the handful of gems.
         /// </summary>
-        public void BuyHandfulOfGems()
+        public void BuyHandfulOfCoins()
         {
-            purchaser.BuyConsumable(GemAmount.HANDFUL);
+            purchaser.BuyConsumable(CoinAmount.HANDFUL);
         }
 
         /// <summary>
         /// Buy the handful of gems.
         /// </summary>
-        public void BuyPileOfGems()
+        public void BuyPileOfCoins()
         {
-            purchaser.BuyConsumable(GemAmount.PILE);
+            purchaser.BuyConsumable(CoinAmount.PILE);
         }
 
         /// <summary>
         /// Buy the handful of gems.
         /// </summary>
-        public void BuySackOfGems()
+        public void BuySackOfCoins()
         {
-            purchaser.BuyConsumable(GemAmount.SACK);
+            purchaser.BuyConsumable(CoinAmount.SACK);
         }
 
         /// <summary>
         /// Buy the handful of gems.
         /// </summary>
-        public void BuyBagOfGems()
+        public void BuyBagOfCoins()
         {
-            purchaser.BuyConsumable(GemAmount.BAG);
+            purchaser.BuyConsumable(CoinAmount.BAG);
         }
 
         /// <summary>
         /// Buy the handful of gems.
         /// </summary>
-        public void BuyChestOfGems()
+        public void BuyChestOfCoins()
         {
-            purchaser.BuyConsumable(GemAmount.CHEST);
+            purchaser.BuyConsumable(CoinAmount.CHEST);
         }
 
 
@@ -92,10 +103,10 @@ namespace TheLastFry
         /// on purchase of gems.
         /// </summary>
         /// <param name="gemAmount">Gem amount.</param>
-        void onPurchaseGems(GemAmount gemAmount)
+        void onPurchaseCoins(CoinAmount gemAmount)
         {
-            if(onPurchaseGemsAction != null){
-                onPurchaseGemsAction(gemAmount);
+            if(onPurchaseCoinsAction != null){
+                onPurchaseCoinsAction(gemAmount);
             }
         }
 
@@ -104,9 +115,18 @@ namespace TheLastFry
         /// </summary>
         void onPurchaseFailed()
         {
+            // notify player on purchase failed
             if (onPurchaseFailedAction != null)
             {
                 onPurchaseFailedAction();
+            }
+        }
+
+        void onPurchaseRemoveAds(){
+
+            // callback on remove ads and thank player
+            if(onRemoveAds != null){
+                onRemoveAds();
             }
         }
     }

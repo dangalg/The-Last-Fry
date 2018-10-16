@@ -28,9 +28,11 @@ namespace TheLastFry
         // the button texts
         [SerializeField] Text AdButtonText;
         [SerializeField] Text CoinButtonText;
+        [SerializeField] TMP_Text Message;
 
         // The panels on screen
         [SerializeField] GameObject ContinuePanel;
+        [SerializeField] GameObject MessagePanel;
 
         // the player data
         PlayerData playerData;
@@ -86,11 +88,17 @@ namespace TheLastFry
             // display the stats
             displayStats();
 
+            // hide continue panel
+            ContinuePanel.SetActive(false);
+
+            // hide shop panel
+            ShopPanel.SetActive(false);
+
             // show the coins
             CoinButtonText.text = coinsForNextLevel.ToString() + " Coins";
 
             // sign in to shopManager
-            ShopManager.instance.onPurchaseGemsAction = onPurchaseGems;
+            ShopManager.instance.onPurchaseCoinsAction = onPurchaseCoins;
             ShopManager.instance.onPurchaseFailedAction = onPurchaseFailed;
 
             // setup the game
@@ -108,33 +116,54 @@ namespace TheLastFry
 
         }
 
-
-        void onPurchaseGems(ShopManager.GemAmount gemAmount)
+        void onPurchaseCoins(ShopManager.CoinAmount coinAmount)
         {
             // give gems to player TODO make exciting animation
-            switch (gemAmount)
+            switch (coinAmount)
             {
-                case ShopManager.GemAmount.HANDFUL:
-                    playerData.Gems += 10;
+                case ShopManager.CoinAmount.HANDFUL:
+                    playerData.Coins += 10;
                     break;
-                case ShopManager.GemAmount.PILE:
-                    playerData.Gems += 20;
+                case ShopManager.CoinAmount.PILE:
+                    playerData.Coins += 20;
                     break;
-                case ShopManager.GemAmount.SACK:
-                    playerData.Gems += 100;
+                case ShopManager.CoinAmount.SACK:
+                    playerData.Coins += 100;
                     break;
-                case ShopManager.GemAmount.BAG:
-                    playerData.Gems += 200;
+                case ShopManager.CoinAmount.BAG:
+                    playerData.Coins += 200;
                     break;
-                case ShopManager.GemAmount.CHEST:
-                    playerData.Gems += 500;
+                case ShopManager.CoinAmount.CHEST:
+                    playerData.Coins += 500;
                     break;
             }
+
+            // hide shop panel
+            ShopPanel.SetActive(false);
+
+            // notify user of something wrong with purchase
+            Message.text = "Thank You For The Purchase!";
+            MessagePanel.SetActive(true);
         }
 
+        /// <summary>
+        /// Clicks the message panel.
+        /// </summary>
+        public void clickMessagePanel()
+        {
+            // close message panel
+            MessagePanel.SetActive(false);
+        }
+
+        /// <summary>
+        /// Ons the purchase failed.
+        /// </summary>
         void onPurchaseFailed()
         {
-            // TODO show purchase failed screen
+
+            // notify user of something wrong with purchase
+            Message.text = "Something Went Wrong Please Try Again Later..";
+            MessagePanel.SetActive(true);
         }
 
         IEnumerator SetupGame(int level)
@@ -161,6 +190,7 @@ namespace TheLastFry
             FoodSpawner.instance.Reset();
             ThiefSpawner.instance.Reset();
             UntouchableSpawner.instance.Reset();
+            OneUpSpawner.instance.Reset();
 
             // setup food spawner
             FoodSpawner.instance.Setup(playerData.Level);
@@ -172,6 +202,11 @@ namespace TheLastFry
 
             // set up thief spawner
             UntouchableSpawner.instance.Setup(playerData.Level);
+
+            // set up one up spawner
+            OneUpSpawner.instance.Setup(playerData.Level);
+
+
         }
 
         private void Update()
@@ -309,7 +344,7 @@ namespace TheLastFry
             FoodSpawner.instance.Reset();
             ThiefSpawner.instance.Reset();
             UntouchableSpawner.instance.Reset();
-
+            OneUpSpawner.instance.Reset();
         }
 
         /// <summary>
@@ -340,6 +375,7 @@ namespace TheLastFry
             // stop the game but do not reset food spawner because the fries are needed
             ThiefSpawner.instance.Reset();
             UntouchableSpawner.instance.Reset();
+            OneUpSpawner.instance.Reset();
 
             // give the coins
             yield return StartCoroutine(FoodSpawner.instance.NextLevelRoutine());
@@ -395,17 +431,32 @@ namespace TheLastFry
         /// </summary>
         public void ContinueCoins()
         {
-            // hide continue panel
-            ContinuePanel.SetActive(false);
 
-            // remove coins from player
-            LoseCoin(coinsForNextLevel);
+            // check if player has enough coins
+            bool playerHasEnoughCoins = playerData.Coins >= coinsForNextLevel;
 
-            // give player life back
-            playerData.Life = lifeForContinue;
+            if (playerHasEnoughCoins)
+            {
+                // hide continue panel
+                ContinuePanel.SetActive(false);
 
-            // start level
-            StartLevel();
+                // remove coins from player
+                LoseCoin(coinsForNextLevel);
+
+                // give player life back
+                playerData.Life = lifeForContinue;
+
+                // start level
+                StartLevel();
+            }
+            else
+            {
+                // hide continue panel
+                ContinuePanel.SetActive(false);
+
+                // show message not enough coins
+                ShopPanel.SetActive(true);
+            }
         }
 
         /// <summary>
