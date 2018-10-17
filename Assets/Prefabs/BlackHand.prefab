@@ -51,8 +51,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1784379143247372}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.46, y: 2.27, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 7.64, y: 3.39, z: 0}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 4422470879978544}
   m_RootOrder: 0
@@ -64,7 +64,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1497278240384528}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.8902488, y: 6.24, z: 0}
+  m_LocalPosition: {x: -1.8902488, y: 4.75, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children:
   - {fileID: 4369941843226204}
@@ -131,12 +131,12 @@ MonoBehaviour:
   pointsForHit: 1
   lifeForFoodStolen: 1
   hitToDropFoodOn: 1
-  openHand: {fileID: 21300000, guid: 5b68afd14b73947819b663cd82842c1a, type: 3}
+  openHand: {fileID: 21300000, guid: 4164a8aae713b47b2839f0f766ea940d, type: 3}
   closedHand: {fileID: 21300000, guid: 9cfc2d638d2e744a0ae7023b4dcd90ca, type: 3}
   handMovementType: 0
   hurtHands:
-  - {fileID: 21300000, guid: 89695ccad00af47a392f170038b4d3f9, type: 3}
-  - {fileID: 21300000, guid: c3beed4e30d2b4a4ab51a6d1b906c5c4, type: 3}
+  - {fileID: 21300000, guid: 98d8d7590c9b2485b834e37e03061754, type: 3}
+  - {fileID: 21300000, guid: 5045f6d89fcc84dac8465633863018e5, type: 3}
   beginPosition: {x: 0, y: 0, z: 0}
   endPosition: {x: 0, y: 0, z: 0}
 --- !u!212 &212309330096679766
@@ -174,7 +174,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: 5b68afd14b73947819b663cd82842c1a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4164a8aae713b47b2839f0f766ea940d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

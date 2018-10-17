@@ -34,6 +34,9 @@ namespace TheLastFry
         // untouchable collider to turn it off after hit
         PolygonCollider2D untouchableCollider;
 
+        // The numberpop object to spawn
+        [SerializeField] GameObject numberPopUp;
+
         private void Start()
         {
             untouchableCollider = GetComponent<PolygonCollider2D>();
@@ -97,7 +100,20 @@ namespace TheLastFry
                 onHitUntouchable(lifeToLose);
             }
 
-            Destroy(gameObject, 1f);
+            // pop up a number
+            GameObject numberObject = Instantiate(numberPopUp);
+
+            // set number position
+            numberObject.transform.position = transform.localPosition;
+
+            // get the script
+            NumberPopUpScript numberPopUpScript = numberObject.GetComponent<NumberPopUpScript>();
+
+            // set the number and spawn it on screen
+            numberPopUpScript.SpawnNumber("-" + lifeToLose.ToString());
+
+            // destroy this
+            Destroy(gameObject, 0.1f);
         }
 
     }

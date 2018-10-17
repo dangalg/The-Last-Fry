@@ -138,7 +138,6 @@ namespace TheLastFry
         /// <param name="amountOfLifeToGain">Amount of life to lose.</param>
         void onHitOneUp(int amountOfLifeToGain)
         {
-
             // lose life when hitting untouchable
             GameManager.instance.GainLife(amountOfLifeToGain);
 

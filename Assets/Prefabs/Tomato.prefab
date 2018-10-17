@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 212975591943407918}
   - component: {fileID: 95059521019764720}
   - component: {fileID: 114818494785868662}
+  - component: {fileID: 60624292518201590}
   m_Layer: 0
   m_Name: Tomato
-  m_TagString: Untagged
+  m_TagString: OneUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42,6 +43,67 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &60624292518201590
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1772560679442944}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.55, y: 2.77}
+    newSize: {x: 3.55, y: 2.77}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.695, y: -0.645}
+      - {x: 0.965, y: -0.385}
+      - {x: 1.045, y: -0.255}
+      - {x: 1.135, y: -0.095}
+      - {x: 1.185, y: 0.065}
+      - {x: 1.185, y: 0.355}
+      - {x: 1.0649999, y: 0.59499997}
+      - {x: 0.905, y: 0.745}
+      - {x: 0.625, y: 0.885}
+      - {x: 0.33499998, y: 0.895}
+      - {x: 0.24499999, y: 0.92499995}
+      - {x: -0.035, y: 0.92499995}
+      - {x: -0.185, y: 0.885}
+      - {x: -0.285, y: 0.955}
+      - {x: -0.385, y: 1.0749999}
+      - {x: -0.445, y: 1.0849999}
+      - {x: -0.505, y: 1.0849999}
+      - {x: -0.565, y: 1.0649999}
+      - {x: -0.635, y: 0.965}
+      - {x: -0.625, y: 0.895}
+      - {x: -0.545, y: 0.755}
+      - {x: -0.655, y: 0.755}
+      - {x: -0.79499996, y: 0.73499995}
+      - {x: -0.965, y: 0.635}
+      - {x: -1.115, y: 0.275}
+      - {x: -1.125, y: 0.235}
+      - {x: -1.125, y: -0.205}
+      - {x: -1.095, y: -0.305}
+      - {x: -0.92499995, y: -0.60499996}
+      - {x: -0.745, y: -0.775}
+      - {x: -0.53499997, y: -0.875}
+      - {x: -0.445, y: -0.91499996}
+      - {x: -0.275, y: -0.945}
+      - {x: -0.015, y: -0.945}
+      - {x: 0.145, y: -0.92499995}
+      - {x: 0.36499998, y: -0.84499997}
+      - {x: 0.59499997, y: -0.715}
 --- !u!95 &95059521019764720
 Animator:
   serializedVersion: 3
@@ -73,9 +135,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DistanceToFloat: 1.7
   moveSpeed: 3
-  gainToLose: 1
+  lifeToGain: 1
   indexOfOneUpInList: 0
   beginPoint: {x: 0, y: 0, z: 0}
+  numberPopUp: {fileID: 1699931572656742, guid: e697500ab0b5544aaafba8fe8073adb7,
+    type: 2}
 --- !u!212 &212975591943407918
 SpriteRenderer:
   m_ObjectHideFlags: 1

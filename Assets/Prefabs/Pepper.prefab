@@ -139,6 +139,8 @@ MonoBehaviour:
   lifeToLose: 1
   indexOfUntouchableInList: 0
   beginPoint: {x: 0, y: 0, z: 0}
+  numberPopUp: {fileID: 1699931572656742, guid: e697500ab0b5544aaafba8fe8073adb7,
+    type: 2}
 --- !u!212 &212501289587285108
 SpriteRenderer:
   m_ObjectHideFlags: 1

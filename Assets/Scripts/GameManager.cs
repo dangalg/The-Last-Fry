@@ -254,7 +254,18 @@ namespace TheLastFry
                     UntouchableController controller = hit.collider.gameObject.GetComponent<UntouchableController>();
 
                     // lose life
-                    controller.onHitUntouchable(controller.lifeToLose);
+                    controller.onHit();
+
+                }
+
+                // Am I hitting an One Up?
+                if (hit.collider.CompareTag("OneUp"))
+                {
+                    // call hit hand function
+                    OneUpController controller = hit.collider.gameObject.GetComponent<OneUpController>();
+
+                    // gain life
+                    controller.onHit();
 
                 }
             }
