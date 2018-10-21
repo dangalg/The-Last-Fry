@@ -48,7 +48,7 @@ namespace TheLastFry
             level = gameLevel;
 
             // start game
-            StartCoroutine(SpawnItems());
+            StartCoroutine(SpawnItems(gameLevel));
         }
 
         // Update is called once per frame
@@ -184,6 +184,6 @@ namespace TheLastFry
         }
 
         // a spawner must spawn!
-        protected abstract IEnumerator SpawnItems();
+        protected abstract IEnumerator SpawnItems(int gameLevel);
     }
 }

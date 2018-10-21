@@ -8,6 +8,8 @@ namespace TheLastFry
 
     public class ThiefController : MonoBehaviour
     {
+    
+        public int ThiefLevel = 1;
 
         // the food to steal
         public GameObject targetFood;
@@ -24,6 +26,15 @@ namespace TheLastFry
 
         // points to player for hitting this hand
         public int pointsForHit = 1;
+
+        // coins for hitting thief
+        public int minCoinsForHit = 1;
+
+        // coins for hitting thief
+        public int maxCoinsForHit = 1;
+
+        // time between spawning coins
+        public float timeBetweenCoinsToSpawn = 0.1f;
 
         // life to lose for player
         public int lifeForFoodStolen = 1;
@@ -69,6 +80,8 @@ namespace TheLastFry
 
         // the id for attempting theft tween in order to stop it in case the hand is hit
         int atemptTheftTween = 0;
+
+
 
         // Use this for initialization
         void Start()
@@ -196,6 +209,9 @@ namespace TheLastFry
 
                     // make food available to other thiefs again
                     FoodSpawner.instance.TakenFoodIndexes.Remove(foodIndex);
+
+                    // spawn coins for hit
+                    StartCoroutine(SpawnCoinsAfterHandHit());
                 }
 
                 // if the thief has a food
@@ -208,6 +224,28 @@ namespace TheLastFry
                     targetFood.GetComponent<SpriteRenderer>().enabled = true;
 
                 }
+            }
+        }
+
+        /// <summary>
+        /// Spawns the coins after hand hit.
+        /// </summary>
+        /// <returns>The coins after hand hit.</returns>
+        IEnumerator SpawnCoinsAfterHandHit(){
+
+            // coins for hit
+            int coinsForHit = 1;
+
+            // get random coin amount by level
+            coinsForHit = Random.Range(minCoinsForHit, maxCoinsForHit + 1);
+
+            for (int i = 0; i < coinsForHit; i++)
+            {
+                // create coin at thief position
+                CoinManager.instance.createCoin(gameObject);
+
+                // wait between coins
+                yield return new WaitForSeconds(timeBetweenCoinsToSpawn);
             }
         }
 
@@ -245,7 +283,7 @@ namespace TheLastFry
             LeanTween.cancel(atemptTheftTween);
 
             // move to end position
-            LeanTween.move(gameObject, endPosition, moveSpeed).setEase(handMovementType).setOnUpdate(onMovementUpdate);
+            LeanTween.move(gameObject, endPosition, moveSpeed * 0.3f).setEase(handMovementType).setOnUpdate(onMovementUpdate);
 
         }
 

@@ -156,6 +156,16 @@ namespace TheLastFry
         }
 
         /// <summary>
+        /// Closes the shop panel.
+        /// </summary>
+        public void closeShopPanel()
+        {
+            // close message panel
+            ShopPanel.SetActive(false);
+            ContinuePanel.SetActive(true);
+        }
+
+        /// <summary>
         /// Ons the purchase failed.
         /// </summary>
         void onPurchaseFailed()
@@ -168,7 +178,12 @@ namespace TheLastFry
 
         IEnumerator SetupGame(int level)
         {
-            
+
+            // reset the spawners
+            ThiefSpawner.instance.Reset();
+            UntouchableSpawner.instance.Reset();
+            OneUpSpawner.instance.Reset();
+
             //enabled level text
             levelText.enabled = true;
 
@@ -183,14 +198,10 @@ namespace TheLastFry
 
             yield return new WaitForSeconds(2f);
 
+            FoodSpawner.instance.Reset();
+
             // disable level text
             levelText.enabled = false;
-
-            // reset the spawners
-            FoodSpawner.instance.Reset();
-            ThiefSpawner.instance.Reset();
-            UntouchableSpawner.instance.Reset();
-            OneUpSpawner.instance.Reset();
 
             // setup food spawner
             FoodSpawner.instance.Setup(playerData.Level);

@@ -119,19 +119,9 @@ namespace TheLastFry
         void SetupStartButton()
         {
 
-            // if out of energy display replenish otherwise display start
-            if (MainMenu.instance.playerData.Energy > 0)
-            {
-                // start game
-                startButton.GetComponentInChildren<Text>().text = "Start";
+            // start game
+            startButton.GetComponentInChildren<Text>().text = "Start";
 
-            }
-            else
-            {
-                // display 
-                startButton.GetComponentInChildren<Text>().text = "Replenish Energy";
-
-            }
         }
 
         /// <summary>
@@ -167,21 +157,8 @@ namespace TheLastFry
         /// </summary>
         public void LoadGame()
         {
-            // if player paid for remove ads or the player energy is above zero
-            if (playerData.RemoveAds || playerData.Energy > 0)
-            {
-                // remove one energy point
-                DecreaseEnergy(1);
-
-                // start game
-                StartGame();
-            }
-            else
-            {
-                // show ad
-                AdManager.instance.ShowAd();
-            }
-
+            // start game
+            StartGame();
         }
 
         /// <summary>

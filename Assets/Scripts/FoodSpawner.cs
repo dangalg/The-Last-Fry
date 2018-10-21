@@ -12,18 +12,8 @@ namespace TheLastFry
         // list of already chosen food items
         public List<int> TakenFoodIndexes = new List<int>();
 
-        // a target for the coins to go to
-        [SerializeField] GameObject CoinCounterTarget;
-
-        // a coin prefab for creating new coins
-        [SerializeField] GameObject Coin;
-
-        // the coin move speed
-        [SerializeField] float coinMoveSpeed = 1f;
+        // coin spawn speed
         [SerializeField] float coinSpawnSpeed = 0.1f;
-
-        // the ease fly type for the coins
-        [SerializeField] LeanTweenType coinFlyEaseType = LeanTweenType.easeInOutCubic;
 
         //Awake is always called before any Start functions
         void Awake()
@@ -49,7 +39,7 @@ namespace TheLastFry
         /// Generate Food
         /// </summary>
         /// <returns>The items.</returns>
-        protected override IEnumerator SpawnItems()
+        protected override IEnumerator SpawnItems(int gameLevel)
         {
 
             yield return null;
@@ -126,7 +116,7 @@ namespace TheLastFry
 
                     if(!TakenFoodIndexes.Contains(fryController.index)){
                         // create a coin in the food item position and rotation and set it's properties
-                        createCoin(item);
+                        CoinManager.instance.createCoin(item);
 
                         // destroy food item
                         Destroy(item);
@@ -136,44 +126,7 @@ namespace TheLastFry
                 yield return new WaitForSeconds(coinSpawnSpeed);
             }
 
-            yield return new WaitForSeconds(coinMoveSpeed);
-        }
-
-        /// <summary>
-        /// Creates the coin.
-        /// </summary>
-        /// <param name="item">Item.</param>
-        private void createCoin(GameObject item)
-        {
-            // create the object
-            GameObject coinObject = Instantiate(Coin, item.transform.position, item.transform.rotation);
-
-            // get the script controller
-            CoinController coinController = coinObject.GetComponent<CoinController>();
-
-            // set the target for the coin to fly to
-            coinController.CoinCounterTarget = CoinCounterTarget;
-
-            // set coin move speed
-            coinController.moveSpeed = coinMoveSpeed;
-
-            // set coin fly type
-            coinController.flyEaseType = coinFlyEaseType;
-
-            // set the function for calling when coin completes flight
-            coinController.onCoinFlyComplete = consumeCoin;
-
-            // start coin flight
-            coinController.GoToCoinCounter();
-
-        }
-
-        /// <summary>
-        /// Add coin to player
-        /// </summary>
-        /// <param name="coins">Coins.</param>
-        void consumeCoin(int coins){
-            GameManager.instance.AddCoin(coins);
+            yield return new WaitForSeconds(2f);
         }
 
         /// <summary>

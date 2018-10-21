@@ -57,7 +57,7 @@ namespace TheLastFry
         /// Spawns the items.
         /// </summary>
         /// <returns>The items.</returns>
-        protected override IEnumerator SpawnItems()
+        protected override IEnumerator SpawnItems(int gameLevel)
         {
             reset = false;
             // spawn all untouchables one by one at spawn time

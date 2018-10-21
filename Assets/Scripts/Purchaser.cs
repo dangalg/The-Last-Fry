@@ -9,7 +9,7 @@ using UnityEngine.Purchasing;
 namespace TheLastFry
 {
     // Deriving the Purchaser class from IStoreListener enables it to receive messages from Unity Purchasing.
-    public class Purchaser : MonoBehaviour , IStoreListener
+    public class Purchaser : IStoreListener
     {
         private static IStoreController m_StoreController;          // The Unity Purchasing system.
         private static IExtensionProvider m_StoreExtensionProvider; // The store-specific Purchasing subsystems.

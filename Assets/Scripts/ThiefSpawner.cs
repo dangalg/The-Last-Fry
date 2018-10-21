@@ -19,6 +19,15 @@ namespace TheLastFry
         // the multiplier that makes level and spawn time faster for every level
         float levelMultiplier = 1f;
 
+        // coin spawn speed
+        [SerializeField] float coinSpawnSpeed = 0.1f;
+
+        // list of all itemTypes
+        public List<GameObject> allItemTypes;
+
+        // list of all item type odds
+        public List<int> allItemTypesOdds;
+
         //Awake is always called before any Start functions
         void Awake()
         {
@@ -37,6 +46,9 @@ namespace TheLastFry
             //Sets this to not be destroyed when reloading scene
             //DontDestroyOnLoad(gameObject);
 
+            allItemTypes = new List<GameObject>(itemTypes);
+
+            allItemTypesOdds = new List<int>(itemTypesOdds);
 
         }
 
@@ -105,12 +117,45 @@ namespace TheLastFry
             }
         }
 
+
+        /// <summary>
+        /// Setup the item types for current level.
+        /// </summary>
+        void setupItemTypesForCurrentLevel(int gameLevel)
+        {
+
+            // get all item types intolist
+            itemTypes = new List<GameObject>(allItemTypes);
+
+            // get all item type odds into list
+            itemTypesOdds = new List<int>(allItemTypesOdds);
+
+
+            // iterate through item types
+            for (int i = itemTypes.Count - 1; i > 0; i--)
+            {
+
+                // get thief controller from current object
+                ThiefController thiefController = itemTypes[i].gameObject.GetComponent<ThiefController>();
+
+                // remove any item types not fitting the level.
+                if (thiefController.ThiefLevel > gameLevel)
+                {
+                    itemTypes.RemoveAt(i);
+                    itemTypesOdds.RemoveAt(i);
+                }
+            }
+        }
+
         /// <summary>
         /// Create many thieves
         /// </summary>
         /// <returns>The items.</returns>
-        protected override IEnumerator SpawnItems()
+        protected override IEnumerator SpawnItems(int gameLevel)
         {
+
+            // setup the item types for the current level
+            setupItemTypesForCurrentLevel(gameLevel);
 
             // set a level multiplier to make hands faster for each level
             levelMultiplier = 1.0f - (((float)level) * 0.001f);
@@ -118,7 +163,7 @@ namespace TheLastFry
             for (int i = 0; i < itemAmount; i++)
             {
                 // create one thief
-                SpwanThief();
+                SpwanThief(gameLevel);
 
                 // set a random spawn time until next thief
                 float randomSpawnTime = Random.Range(minTimeBetweenSpawns * levelMultiplier, maxTimeBetweenSpawns * levelMultiplier);
@@ -130,7 +175,8 @@ namespace TheLastFry
         /// <summary>
         /// Create one thief and sets it's target food
         /// </summary>
-        private void SpwanThief()
+        /// <param name="gameLevel">Game level.</param>
+        private void SpwanThief(int gameLevel)
         {
             // get a random free food as the target for theft
             int randomFreeFoodIndex = FoodSpawner.instance.GetRandomFreeFoodIndex();
