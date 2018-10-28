@@ -158,7 +158,7 @@ namespace TheLastFry
             setupItemTypesForCurrentLevel(gameLevel);
 
             // set a level multiplier to make hands faster for each level
-            levelMultiplier = 1.0f - (((float)level) * 0.001f);
+            levelMultiplier = 1.0f - (((float)level) * 0.003f);
 
             for (int i = 0; i < itemAmount; i++)
             {

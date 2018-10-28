@@ -88,7 +88,7 @@ MonoBehaviour:
   maxTimeBetweenSpawns: 1
   Items: []
   itemHolder: {fileID: 1859378031400882}
-  itemTypesOdds: 19000000320000004b00000064000000
+  itemTypesOdds: 500000005a000000640000006e000000
   itemTypes:
   - {fileID: 1208100421849838, guid: bd56786490ca649cb8e69b9db8c63fba, type: 2}
   - {fileID: 1998713837153636, guid: 0a76cf26f1fec4d0abb1236adb9e6d26, type: 2}
@@ -96,3 +96,6 @@ MonoBehaviour:
   - {fileID: 1686271869712860, guid: 0757104107cd849678c78cb6be4bc4cc, type: 2}
   thiefHitCounter: 0
   thiefGotFoodCounter: 0
+  coinSpawnSpeed: 0.1
+  allItemTypes: []
+  allItemTypesOdds: 
