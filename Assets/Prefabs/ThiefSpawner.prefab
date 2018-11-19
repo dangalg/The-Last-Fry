@@ -88,11 +88,20 @@ MonoBehaviour:
   maxTimeBetweenSpawns: 1
   Items: []
   itemHolder: {fileID: 1859378031400882}
-  itemTypesOdds: 500000005a000000640000006e000000
+  itemTypesOdds: 0100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d000000
   itemTypes:
   - {fileID: 1208100421849838, guid: bd56786490ca649cb8e69b9db8c63fba, type: 2}
-  - {fileID: 1998713837153636, guid: 0a76cf26f1fec4d0abb1236adb9e6d26, type: 2}
+  - {fileID: 1497278240384528, guid: f3be80971e34548acb7c48a9fbb3dc24, type: 2}
+  - {fileID: 1526634835044494, guid: 07bbefdd4ebf84552b642b9454be8e2f, type: 2}
+  - {fileID: 1787667638281918, guid: 117e8b017feeb4f6a9c40950d7aa0b03, type: 2}
   - {fileID: 1709479737352226, guid: 4241e9d93c9d94d869d5c9e94010d79a, type: 2}
+  - {fileID: 1606868291960376, guid: 930ecc1659cbe402eb5b1003b9d2a4f1, type: 2}
+  - {fileID: 1998713837153636, guid: 0a76cf26f1fec4d0abb1236adb9e6d26, type: 2}
+  - {fileID: 1615135758753766, guid: b812d0af0d56447c0b94522b7ab0f5af, type: 2}
+  - {fileID: 1020724831046682, guid: 4aec9eff33bd6468ca6a33dc4cebe82a, type: 2}
+  - {fileID: 1709479737352226, guid: 4241e9d93c9d94d869d5c9e94010d79a, type: 2}
+  - {fileID: 1236006559648168, guid: 33fb7b006bea64ec3a8d92ba6992dc8f, type: 2}
+  - {fileID: 1719430468634332, guid: 0370d4b9ea6834d84be431cafb1bd2a2, type: 2}
   - {fileID: 1686271869712860, guid: 0757104107cd849678c78cb6be4bc4cc, type: 2}
   thiefHitCounter: 0
   thiefGotFoodCounter: 0

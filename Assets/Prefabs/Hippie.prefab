@@ -131,10 +131,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48f8b7e3ad22c4077898f6ddf3285ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ThiefLevel: 2
   targetFood: {fileID: 0}
   foodIndex: 0
   moveSpeed: 3
   pointsForHit: 1
+  minCoinsForHit: 1
+  maxCoinsForHit: 2
+  timeBetweenCoinsToSpawn: 0.1
   lifeForFoodStolen: 1
   hitToDropFoodOn: 1
   openHand: {fileID: 21300000, guid: 1c0ca925aa2264f9bbafb67615c70ad8, type: 3}
@@ -143,6 +147,8 @@ MonoBehaviour:
   hurtHands:
   - {fileID: 21300000, guid: d233e4cd998cc4d88895d5cf27af915d, type: 3}
   - {fileID: 21300000, guid: bf020204342b6420a8ee3305fe11d0ad, type: 3}
+  beginPosition: {x: 0, y: 0, z: 0}
+  endPosition: {x: 0, y: 0, z: 0}
 --- !u!212 &212663310518742426
 SpriteRenderer:
   m_ObjectHideFlags: 1

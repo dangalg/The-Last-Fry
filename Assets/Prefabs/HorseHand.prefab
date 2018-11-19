@@ -9,17 +9,17 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1526634835044494}
+  m_RootGameObject: {fileID: 1719430468634332}
   m_IsPrefabAsset: 1
---- !u!1 &1228796492941232
+--- !u!1 &1091649404323530
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4666983816783532}
-  - component: {fileID: 212426865719203126}
+  - component: {fileID: 4185910045739652}
+  - component: {fileID: 212099076039540054}
   m_Layer: 0
   m_Name: handImage
   m_TagString: ThiefHand
@@ -27,56 +27,56 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1526634835044494
+--- !u!1 &1719430468634332
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4744698301377582}
-  - component: {fileID: 114580364061389464}
-  - component: {fileID: 60877418941780638}
+  - component: {fileID: 4317318592299846}
+  - component: {fileID: 114435600473420602}
+  - component: {fileID: 60696798281973718}
   m_Layer: 0
-  m_Name: ChefHand
+  m_Name: HorseHand
   m_TagString: ThiefHand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4666983816783532
+--- !u!4 &4185910045739652
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1228796492941232}
+  m_GameObject: {fileID: 1091649404323530}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.64, y: 2.47, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 1}
+  m_LocalPosition: {x: 7.46, y: 2.27, z: 0}
+  m_LocalScale: {x: 3.7, y: 3.7, z: 1}
   m_Children: []
-  m_Father: {fileID: 4744698301377582}
+  m_Father: {fileID: 4317318592299846}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4744698301377582
+--- !u!4 &4317318592299846
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1526634835044494}
+  m_GameObject: {fileID: 1719430468634332}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.8902488, y: 4.75, z: 0}
+  m_LocalPosition: {x: -1.8902488, y: 6.24, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children:
-  - {fileID: 4666983816783532}
+  - {fileID: 4185910045739652}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &60877418941780638
+--- !u!60 &60696798281973718
 PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1526634835044494}
+  m_GameObject: {fileID: 1719430468634332}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -95,72 +95,63 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 9.623606, y: 3.871183}
-      - {x: 8.614971, y: 4.3974442}
-      - {x: 6.2674675, y: 3.8788013}
-      - {x: 5.8649135, y: 2.6805096}
-      - {x: 1.5634214, y: 1.6864425}
-      - {x: 0.70736086, y: 2.3800132}
-      - {x: 0.20709711, y: 1.9840493}
-      - {x: -0.3938897, y: 2.8590217}
-      - {x: -0.5901916, y: 2.5374951}
-      - {x: -0.40598628, y: 1.6032392}
-      - {x: -1.8403512, y: 1.5076842}
-      - {x: -2.2837248, y: 0.6897799}
-      - {x: -2.0556958, y: -0.5268017}
-      - {x: -1.4127698, y: -1.2532408}
-      - {x: 0.5066859, y: -1.2632401}
-      - {x: 1.4127698, y: -0.93593746}
-      - {x: 1.483178, y: -0.19473074}
-      - {x: 5.9671116, y: 0.31005856}
-      - {x: 7.3063345, y: -2.3260384}
-      - {x: 7.9424367, y: -2.3061638}
-      - {x: 9.611259, y: -0.92783123}
-      - {x: 9.942139, y: 0.77952856}
-      - {x: 10.507885, y: 0.966997}
-      - {x: 11.768976, y: 0.853486}
-      - {x: 12.057716, y: 1.2182839}
-      - {x: 13.070817, y: 0.8950328}
-      - {x: 15.069769, y: 2.0539281}
-      - {x: 15.833411, y: 1.8746104}
-      - {x: 16.39732, y: 2.5462594}
-      - {x: 17.370146, y: 2.8923492}
-      - {x: 16.689228, y: 5.8300695}
---- !u!114 &114580364061389464
+    - - {x: 4.3797107, y: 3.0745964}
+      - {x: 2.798728, y: 3.421276}
+      - {x: 0.13797122, y: 3.478018}
+      - {x: -0.9127044, y: 4.0440445}
+      - {x: -1.4230266, y: 3.9452295}
+      - {x: -1.3088448, y: 3.0642061}
+      - {x: -0.9630798, y: 1.6247048}
+      - {x: -0.048733547, y: 1.5632151}
+      - {x: 0.85918933, y: 1.5596896}
+      - {x: 1.892834, y: 1.434272}
+      - {x: 2.366195, y: 0.9450673}
+      - {x: 3.2749617, y: 1.1096619}
+      - {x: 6.6382704, y: 1.247808}
+      - {x: 9.541075, y: 1.0119294}
+      - {x: 12.366829, y: 0.7040564}
+      - {x: 14.579503, y: 0.6902392}
+      - {x: 15.870578, y: 0.62880826}
+      - {x: 15.936208, y: 2.6291971}
+      - {x: 14.424135, y: 3.1837778}
+      - {x: 11.583714, y: 3.3698874}
+      - {x: 10.29906, y: 3.3921587}
+      - {x: 8.490836, y: 3.538481}
+--- !u!114 &114435600473420602
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1526634835044494}
+  m_GameObject: {fileID: 1719430468634332}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 48f8b7e3ad22c4077898f6ddf3285ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ThiefLevel: 1
+  ThiefLevel: 7
   targetFood: {fileID: 0}
   foodIndex: 0
   moveSpeed: 3
   pointsForHit: 1
   minCoinsForHit: 1
-  maxCoinsForHit: 1
+  maxCoinsForHit: 5
   timeBetweenCoinsToSpawn: 0.1
   lifeForFoodStolen: 1
   hitToDropFoodOn: 1
-  openHand: {fileID: 21300000, guid: 21de4b723b91a4e6e85476024d95714f, type: 3}
-  closedHand: {fileID: 21300000, guid: 7d21a6bca37dc4823a6746d72a50acc9, type: 3}
+  openHand: {fileID: 21300000, guid: ac722f974da4b4e81a0c0e2d5a52324a, type: 3}
+  closedHand: {fileID: 21300000, guid: 4153f917c3fc04996ae2fe5d25246eb3, type: 3}
   handMovementType: 0
   hurtHands:
-  - {fileID: 21300000, guid: a3e587c30ee9e40bda8339bfcc3e1103, type: 3}
-  - {fileID: 21300000, guid: 129a13d6cbee14389aeddeeb6e63b69c, type: 3}
+  - {fileID: 21300000, guid: e3a7e643af96d47b9add59805fcd720f, type: 3}
+  - {fileID: 21300000, guid: 01fc7c31a0b5b48a68ad98b9a484d7d2, type: 3}
   beginPosition: {x: 0, y: 0, z: 0}
   endPosition: {x: 0, y: 0, z: 0}
---- !u!212 &212426865719203126
+--- !u!212 &212099076039540054
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1228796492941232}
+  m_GameObject: {fileID: 1091649404323530}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -190,7 +181,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: 21de4b723b91a4e6e85476024d95714f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ac722f974da4b4e81a0c0e2d5a52324a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

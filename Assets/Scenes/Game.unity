@@ -584,27 +584,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114742353216275096, guid: 7b2bf467401f14603963a6d6bfd39e68,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 474002491}
-    - target: {fileID: 223126588967541462, guid: 7b2bf467401f14603963a6d6bfd39e68,
-        type: 2}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 559383129}
-    - target: {fileID: 114754372031746630, guid: 7b2bf467401f14603963a6d6bfd39e68,
+    - target: {fileID: 114947767285613480, guid: 7b2bf467401f14603963a6d6bfd39e68,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1156211609}
-    - target: {fileID: 114683840914078930, guid: 7b2bf467401f14603963a6d6bfd39e68,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 474002491}
-    - target: {fileID: 114752941314830688, guid: 7b2bf467401f14603963a6d6bfd39e68,
+    - target: {fileID: 114177324684877674, guid: 7b2bf467401f14603963a6d6bfd39e68,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -614,16 +599,31 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 474002491}
-    - target: {fileID: 114177324684877674, guid: 7b2bf467401f14603963a6d6bfd39e68,
+    - target: {fileID: 114752941314830688, guid: 7b2bf467401f14603963a6d6bfd39e68,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 474002491}
-    - target: {fileID: 114947767285613480, guid: 7b2bf467401f14603963a6d6bfd39e68,
+    - target: {fileID: 114683840914078930, guid: 7b2bf467401f14603963a6d6bfd39e68,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 474002491}
+    - target: {fileID: 114754372031746630, guid: 7b2bf467401f14603963a6d6bfd39e68,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1156211609}
+    - target: {fileID: 223126588967541462, guid: 7b2bf467401f14603963a6d6bfd39e68,
+        type: 2}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 559383129}
+    - target: {fileID: 114742353216275096, guid: 7b2bf467401f14603963a6d6bfd39e68,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 474002491}
     - target: {fileID: 114532214038909008, guid: 7b2bf467401f14603963a6d6bfd39e68,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -634,6 +634,16 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1156211609}
+    - target: {fileID: 114612911427809576, guid: 7b2bf467401f14603963a6d6bfd39e68,
+        type: 2}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114612911427809576, guid: 7b2bf467401f14603963a6d6bfd39e68,
+        type: 2}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 114202471244969204, guid: 7b2bf467401f14603963a6d6bfd39e68,
         type: 2}
       propertyPath: m_havePropertiesChanged
@@ -662,10 +672,6 @@ Prefab:
     - target: {fileID: 114997436735576668, guid: 7b2bf467401f14603963a6d6bfd39e68,
         type: 2}
       propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1620419361523910, guid: 7b2bf467401f14603963a6d6bfd39e68, type: 2}
-      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
