@@ -63,6 +63,15 @@ namespace TheLastFry
         // end position target for run away
         public Vector3 endPosition;
 
+        // fly when hit
+        public bool flyWhenHit = false;
+
+        // The speed to fly off screen when hit
+        public float flyOffScreenSpeed = 1.5f;
+
+        // turn towards target angle
+        public float turnTowardsAngle = 180f;
+
         // do i have food?
         bool gotFood = false;
 
@@ -81,7 +90,8 @@ namespace TheLastFry
         // the id for attempting theft tween in order to stop it in case the hand is hit
         int atemptTheftTween = 0;
 
-
+        // sound effect when getting hit
+        [SerializeField] List<AudioClip> hitSounds;
 
         // Use this for initialization
         void Start()
@@ -93,12 +103,20 @@ namespace TheLastFry
         /// <summary>
         /// Setup this instance.
         /// </summary>
-        public void Setup(){
+        public void Setup()
+        {
             // set position
             transform.position = beginPosition;
 
             // face target
             turnTowardsTarget(targetFood.transform.position);
+
+            // if fly when hit 
+            if (flyWhenHit)
+            {
+                // make end position opposite of start position so the character will grab the fry and run to the other side
+                endPosition = new Vector3(endPosition.x * (-1), endPosition.y * (-1), endPosition.z);
+            }
         }
 
         // Update is called once per frame
@@ -139,11 +157,15 @@ namespace TheLastFry
                     // set got food 
                     gotFood = true;
 
-                    // set image to closed hand
-                    sr.sprite = closedHand;
+                    // if not fly when hit
+                    if (!flyWhenHit)
+                    {
+                        // set image to closed hand
+                        sr.sprite = closedHand;
 
-                    // make food dissapear under hand
-                    targetFood.GetComponent<SpriteRenderer>().enabled = false;
+                        // make food dissapear under hand
+                        targetFood.GetComponent<SpriteRenderer>().enabled = false;
+                    }
                 }
             }
 
@@ -192,11 +214,20 @@ namespace TheLastFry
             // set thief hit
             thiefHit = true;
 
+            // play random hit sound
+            int randomSoundIndex = Random.Range(0, hitSounds.Count);
+            AudioClip hitSound = hitSounds[randomSoundIndex];
+            SoundManager.instance.PlayHitSingle(hitSound);
+
             // if not all hand images have been used
             if (currentHit < hurtHands.Count)
             {
-                // Display next hurt hand... It gets worse and worse!
-                sr.sprite = hurtHands[currentHit];
+                // if not fly when hit
+                if (!flyWhenHit)
+                {
+                    // Display next hurt hand... It gets worse and worse!
+                    sr.sprite = hurtHands[currentHit];
+                }
 
                 // up the image counter
                 currentHit++;
@@ -259,7 +290,7 @@ namespace TheLastFry
             transform.right = target - transform.position;
 
             // spin the transform to face the target
-            transform.eulerAngles = new Vector3(0, 0, transform.eulerAngles.z + 180);
+            transform.eulerAngles = new Vector3(0, 0, transform.eulerAngles.z + turnTowardsAngle);
         }
 
         /// <summary>
@@ -281,6 +312,13 @@ namespace TheLastFry
         {
             // stop moving to target
             LeanTween.cancel(atemptTheftTween);
+
+            // if it should fly away when hit give it spin when it is retreating after hit
+            if(thiefHit && flyWhenHit)
+            {
+                // spin the transform
+                LeanTween.rotateZ(gameObject, 1024, flyOffScreenSpeed);
+            }
 
             // move to end position
             LeanTween.move(gameObject, endPosition, moveSpeed * 0.3f).setEase(handMovementType).setOnUpdate(onMovementUpdate);

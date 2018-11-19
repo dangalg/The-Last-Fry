@@ -125,10 +125,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48f8b7e3ad22c4077898f6ddf3285ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ThiefLevel: 1
   targetFood: {fileID: 0}
   foodIndex: 0
   moveSpeed: 3
   pointsForHit: 1
+  minCoinsForHit: 1
+  maxCoinsForHit: 1
+  timeBetweenCoinsToSpawn: 0.1
   lifeForFoodStolen: 1
   hitToDropFoodOn: 1
   openHand: {fileID: 21300000, guid: 5b68afd14b73947819b663cd82842c1a, type: 3}
@@ -139,6 +143,12 @@ MonoBehaviour:
   - {fileID: 21300000, guid: c3beed4e30d2b4a4ab51a6d1b906c5c4, type: 3}
   beginPosition: {x: 0, y: 0, z: 0}
   endPosition: {x: 0, y: 0, z: 0}
+  hitSounds:
+  - {fileID: 8300000, guid: dfcc94165770f4a06afc69b949f0712c, type: 3}
+  - {fileID: 8300000, guid: e24d6c09e08c846dbaa951d93fcf4e00, type: 3}
+  - {fileID: 8300000, guid: 59038ab29657c495d8d896cf1af463b8, type: 3}
+  - {fileID: 8300000, guid: dbed5a4c0ce794790b9597180e550f26, type: 3}
+  - {fileID: 8300000, guid: ac2a502225ed94f96870bcdd1a37875e, type: 3}
 --- !u!212 &212439641225573988
 SpriteRenderer:
   m_ObjectHideFlags: 1

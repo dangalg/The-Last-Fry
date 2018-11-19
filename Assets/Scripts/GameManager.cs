@@ -46,6 +46,15 @@ namespace TheLastFry
         // level for testing
         public int levelForTesting = 0;
 
+        // Audio game music
+        [SerializeField] AudioClip GameMusic;
+
+        // Audio win jingle
+        [SerializeField] AudioClip WinSound;
+
+        // Audio lose jingle
+        [SerializeField] AudioClip LoseSound;
+
         //Awake is always called before any Start functions
         void Awake()
         {
@@ -110,10 +119,9 @@ namespace TheLastFry
         {
 
             // sign in to ad manager callbacks
-            AdManager.instance.onSkippedAd = DecideEndorContinue;
-            AdManager.instance.onFailedAd = DecideEndorContinue;
+            AdManager.instance.onSkippedAd = LoseLevel;
+            AdManager.instance.onFailedAd = LoseLevel;
             AdManager.instance.onFinishedAd = ContinueAd;
-
         }
 
         void onPurchaseCoins(ShopManager.CoinAmount coinAmount)
@@ -217,6 +225,8 @@ namespace TheLastFry
             // set up one up spawner
             OneUpSpawner.instance.Setup(playerData.Level);
 
+            // play game music
+            SoundManager.instance.PlayMusic(GameMusic);
 
         }
 
@@ -326,7 +336,7 @@ namespace TheLastFry
                 playerData.Life = 0;
 
                 // go to continue screen
-                DecideEndorContinue();
+                LoseLevel();
             }
 
             // display stats
@@ -348,8 +358,15 @@ namespace TheLastFry
         /// <summary>
         /// Open the Continue panel to decide if to end or continue.
         /// </summary>
-        public void DecideEndorContinue()
+        public void LoseLevel()
         {
+
+            // stop game music
+            SoundManager.instance.StopMusic();
+
+            // play Lose sound
+            SoundManager.instance.PlayHitSingle(LoseSound);
+
             // stop game
             StopGame();
 
@@ -387,6 +404,19 @@ namespace TheLastFry
             SceneManager.LoadScene("MainMenu");
 
             yield return null;
+        }
+
+        public void GoToNextLevel()
+        {
+
+            // stop game music
+            SoundManager.instance.StopMusic();
+
+            // play win sound
+            SoundManager.instance.PlayHitSingle(WinSound);
+
+            // start next level
+            StartCoroutine(NextLevel());
         }
 
         /// <summary>

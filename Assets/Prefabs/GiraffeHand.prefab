@@ -152,6 +152,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 3e3f792e26d55496cabaf66f1c1f3998, type: 3}
   beginPosition: {x: 0, y: 0, z: 0}
   endPosition: {x: 0, y: 0, z: 0}
+  hitSounds:
+  - {fileID: 8300000, guid: 40ed0c78ed9a54ddcbff406ffa5b3fb3, type: 3}
 --- !u!212 &212298012385132640
 SpriteRenderer:
   m_ObjectHideFlags: 1

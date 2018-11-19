@@ -136,12 +136,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DistanceToFloat: 1.7
   moveSpeed: 3
+  flyOffScreenSpeed: 1.5
   lifeToLose: 1
   indexOfUntouchableInList: 0
   beginPoint: {x: 0, y: 0, z: 0}
   turnTowardsTargetWhenMoving: 1
   numberPopUp: {fileID: 1699931572656742, guid: e697500ab0b5544aaafba8fe8073adb7,
     type: 2}
+  hitSound: {fileID: 8300000, guid: cc5d79ecabfbe494299a0f08bd8e6e61, type: 3}
 --- !u!212 &212390327477478272
 SpriteRenderer:
   m_ObjectHideFlags: 1

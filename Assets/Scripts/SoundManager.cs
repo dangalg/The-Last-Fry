@@ -8,11 +8,20 @@ namespace TheLastFry
     public class SoundManager : MonoBehaviour
     {
         public AudioSource efxSource;                   //Drag a reference to the audio source which will play the sound effects.
+        public AudioSource hitsSource;                   //Drag a reference to the audio source which will play the hits sound effects.
         public AudioSource musicSource;                 //Drag a reference to the audio source which will play the music.
         public static SoundManager instance = null;     //Allows other scripts to call functions from SoundManager.             
         public float lowPitchRange = .95f;              //The lowest a sound effect will be randomly pitched.
         public float highPitchRange = 1.05f;            //The highest a sound effect will be randomly pitched.
 
+        // game music volume from 0.0 to 1.0
+        public float GameMusicVolume = 1.0f;
+
+        // game music volume from 0.0 to 1.0
+        public float EFXVolume = 1.0f;
+
+        // game music volume from 0.0 to 1.0
+        public float SingleHitVolume = 1.0f;
 
         void Awake()
         {
@@ -36,8 +45,45 @@ namespace TheLastFry
             //Set the clip of our efxSource audio source to the clip passed in as a parameter.
             efxSource.clip = clip;
 
+            // set the volume
+            efxSource.volume = EFXVolume;
+
             //Play the clip.
             efxSource.Play();
+        }
+
+        //Used to play single sound clips.
+        public void PlayHitSingle(AudioClip clip)
+        {
+            //Set the clip of our efxSource audio source to the clip passed in as a parameter.
+            hitsSource.clip = clip;
+
+            // set the volume
+            hitsSource.volume = SingleHitVolume;
+
+            //Play the clip.
+            hitsSource.Play();
+        }
+
+        //Used to play single sound clips.
+        public void PlayMusic(AudioClip clip)
+        {
+            //Set the clip of our efxSource audio source to the clip passed in as a parameter.
+            musicSource.clip = clip;
+
+            // set the volume
+            musicSource.volume = GameMusicVolume;
+
+            //Play the clip.
+            musicSource.Play();
+        }
+
+        //Used to play single sound clips.
+        public void StopMusic()
+        {
+            //Stop the music
+            musicSource.Stop();
+
         }
 
 

@@ -14,6 +14,9 @@ namespace TheLastFry
         // The move speed
         public float moveSpeed = 3;
 
+        // The speed to fly off screen when hit
+        public float flyOffScreenSpeed = 1.5f;
+
         // amount of life to lose when touching this
         public int lifeToGain = 1;
 
@@ -41,9 +44,19 @@ namespace TheLastFry
         // The numberpop object to spawn
         [SerializeField] GameObject numberPopUp;
 
+        // hit sound
+        [SerializeField] AudioClip hitSound;
+
+        // initial position
+        Vector3 initialPosition;
+
         private void Start()
         {
             oneUpCollider = GetComponent<PolygonCollider2D>();
+
+            // set initial position
+            initialPosition = transform.position;
+
         }
 
         /// <summary>
@@ -99,6 +112,10 @@ namespace TheLastFry
 
         public void onHit()
         {
+
+            // play hit sound
+            SoundManager.instance.PlayHitSingle(hitSound);
+
             oneUpCollider.enabled = false;
             // call callback
             if (onHitOneUp != null)
@@ -121,7 +138,32 @@ namespace TheLastFry
             numberPopUpScript.SpawnNumber("+" + lifeToGain.ToString());
 
             // destroy this
-            Destroy(gameObject, 0.1f);
+            flyOffScreen();
         }
+
+        void flyOffScreen(){
+
+            // stop move tween
+            LeanTween.cancel(floatToTargetTweenId);
+
+            // spin the transform
+            LeanTween.rotateZ(gameObject, 1024, flyOffScreenSpeed);
+
+            LeanTween.move(gameObject, initialPosition, flyOffScreenSpeed).setEase(LeanTweenType.animationCurve).setOnComplete(onCompleteFlightOffScreen);
+
+        }
+
+        /// <summary>
+        /// Ons the complete flight off screen.
+        /// </summary>
+        void onCompleteFlightOffScreen()
+        {
+
+            // destroy this gameobject
+            Destroy(gameObject, 0.1f);
+
+        }
+
+
     }
 }
