@@ -29,6 +29,9 @@ namespace TheLastFry
         // the beginning point for the untouchable
         public Vector3 beginPoint;
 
+        // decide if object should turn towards target when moving
+        public bool turnTowardsTargetWhenMoving = false;
+
         // the id for attempting theft tween in order to stop it in case the hand is hit
         int floatToTargetTweenId = 0;
 
@@ -59,7 +62,10 @@ namespace TheLastFry
             floatToTargetTweenId = LeanTween.move(gameObject, targetPosition, moveSpeed).setEase(LeanTweenType.animationCurve).setOnComplete(onComplete).id;
 
             // turn to target
-            //turnTowardsTarget(targetPosition);
+            if(turnTowardsTargetWhenMoving){
+                turnTowardsTarget(targetPosition);
+            }
+
         }
 
         /// <summary>
