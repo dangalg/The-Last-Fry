@@ -59,7 +59,7 @@ namespace TheLastFry
             floatToTargetTweenId = LeanTween.move(gameObject, targetPosition, moveSpeed).setEase(LeanTweenType.animationCurve).setOnComplete(onComplete).id;
 
             // turn to target
-            turnTowardsTarget(targetPosition);
+            //turnTowardsTarget(targetPosition);
         }
 
         /// <summary>
