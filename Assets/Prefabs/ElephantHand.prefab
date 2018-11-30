@@ -128,7 +128,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48f8b7e3ad22c4077898f6ddf3285ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ThiefLevel: 5
+  ThiefLevel: 10
+  ThiefName: elephant
   targetFood: {fileID: 0}
   foodIndex: 0
   moveSpeed: 3
@@ -146,6 +147,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 6d47450d729ed4deeb1df694440f3e1a, type: 3}
   beginPosition: {x: 0, y: 0, z: 0}
   endPosition: {x: 0, y: 0, z: 0}
+  flyWhenHit: 0
+  flyOffScreenSpeed: 1.5
+  flySounds: []
+  turnTowardsAngle: 180
   hitSounds:
   - {fileID: 8300000, guid: 0f0966220d193442ea322dfb1ba044f5, type: 3}
   - {fileID: 8300000, guid: ea0944bbdd27c4a4eaab4230e519c7ac, type: 3}

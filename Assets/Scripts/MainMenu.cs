@@ -26,6 +26,10 @@ namespace TheLastFry
         [SerializeField] GameObject MessagePanel;
         [SerializeField] GameObject InstructionsPanel;
 
+        [SerializeField] GameObject ShopPanel;
+
+        [SerializeField] GameObject ItemStorePanel;
+
         //Awake is always called before any Start functions
         void Awake()
         {
@@ -55,6 +59,10 @@ namespace TheLastFry
         {
             // load player data
             playerData = DataHandler.LoadPlayerData();
+
+            DataHandler.SaveIntToDB("hand", 1);
+            DataHandler.SaveIntToDB("black", 1);
+            DataHandler.SaveIntToDB("chinese", 1);
         }
 
         // Use this for initialization
@@ -85,6 +93,40 @@ namespace TheLastFry
         {
             // close Instructions Panel
             InstructionsPanel.SetActive(false);
+        }
+
+        /// <summary>
+        /// Shows the item store.
+        /// </summary>
+        public void ShowItemStore()
+        {
+            ItemStorePanel.SetActive(true);
+        }
+
+        /// <summary>
+        /// Hides the item store.
+        /// </summary>
+        public void HideItemStore()
+        {
+            // close Instructions Panel
+            ItemStorePanel.SetActive(false);
+        }
+
+        /// <summary>
+        /// Shows the item store.
+        /// </summary>
+        public void ShowShop()
+        {
+            ShopPanel.SetActive(true);
+        }
+
+        /// <summary>
+        /// Hides the item store.
+        /// </summary>
+        public void HideShop()
+        {
+            // close Instructions Panel
+            ShopPanel.SetActive(false);
         }
 
         /// <summary>

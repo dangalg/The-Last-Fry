@@ -128,6 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ThiefLevel: 5
+  ThiefName: cow
   targetFood: {fileID: 0}
   foodIndex: 0
   moveSpeed: 3
@@ -145,6 +146,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 929cd912a9d674bdfbce2687af2b04a7, type: 3}
   beginPosition: {x: 0, y: 0, z: 0}
   endPosition: {x: 0, y: 0, z: 0}
+  flyWhenHit: 0
+  flyOffScreenSpeed: 1.5
+  flySounds: []
+  turnTowardsAngle: 180
   hitSounds:
   - {fileID: 8300000, guid: ba4e39c96c1b242bab594580973649c1, type: 3}
 --- !u!212 &212543743254219348

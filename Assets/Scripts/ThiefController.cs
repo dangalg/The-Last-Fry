@@ -11,6 +11,9 @@ namespace TheLastFry
     
         public int ThiefLevel = 1;
 
+        // The name of the item
+        public string ThiefName;
+
         // the food to steal
         public GameObject targetFood;
 

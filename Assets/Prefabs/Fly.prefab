@@ -230,6 +230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ThiefLevel: 1
+  ThiefName: fly
   targetFood: {fileID: 0}
   foodIndex: 0
   moveSpeed: 2.5

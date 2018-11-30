@@ -139,11 +139,26 @@ namespace TheLastFry
                 ThiefController thiefController = itemTypes[i].gameObject.GetComponent<ThiefController>();
 
                 // remove any item types not fitting the level.
-                if (thiefController.ThiefLevel > gameLevel)
+                //if (thiefController.ThiefLevel > gameLevel)
+                //{
+                //    itemTypes.RemoveAt(i);
+                //    itemTypesOdds.RemoveAt(i);
+
+                //    continue;
+                //}
+
+                // get item owned from db
+                bool itemOwned = DataHandler.LoadIntFromDB(thiefController.ThiefName) == 1;
+
+                // remove any item types not bought.
+                if (!itemOwned)
                 {
                     itemTypes.RemoveAt(i);
                     itemTypesOdds.RemoveAt(i);
+
+                    continue;
                 }
+
             }
         }
 

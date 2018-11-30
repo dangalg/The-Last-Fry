@@ -230,6 +230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ThiefLevel: 1
+  ThiefName: bat
   targetFood: {fileID: 0}
   foodIndex: 0
   moveSpeed: 2.5
@@ -297,6 +298,6 @@ SpriteRenderer:
   m_Size: {x: 2.7, y: 3.03}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
