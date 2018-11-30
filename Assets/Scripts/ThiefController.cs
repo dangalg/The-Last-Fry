@@ -69,6 +69,9 @@ namespace TheLastFry
         // The speed to fly off screen when hit
         public float flyOffScreenSpeed = 1.5f;
 
+        // sound effect when flying
+        [SerializeField] List<AudioClip> flySounds;
+
         // turn towards target angle
         public float turnTowardsAngle = 180f;
 
@@ -114,9 +117,17 @@ namespace TheLastFry
             // if fly when hit 
             if (flyWhenHit)
             {
+
                 // make end position opposite of start position so the character will grab the fry and run to the other side
                 endPosition = new Vector3(endPosition.x * (-1), endPosition.y * (-1), endPosition.z);
+
+                // play random fly sound
+                int randomSoundIndex = Random.Range(0, flySounds.Count);
+                AudioClip flySound = flySounds[randomSoundIndex];
+                //SoundManager.instance.PlayFly(flySound);
+
             }
+
         }
 
         // Update is called once per frame
@@ -321,7 +332,7 @@ namespace TheLastFry
             }
 
             // move to end position
-            LeanTween.move(gameObject, endPosition, moveSpeed * 0.3f).setEase(handMovementType).setOnUpdate(onMovementUpdate);
+            LeanTween.move(gameObject, endPosition, moveSpeed * 0.3f).setEase(handMovementType).setOnUpdate(onMovementUpdate).setOnComplete(onCompleteFlight);
 
         }
 
@@ -337,6 +348,16 @@ namespace TheLastFry
                 // keep the food position and rotation same as mine during movement
                 targetFood.transform.position = transform.position;
                 targetFood.transform.rotation = transform.rotation;
+            }
+        }
+
+        void onCompleteFlight()
+        {
+            // if fly when hit 
+            if (flyWhenHit)
+            {
+                // stop fly music
+                //SoundManager.instance.StopFly();
             }
         }
 

@@ -23,6 +23,15 @@ namespace TheLastFry
         // game music volume from 0.0 to 1.0
         public float SingleHitVolume = 1.0f;
 
+        // fly music volume from 0.0 to 1.0
+        public float FlyVolume = 1.0f;
+
+        // music mute enable
+        bool muteMusic = false;
+
+        // sfx mute enable
+        bool muteSFX = false;
+
         void Awake()
         {
             //Check if there is already an instance of SoundManager
@@ -65,6 +74,32 @@ namespace TheLastFry
             hitsSource.Play();
         }
 
+        //Used to mute the sfx.
+        public void MuteSFX()
+        {
+
+            if(!muteSFX)
+            {
+
+                muteSFX = true;
+
+                // set the volume to 0
+                efxSource.volume = 0;
+                hitsSource.volume = 0;
+            }
+            else
+            {
+
+                muteSFX = false;
+
+                // set the volume
+                efxSource.volume = EFXVolume;
+                hitsSource.volume = SingleHitVolume;
+            }
+
+
+        }
+
         //Used to play single sound clips.
         public void PlayMusic(AudioClip clip)
         {
@@ -78,6 +113,29 @@ namespace TheLastFry
             musicSource.Play();
         }
 
+        //Used to mute the music.
+        public void MuteMusic()
+        {
+
+            if (!muteMusic)
+            {
+
+                muteMusic = true;
+
+                // set the volume to 0
+                musicSource.volume = 0;
+            }
+            else
+            {
+
+                muteMusic = false;
+
+                // set the volume
+                musicSource.volume = GameMusicVolume;
+            }
+
+        }
+
         //Used to play single sound clips.
         public void StopMusic()
         {
@@ -85,7 +143,6 @@ namespace TheLastFry
             musicSource.Stop();
 
         }
-
 
         //RandomizeSfx chooses randomly between various audio clips and slightly changes their pitch.
         public void RandomizeSfx(params AudioClip[] clips)

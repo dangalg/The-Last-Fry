@@ -63,7 +63,7 @@ MonoBehaviour:
   ContinuePanel: {fileID: 0}
   MessagePanel: {fileID: 0}
   coinsForNextLevel: 300
-  lifeForContinue: 1000
+  lifeForContinue: 10
   levelForTesting: 0
   GameMusic: {fileID: 8300000, guid: 6404f931d10374afc93d213d5d3b4f50, type: 3}
   WinSound: {fileID: 8300000, guid: 19f51af5020a84c41b0f23878df82c44, type: 3}

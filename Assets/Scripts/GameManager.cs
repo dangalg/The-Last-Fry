@@ -107,8 +107,8 @@ namespace TheLastFry
             CoinButtonText.text = coinsForNextLevel.ToString() + " Coins";
 
             // sign in to shopManager
-            ShopManager.instance.onPurchaseCoinsAction = onPurchaseCoins;
-            ShopManager.instance.onPurchaseFailedAction = onPurchaseFailed;
+            ShopManager.instance.onPurchaseCoinsAction += onPurchaseCoins;
+            ShopManager.instance.onPurchaseFailedAction += onPurchaseFailed;
 
             // setup the game
             StartCoroutine(SetupGame(playerData.Level));
@@ -145,6 +145,9 @@ namespace TheLastFry
                     playerData.Coins += 500;
                     break;
             }
+
+            // save player data
+            DataHandler.SavePlayerData(playerData);
 
             // hide shop panel
             ShopPanel.SetActive(false);

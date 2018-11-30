@@ -26,6 +26,7 @@ namespace TheLastFry
 
         // callbacks
         public UnityAction<CoinAmount> onPurchaseCoinsAction;
+        public UnityAction<CoinAmount> onAfterPurchaseCoinsAction;
         public UnityAction onRemoveAds;
         public UnityAction onPurchaseFailedAction;
 
@@ -102,12 +103,18 @@ namespace TheLastFry
         /// <summary>
         /// on purchase of gems.
         /// </summary>
-        /// <param name="gemAmount">Gem amount.</param>
-        void onPurchaseCoins(CoinAmount gemAmount)
+        /// <param name="coinAmount">coin amount.</param>
+        void onPurchaseCoins(CoinAmount coinAmount)
         {
             if(onPurchaseCoinsAction != null){
-                onPurchaseCoinsAction(gemAmount);
+                onPurchaseCoinsAction(coinAmount);
             }
+
+            if (onAfterPurchaseCoinsAction != null)
+            {
+                onAfterPurchaseCoinsAction(coinAmount);
+            }
+
         }
 
         /// <summary>
