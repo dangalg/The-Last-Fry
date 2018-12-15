@@ -342,7 +342,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1536849391
+--- !u!1001 &1423000171
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -416,6 +416,26 @@ Prefab:
       propertyPath: ShopPanel
       value: 
       objectReference: {fileID: 26822452}
+    - target: {fileID: 114678964245069876, guid: 37a53013b9067433080b4cdd016fb689,
+        type: 2}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114678964245069876, guid: 37a53013b9067433080b4cdd016fb689,
+        type: 2}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114132713088493008, guid: 37a53013b9067433080b4cdd016fb689,
+        type: 2}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114132713088493008, guid: 37a53013b9067433080b4cdd016fb689,
+        type: 2}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37a53013b9067433080b4cdd016fb689, type: 2}
   m_IsPrefabAsset: 0

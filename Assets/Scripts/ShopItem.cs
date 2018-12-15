@@ -15,6 +15,8 @@ namespace TheLastFry{
 
         [SerializeField] Button BuyButton;
 
+        [SerializeField] Text BuyButtonText;
+
         [SerializeField] Image Original;
         [SerializeField] Image Shadow;
 
@@ -49,6 +51,8 @@ namespace TheLastFry{
                 // disable buy button
                 BuyButton.enabled = false;
 
+                BuyButtonText.text = "Unlocked";
+
             }
             else
             {
@@ -59,6 +63,8 @@ namespace TheLastFry{
 
                 // enable buy button
                 BuyButton.enabled = true;
+
+                BuyButtonText.text = "Unlock";
 
             }
 
@@ -74,6 +80,8 @@ namespace TheLastFry{
                 // show image
                 Shadow.gameObject.SetActive(false);
                 Original.gameObject.SetActive(true);
+
+                BuyButtonText.text = "Unlocked";
 
             }
 
