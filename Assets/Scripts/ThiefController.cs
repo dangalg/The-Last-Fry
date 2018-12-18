@@ -57,6 +57,9 @@ namespace TheLastFry
         // list of hurt images in order of good to worst
         [SerializeField] List<Sprite> hurtHands;
 
+        // dead image
+        [SerializeField] Sprite deadImage;
+
         // the sprite rnderer
         SpriteRenderer sr;
 
@@ -242,6 +245,12 @@ namespace TheLastFry
                     // Display next hurt hand... It gets worse and worse!
                     sr.sprite = hurtHands[currentHit];
                 }
+                else
+                {
+                    // show death image for flying object
+                    sr.sprite = deadImage;
+
+                }
 
                 // up the image counter
                 currentHit++;
@@ -249,6 +258,7 @@ namespace TheLastFry
                 // first hit?
                 if (currentHit == 1)
                 {
+
                     // then add points
                     GameManager.instance.AddPoint(pointsForHit);
 

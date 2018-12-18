@@ -24,6 +24,8 @@ namespace TheLastFry{
 
         [SerializeField] GameObject ShopPanel;
 
+        [SerializeField] GameObject ItemStorePanel;
+
         // Use this for initialization
         void Start()
         {
@@ -88,6 +90,10 @@ namespace TheLastFry{
             // I don't have enough coins
             else
             {
+
+                // hide item store
+                ItemStorePanel.SetActive(false);
+
                 // show shop panel
                 ShopPanel.SetActive(true);
             }
