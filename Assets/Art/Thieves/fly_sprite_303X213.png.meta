@@ -1,22 +1,20 @@
 fileFormatVersion: 2
-guid: 84c65884b1a994177bc85cc4fb3caffe
+guid: 11ec276913c4641d68f44eb7be65128f
 TextureImporter:
   fileIDToRecycleName:
-    21300000: mosqito_0
-    21300002: mosqito_1
-    21300004: mosqito_2
-    21300006: mosqito_3
-    21300008: mosqito_4
-    21300010: mosqito_5
-    21300012: mosqito_6
-    21300014: mosqito_7
-    21300016: mosqito_8
-    21300018: mosqito_9
-    21300020: mosqito_10
-    21300022: mosqito_11
-    21300024: mosqito_12
-    21300026: mosqito_13
-    21300028: mosqito_14
+    21300000: fly_sprite_303X213_0
+    21300002: fly_sprite_303X213_1
+    21300004: fly_sprite_303X213_2
+    21300006: fly_sprite_303X213_3
+    21300008: fly_sprite_303X213_4
+    21300010: fly_sprite_303X213_5
+    21300012: fly_sprite_303X213_6
+    21300014: fly_sprite_303X213_7
+    21300016: fly_sprite_303X213_8
+    21300018: fly_sprite_303X213_9
+    21300020: fly_sprite_303X213_10
+    21300022: fly_sprite_303X213_11
+    21300024: fly_sprite_303X213_12
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -143,13 +141,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mosqito_0
+      name: fly_sprite_303X213_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 1745
-        width: 270
-        height: 303
+        y: 1831
+        width: 303
+        height: 217
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -157,19 +155,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd7913a3dcc1c44f4921339011f6629e
+      spriteID: 0448b473efce84a488eaaa89b971c5d4
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mosqito_1
+      name: fly_sprite_303X213_1
       rect:
         serializedVersion: 2
-        x: 270
-        y: 1745
-        width: 270
-        height: 303
+        x: 303
+        y: 1831
+        width: 303
+        height: 217
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -177,19 +175,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6bb0758c34e3d45c8a001edc4b438f92
+      spriteID: e17087b5599c04bedae9168ffdf7c721
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mosqito_2
+      name: fly_sprite_303X213_2
       rect:
         serializedVersion: 2
-        x: 540
-        y: 1745
-        width: 270
-        height: 303
+        x: 606
+        y: 1831
+        width: 303
+        height: 217
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -197,79 +195,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a2ba930ce381424496b68edde458e4b
+      spriteID: 7ff8653ea461f43fc897ff3910e1b422
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mosqito_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 1442
-        width: 270
-        height: 303
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 691dc7ca9b13648b4967064d9a3a5b73
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mosqito_4
-      rect:
-        serializedVersion: 2
-        x: 270
-        y: 1442
-        width: 270
-        height: 303
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e52b2ed28e1a945af8da760cd4d42c66
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mosqito_5
-      rect:
-        serializedVersion: 2
-        x: 540
-        y: 1442
-        width: 270
-        height: 303
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 972c0cca1e07e404593c0513846df4a5
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mosqito_6
+      name: fly_sprite_303X213_3
       rect:
         serializedVersion: 2
         x: 0
-        y: 1139
-        width: 270
-        height: 303
+        y: 1614
+        width: 303
+        height: 217
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -277,19 +215,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fff9bfd0ebc534e439c120046d7d8c06
+      spriteID: 410ae68bc45134537b36f241633aff66
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mosqito_7
+      name: fly_sprite_303X213_4
       rect:
         serializedVersion: 2
-        x: 270
-        y: 1139
-        width: 270
-        height: 303
+        x: 303
+        y: 1614
+        width: 303
+        height: 217
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -297,19 +235,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dcdc47e7d752c490b98784c6b4f53007
+      spriteID: 41f6060e9cfb748d4a3b9dd8ed9daa99
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mosqito_8
+      name: fly_sprite_303X213_5
       rect:
         serializedVersion: 2
-        x: 540
-        y: 1139
-        width: 270
-        height: 303
+        x: 606
+        y: 1614
+        width: 303
+        height: 217
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -317,79 +255,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f3e844570167c470580cb6d9fbdfd562
+      spriteID: 8bc7f1cfa21404062b5666a42f4df57c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mosqito_9
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 836
-        width: 270
-        height: 303
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cef5d658ab2ce48fdad5a965bcf0d3eb
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mosqito_10
-      rect:
-        serializedVersion: 2
-        x: 270
-        y: 836
-        width: 270
-        height: 303
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fc3631c273a4c438189cc240348a86f8
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mosqito_11
-      rect:
-        serializedVersion: 2
-        x: 540
-        y: 836
-        width: 270
-        height: 303
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d9a1e7bc2e82e4aa186aae24ed8c2910
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mosqito_12
+      name: fly_sprite_303X213_6
       rect:
         serializedVersion: 2
         x: 0
-        y: 533
-        width: 270
-        height: 303
+        y: 1397
+        width: 303
+        height: 217
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -397,19 +275,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc1cca4ae7f2f4d81a30803c0a566140
+      spriteID: 887750b86513c477eb64246673adf0ab
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mosqito_13
+      name: fly_sprite_303X213_7
       rect:
         serializedVersion: 2
-        x: 270
-        y: 533
-        width: 270
-        height: 303
+        x: 303
+        y: 1397
+        width: 303
+        height: 217
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -417,19 +295,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa5a9c48c6b9349928a5cdc776260637
+      spriteID: 8ca7a61406823475883a9cb08265b895
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mosqito_14
+      name: fly_sprite_303X213_8
       rect:
         serializedVersion: 2
-        x: 540
-        y: 533
-        width: 270
-        height: 303
+        x: 606
+        y: 1397
+        width: 303
+        height: 217
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -437,7 +315,87 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1ac207ddc4644685a6e422722d8d5b7
+      spriteID: b0d24afa22a394083b9da84836f48159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fly_sprite_303X213_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1180
+        width: 303
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 716e534f33eeb4eaa8054077abc44f0d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fly_sprite_303X213_10
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 1180
+        width: 303
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67a1e5b967b4848c289097974698d2ef
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fly_sprite_303X213_11
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 1180
+        width: 303
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0171db9e30dd442ef96ca3bf4772a75f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fly_sprite_303X213_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 963
+        width: 303
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 065a854a0dc794f29a2a14b314983388
       vertices: []
       indices: 
       edges: []
@@ -445,7 +403,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 068736f8ff9d8465ba1ac525f45da75f
+    spriteID: af0ea83c2953b4521a837c88ad534471
     vertices: []
     indices: 
     edges: []

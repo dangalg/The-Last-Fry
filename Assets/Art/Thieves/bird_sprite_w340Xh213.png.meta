@@ -1,19 +1,25 @@
 fileFormatVersion: 2
-guid: 2194dba5d3f1d449383a1aa5dcd0185f
+guid: 7a56c26c7ae6c44969c41ec48802769f
 TextureImporter:
   fileIDToRecycleName:
-    21300000: fly_0
-    21300002: fly_1
-    21300004: fly_2
-    21300006: fly_3
-    21300008: fly_4
-    21300010: fly_5
-    21300012: fly_6
-    21300014: fly_7
-    21300016: fly_8
-    21300018: fly_9
-    21300020: fly_10
-    21300022: fly_11
+    21300000: bird_sprite_w340Xh213_0
+    21300002: bird_sprite_w340Xh213_1
+    21300004: bird_sprite_w340Xh213_2
+    21300006: bird_sprite_w340Xh213_3
+    21300008: bird_sprite_w340Xh213_4
+    21300010: bird_sprite_w340Xh213_5
+    21300012: bird_sprite_w340Xh213_6
+    21300014: bird_sprite_w340Xh213_7
+    21300016: bird_sprite_w340Xh213_8
+    21300018: bird_sprite_w340Xh213_9
+    21300020: bird_sprite_w340Xh213_10
+    21300022: bird_sprite_w340Xh213_11
+    21300024: bird_sprite_w340Xh213_12
+    21300026: bird_sprite_w340Xh213_13
+    21300028: bird_sprite_w340Xh213_14
+    21300030: bird_sprite_w340Xh213_15
+    21300032: bird_sprite_w340Xh213_16
+    21300034: bird_sprite_w340Xh213_17
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -140,13 +146,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: fly_0
+      name: bird_sprite_w340Xh213_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 809
-        width: 303
-        height: 215
+        y: 1835
+        width: 340
+        height: 213
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,19 +160,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 066fda3e0ca3e4474ab9092299bf9303
+      spriteID: db00386419c8646aa9015223cd7b3ab2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fly_1
+      name: bird_sprite_w340Xh213_1
       rect:
         serializedVersion: 2
-        x: 303
-        y: 809
-        width: 303
-        height: 215
+        x: 340
+        y: 1835
+        width: 340
+        height: 213
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,19 +180,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef1b8af59a4864e9a9c76974945f5211
+      spriteID: 83b51095451b3483595e0b860774d81c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fly_2
+      name: bird_sprite_w340Xh213_2
       rect:
         serializedVersion: 2
-        x: 606
-        y: 809
-        width: 303
-        height: 215
+        x: 680
+        y: 1835
+        width: 340
+        height: 213
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,79 +200,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d9da6264e2bf3461e93c77419f5bb2e4
+      spriteID: 096e4576b5d9347f5b7ceefb00ad982e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fly_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 594
-        width: 303
-        height: 215
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b507c8d38e68b4ab1948f3938f854ca0
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fly_4
-      rect:
-        serializedVersion: 2
-        x: 303
-        y: 594
-        width: 303
-        height: 215
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 92d91f956fa384b88bdfaa752d91bafd
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fly_5
-      rect:
-        serializedVersion: 2
-        x: 606
-        y: 594
-        width: 303
-        height: 215
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b2e3ea5939e12447186395632b0c8409
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fly_6
+      name: bird_sprite_w340Xh213_3
       rect:
         serializedVersion: 2
         x: 0
-        y: 379
-        width: 303
-        height: 215
+        y: 1622
+        width: 340
+        height: 213
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -274,19 +220,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7800cccaa16241518acdfb783385d6b
+      spriteID: c01abd65e881d454eae754d1989d893b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fly_7
+      name: bird_sprite_w340Xh213_4
       rect:
         serializedVersion: 2
-        x: 303
-        y: 379
-        width: 303
-        height: 215
+        x: 340
+        y: 1622
+        width: 340
+        height: 213
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -294,19 +240,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b99344a5035e64a2495822778c585a4c
+      spriteID: 1e7f2d6bd13234e4f80cc9862a9238d4
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fly_8
+      name: bird_sprite_w340Xh213_5
       rect:
         serializedVersion: 2
-        x: 606
-        y: 379
-        width: 303
-        height: 215
+        x: 680
+        y: 1622
+        width: 340
+        height: 213
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -314,19 +260,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e48a32fa02079450f85aef42ea5bc605
+      spriteID: 800bc33a5777e417da5dab40a331b97a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fly_9
+      name: bird_sprite_w340Xh213_6
       rect:
         serializedVersion: 2
         x: 0
-        y: 164
-        width: 303
-        height: 215
+        y: 1409
+        width: 340
+        height: 213
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -334,19 +280,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 57a67f1f2a5fd480d83918b66ecdbe6a
+      spriteID: 034b150c0cca344daadd01417742da33
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fly_10
+      name: bird_sprite_w340Xh213_7
       rect:
         serializedVersion: 2
-        x: 303
-        y: 164
-        width: 303
-        height: 215
+        x: 340
+        y: 1409
+        width: 340
+        height: 213
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -354,19 +300,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49a233d7497ab49498c0377909b4474a
+      spriteID: 54baabce0e442429fab1323ad361b212
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fly_11
+      name: bird_sprite_w340Xh213_8
       rect:
         serializedVersion: 2
-        x: 606
-        y: 164
-        width: 303
-        height: 215
+        x: 680
+        y: 1409
+        width: 340
+        height: 213
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -374,7 +320,187 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52d660f0266dd4243af3eabe9a44736b
+      spriteID: 80137914652084b6e980595f1ff4dd52
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_sprite_w340Xh213_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1196
+        width: 340
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eae1a210e37043b8a02986ee3d763ba
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_sprite_w340Xh213_10
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 1196
+        width: 340
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b85dcc9aa49d48dd834dcc98cf0ce78
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_sprite_w340Xh213_11
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 1196
+        width: 340
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8603e0b637ceb4b0f941671d4afc5d9f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_sprite_w340Xh213_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 983
+        width: 340
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a54ff1a04a32c444c94295c821ec8cfd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_sprite_w340Xh213_13
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 983
+        width: 340
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8481d694fd602481b869f73e75b76a8c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_sprite_w340Xh213_14
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 983
+        width: 340
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 171948a64bee140a8825954afced93de
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_sprite_w340Xh213_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 770
+        width: 340
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf4612888af854220a80254c7c51569c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_sprite_w340Xh213_16
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 770
+        width: 340
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ef2f3674e2f54d78b31a76e42b1164f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bird_sprite_w340Xh213_17
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 770
+        width: 340
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28a4651c5bbbe48ae9511cf9cbe2f769
       vertices: []
       indices: 
       edges: []
@@ -382,7 +508,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 1b1d5f22d2a9545dbb7ccf8a1af45a83
+    spriteID: 3bff8a433ae464c948afa45beebc7c0f
     vertices: []
     indices: 
     edges: []

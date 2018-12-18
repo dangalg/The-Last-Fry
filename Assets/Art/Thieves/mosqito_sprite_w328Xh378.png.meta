@@ -1,17 +1,20 @@
 fileFormatVersion: 2
-guid: e7d749b20b7964ae8a9df77449396eef
+guid: 663ca15f35f07421da6a56ca20f99db5
 TextureImporter:
   fileIDToRecycleName:
-    21300000: bat_sprite_0
-    21300002: bat_sprite_1
-    21300004: bat_sprite_2
-    21300006: bat_sprite_3
-    21300008: bat_sprite_4
-    21300010: bat_sprite_5
-    21300012: bat_sprite_6
-    21300014: bat_sprite_7
-    21300016: bat_sprite_8
-    21300018: bat_sprite_9
+    21300000: mosqito_sprite_w328Xh378_0
+    21300002: mosqito_sprite_w328Xh378_1
+    21300004: mosqito_sprite_w328Xh378_2
+    21300006: mosqito_sprite_w328Xh378_3
+    21300008: mosqito_sprite_w328Xh378_4
+    21300010: mosqito_sprite_w328Xh378_5
+    21300012: mosqito_sprite_w328Xh378_6
+    21300014: mosqito_sprite_w328Xh378_7
+    21300016: mosqito_sprite_w328Xh378_8
+    21300018: mosqito_sprite_w328Xh378_9
+    21300020: mosqito_sprite_w328Xh378_10
+    21300022: mosqito_sprite_w328Xh378_11
+    21300024: mosqito_sprite_w328Xh378_12
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -138,13 +141,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bat_sprite_0
+      name: mosqito_sprite_w328Xh378_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 857
-        width: 310
-        height: 167
+        y: 1670
+        width: 328
+        height: 378
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,19 +155,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 137522f6691054f0b86b2f17f9de7cd7
+      spriteID: cc3eb4177a13a4821a2155f1bc95a2df
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bat_sprite_1
+      name: mosqito_sprite_w328Xh378_1
       rect:
         serializedVersion: 2
-        x: 310
-        y: 857
-        width: 310
-        height: 167
+        x: 328
+        y: 1670
+        width: 328
+        height: 378
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,19 +175,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 930d2c9e1fb6c4f47918160d1836c6db
+      spriteID: 82b10be1f2d2e4527a1f01e40acca4ed
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bat_sprite_2
+      name: mosqito_sprite_w328Xh378_2
       rect:
         serializedVersion: 2
-        x: 620
-        y: 857
-        width: 310
-        height: 167
+        x: 656
+        y: 1670
+        width: 328
+        height: 378
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,79 +195,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39b062801fcd74296b5c07d3225ce14f
+      spriteID: 69e911f7a7ed5447499e82b0b456acd4
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bat_sprite_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 690
-        width: 310
-        height: 167
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4a421365dd3fe4a61a62b24e9a5dd97f
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bat_sprite_4
-      rect:
-        serializedVersion: 2
-        x: 310
-        y: 690
-        width: 310
-        height: 167
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ea4c67796aca9482da218b085e3509ed
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bat_sprite_5
-      rect:
-        serializedVersion: 2
-        x: 620
-        y: 690
-        width: 310
-        height: 167
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 10c47720b081349208ab0a97916c9f7e
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bat_sprite_6
+      name: mosqito_sprite_w328Xh378_3
       rect:
         serializedVersion: 2
         x: 0
-        y: 523
-        width: 310
-        height: 167
+        y: 1292
+        width: 328
+        height: 378
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -272,19 +215,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78757289c608941cbac8307632606905
+      spriteID: 66d3eccbf152548fb9c0903ed8c69416
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bat_sprite_7
+      name: mosqito_sprite_w328Xh378_4
       rect:
         serializedVersion: 2
-        x: 310
-        y: 523
-        width: 310
-        height: 167
+        x: 328
+        y: 1292
+        width: 328
+        height: 378
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -292,19 +235,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 47832c3eb9bf24c6d8d10190d58fd132
+      spriteID: d7b550f7813d84ad0b6d5d76427adae1
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bat_sprite_8
+      name: mosqito_sprite_w328Xh378_5
       rect:
         serializedVersion: 2
-        x: 620
-        y: 523
-        width: 310
-        height: 167
+        x: 656
+        y: 1292
+        width: 328
+        height: 378
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -312,19 +255,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44b5df4a7cc454465a719bd8ef563106
+      spriteID: 4cf1360dc728048c68fb66b33d20914b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bat_sprite_9
+      name: mosqito_sprite_w328Xh378_6
       rect:
         serializedVersion: 2
         x: 0
-        y: 356
-        width: 310
-        height: 167
+        y: 914
+        width: 328
+        height: 378
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -332,7 +275,127 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d15f070d8fe34b148d28e93b5819300
+      spriteID: b43614c6079f8422ba3d81f88849b7f6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mosqito_sprite_w328Xh378_7
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 914
+        width: 328
+        height: 378
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fcd7cd209944473c8e1acd335bca735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mosqito_sprite_w328Xh378_8
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 914
+        width: 328
+        height: 378
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da80c7ba0844b497981c449470228cc0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mosqito_sprite_w328Xh378_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 536
+        width: 328
+        height: 378
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b906b31cc3e245ae8b08865e6ac10cb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mosqito_sprite_w328Xh378_10
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 536
+        width: 328
+        height: 378
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d10374a73309944bfaccc67ec1417b26
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mosqito_sprite_w328Xh378_11
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 536
+        width: 328
+        height: 378
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9db73fc73c8154d00bed959f898e13fa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mosqito_sprite_w328Xh378_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 158
+        width: 328
+        height: 378
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5160907f346b24a07b358b6e750da022
       vertices: []
       indices: 
       edges: []
@@ -340,7 +403,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: ea37ef45ba0d64180acec258a24e7d65
+    spriteID: f14e3d7c3275740edb2dae2d718f1492
     vertices: []
     indices: 
     edges: []

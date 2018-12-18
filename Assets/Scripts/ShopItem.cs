@@ -66,7 +66,7 @@ namespace TheLastFry{
                 // enable buy button
                 BuyButton.enabled = true;
 
-                BuyButtonText.text = "Unlock";
+                BuyButtonText.text = Price.ToString();
 
             }
 
