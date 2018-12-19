@@ -148,8 +148,11 @@ MonoBehaviour:
   flyOffScreenSpeed: 1.5
   flySounds: []
   turnTowardsAngle: 180
+  rotateOnDeath: 0
+  flyOffScreenOnDeath: 1
   hitSounds:
   - {fileID: 8300000, guid: ba4e39c96c1b242bab594580973649c1, type: 3}
+  animateOnDeath: 0
 --- !u!60 &60433473337811128
 PolygonCollider2D:
   m_ObjectHideFlags: 0

@@ -78,6 +78,9 @@ namespace TheLastFry
         // sound effect when flying
         [SerializeField] List<AudioClip> flySounds;
 
+        // turn towards target
+        public bool shouldTurnTowardsTarget = true;
+
         // turn towards target angle
         public float turnTowardsAngle = 180f;
 
@@ -99,14 +102,30 @@ namespace TheLastFry
         // the id for attempting theft tween in order to stop it in case the hand is hit
         int atemptTheftTween = 0;
 
+        // the id for attempting theft tween in order to stop it in case the hand is hit
+        int runningAwayTween = 1;
+
+        // rotate on death
+        [SerializeField] bool rotateOnDeath;
+
+        // fly off screen on death
+        [SerializeField] bool flyOffScreenOnDeath;
+
         // sound effect when getting hit
         [SerializeField] List<AudioClip> hitSounds;
+
+        // animate on death
+        [SerializeField] bool animateOnDeath;
+
+        Animator animator;
 
         // Use this for initialization
         void Start()
         {
             // get the sprite renderer
             sr = GetComponentInChildren<SpriteRenderer>();
+
+            animator = GetComponent<Animator>();
         }
 
         /// <summary>
@@ -189,37 +208,42 @@ namespace TheLastFry
             // got to end position
             if (transform.position == endPosition)
             {
-                // did I steal food?
-                if (gotFood)
-                {
-                    // lose life for player
-                    GameManager.instance.LoseLife(lifeForFoodStolen);
-                    FoodSpawner.instance.DestroyFood(foodIndex);
-
-                    // fire callback
-                    if (thiefGotFood != null)
-                    {
-                        thiefGotFood();
-                    }
-
-                    // destroy thief
-                    Destroy(gameObject);
-                }
-
-                // if the thief was hit
-                if (thiefHit)
-                {
-                    // fire callback
-                    if (thiefGotHit != null)
-                    {
-                        thiefGotHit();
-                    }
-
-                    // destroy thief
-                    Destroy(gameObject);
-                }
+                IDied();
             }
 
+        }
+
+        private void IDied()
+        {
+            // did I steal food?
+            if (gotFood)
+            {
+                // lose life for player
+                GameManager.instance.LoseLife(lifeForFoodStolen);
+                FoodSpawner.instance.DestroyFood(foodIndex);
+
+                // fire callback
+                if (thiefGotFood != null)
+                {
+                    thiefGotFood();
+                }
+
+                // destroy thief
+                Destroy(gameObject);
+            }
+
+            // if the thief was hit
+            if (thiefHit)
+            {
+                // fire callback
+                if (thiefGotHit != null)
+                {
+                    thiefGotHit();
+                }
+
+                // destroy thief
+                Destroy(gameObject);
+            }
         }
 
         /// <summary>
@@ -230,6 +254,9 @@ namespace TheLastFry
 
             // set thief hit
             thiefHit = true;
+
+            // stop running away
+            runningAway = false;
 
             // play random hit sound
             int randomSoundIndex = Random.Range(0, hitSounds.Count);
@@ -247,8 +274,7 @@ namespace TheLastFry
                 }
                 else
                 {
-                    // show death image for flying object
-                    sr.sprite = deadImage;
+                    Die();
 
                 }
 
@@ -283,6 +309,25 @@ namespace TheLastFry
         }
 
         /// <summary>
+        /// Die this instance.
+        /// </summary>
+        private void Die()
+        {
+            if (animateOnDeath)
+            {
+                animator.SetTrigger("explode");
+            }
+            else
+            {
+                // stop animation
+                animator.enabled = false;
+
+                // show death image for flying object
+                sr.sprite = deadImage;
+            }
+        }
+
+        /// <summary>
         /// Spawns the coins after hand hit.
         /// </summary>
         /// <returns>The coins after hand hit.</returns>
@@ -291,7 +336,7 @@ namespace TheLastFry
             // coins for hit
             int coinsForHit = 1;
 
-            // get random coin amount by level
+            // get random coin amount by levelrotateOnDeath
             coinsForHit = Random.Range(minCoinsForHit, maxCoinsForHit + 1);
 
             for (int i = 0; i < coinsForHit; i++)
@@ -310,11 +355,15 @@ namespace TheLastFry
         /// <param name="target">Target.</param>
         private void turnTowardsTarget(Vector3 target)
         {
-            // get the right from the target
-            transform.right = target - transform.position;
+            if (shouldTurnTowardsTarget)
+            {
+                // get the right from the target
+                transform.right = target - transform.position;
 
-            // spin the transform to face the target
-            transform.eulerAngles = new Vector3(0, 0, transform.eulerAngles.z + turnTowardsAngle);
+                // spin the transform to face the target
+                transform.eulerAngles = new Vector3(0, 0, transform.eulerAngles.z + turnTowardsAngle);
+            }
+
         }
 
         /// <summary>
@@ -337,15 +386,39 @@ namespace TheLastFry
             // stop moving to target
             LeanTween.cancel(atemptTheftTween);
 
-            // if it should fly away when hit give it spin when it is retreating after hit
-            if(thiefHit && flyWhenHit)
+
+
+            if (thiefHit && rotateOnDeath)
             {
                 // spin the transform
                 LeanTween.rotateZ(gameObject, 1024, flyOffScreenSpeed);
             }
 
-            // move to end position
-            LeanTween.move(gameObject, endPosition, moveSpeed * 0.3f).setEase(handMovementType).setOnUpdate(onMovementUpdate).setOnComplete(onCompleteFlight);
+            if (thiefHit)
+            {
+
+                // stop running away
+                LeanTween.cancel(runningAwayTween);
+
+                if (flyOffScreenOnDeath)
+                {
+                    // move to end position
+                    LeanTween.move(gameObject, endPosition, moveSpeed * 0.3f).setEase(handMovementType).setOnUpdate(onMovementUpdate).setOnComplete(onCompleteFlight);
+                }
+                else
+                {
+                    Invoke("IDied",2f);
+                }
+
+            }
+            else
+            {
+                if (runningAway)
+                {
+                    // move to end position
+                    runningAwayTween = LeanTween.move(gameObject, endPosition, moveSpeed * 0.3f).setEase(handMovementType).setOnUpdate(onMovementUpdate).setOnComplete(onCompleteFlight).id;
+                }
+            }
 
         }
 

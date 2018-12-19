@@ -26,6 +26,8 @@ namespace TheLastFry{
 
         [SerializeField] GameObject ItemStorePanel;
 
+        bool itemOwned = false;
+
         // Use this for initialization
         void Start()
         {
@@ -42,7 +44,7 @@ namespace TheLastFry{
         {
 
             // get item owned from db
-            bool itemOwned = DataHandler.LoadIntFromDB(Name) == 1;
+            itemOwned = DataHandler.LoadIntFromDB(Name) == 1;
 
             if(itemOwned){
 
@@ -74,28 +76,33 @@ namespace TheLastFry{
 
         void BuyItem()
         {
-            // I have enough coins to buy the item
-            if (ItemStore.playerData.Coins >= Price)
+            if (!itemOwned)
             {
-                ItemStore.BoughtItem(Name, Price);
+                // I have enough coins to buy the item
+                if (ItemStore.playerData.Coins >= Price)
+                {
+                    ItemStore.BoughtItem(Name, Price);
 
-                // show image
-                Shadow.gameObject.SetActive(false);
-                Original.gameObject.SetActive(true);
+                    // show image
+                    Shadow.gameObject.SetActive(false);
+                    Original.gameObject.SetActive(true);
 
-                BuyButtonText.text = "Unlocked";
+                    BuyButtonText.text = "Unlocked";
 
-            }
+                    itemOwned = true;
 
-            // I don't have enough coins
-            else
-            {
+                }
 
-                // hide item store
-                ItemStorePanel.SetActive(false);
+                // I don't have enough coins
+                else
+                {
 
-                // show shop panel
-                ShopPanel.SetActive(true);
+                    // hide item store
+                    ItemStorePanel.SetActive(false);
+
+                    // show shop panel
+                    ShopPanel.SetActive(true);
+                }
             }
         }
     }

@@ -419,5 +419,25 @@ PrefabInstance:
       propertyPath: ShopPanel
       value: 
       objectReference: {fileID: 26822452}
+    - target: {fileID: 114678964245069876, guid: 37a53013b9067433080b4cdd016fb689,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114678964245069876, guid: 37a53013b9067433080b4cdd016fb689,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114132713088493008, guid: 37a53013b9067433080b4cdd016fb689,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114132713088493008, guid: 37a53013b9067433080b4cdd016fb689,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37a53013b9067433080b4cdd016fb689, type: 3}

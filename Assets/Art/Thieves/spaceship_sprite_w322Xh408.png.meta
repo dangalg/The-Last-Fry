@@ -1,0 +1,1004 @@
+fileFormatVersion: 2
+guid: 104ec5471cb794dfbbe35f1bc8b6c08e
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: spaceship_sprite_w322Xh408_0
+    21300002: spaceship_sprite_w322Xh408_1
+    21300004: spaceship_sprite_w322Xh408_2
+    21300006: spaceship_sprite_w322Xh408_3
+    21300008: spaceship_sprite_w322Xh408_4
+    21300010: spaceship_sprite_w322Xh408_5
+    21300012: spaceship_sprite_w322Xh408_6
+    21300014: spaceship_sprite_w322Xh408_7
+    21300016: spaceship_sprite_w322Xh408_8
+    21300018: spaceship_sprite_w322Xh408_9
+    21300020: spaceship_sprite_w322Xh408_10
+    21300022: spaceship_sprite_w322Xh408_11
+    21300024: spaceship_sprite_w322Xh408_12
+    21300026: spaceship_sprite_w322Xh408_13
+    21300028: spaceship_sprite_w322Xh408_14
+    21300030: spaceship_sprite_w322Xh408_15
+    21300032: spaceship_sprite_w322Xh408_16
+    21300034: spaceship_sprite_w322Xh408_17
+    21300036: spaceship_sprite_w322Xh408_18
+    21300038: spaceship_sprite_w322Xh408_19
+    21300040: spaceship_sprite_w322Xh408_20
+    21300042: spaceship_sprite_w322Xh408_21
+    21300044: spaceship_sprite_w322Xh408_22
+    21300046: spaceship_sprite_w322Xh408_23
+    21300048: spaceship_sprite_w322Xh408_24
+    21300050: spaceship_sprite_w322Xh408_25
+    21300052: spaceship_sprite_w322Xh408_26
+    21300054: spaceship_sprite_w322Xh408_27
+    21300056: spaceship_sprite_w322Xh408_28
+    21300058: spaceship_sprite_w322Xh408_29
+    21300060: spaceship_sprite_w322Xh408_30
+    21300062: spaceship_sprite_w322Xh408_31
+    21300064: spaceship_sprite_w322Xh408_32
+    21300066: spaceship_sprite_w322Xh408_33
+    21300068: spaceship_sprite_w322Xh408_34
+    21300070: spaceship_sprite_w322Xh408_35
+    21300072: spaceship_sprite_w322Xh408_36
+    21300074: spaceship_sprite_w322Xh408_37
+    21300076: spaceship_sprite_w322Xh408_38
+    21300078: spaceship_sprite_w322Xh408_39
+    21300080: spaceship_sprite_w322Xh408_40
+  externalObjects: {}
+  serializedVersion: 7
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: spaceship_sprite_w322Xh408_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3688
+        width: 322
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a01fd826e95604eb4a5a22b3b261154a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceship_sprite_w322Xh408_1
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 3688
+        width: 322
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaef64881f86f412fb224597d70df2b3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceship_sprite_w322Xh408_2
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 3688
+        width: 322
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 125f569eeae854cababe65623a78a4a8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceship_sprite_w322Xh408_3
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 3688
+        width: 322
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 816c0bb7c448e4809a6457346eccd12d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceship_sprite_w322Xh408_4
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 3688
+        width: 322
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faee1658c7cb64531a6402e1a64585f7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceship_sprite_w322Xh408_5
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 3688
+        width: 322
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27289e0bd1ce446c3b2795312baa3181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceship_sprite_w322Xh408_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3280
+        width: 322
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27d83a58dc5244d3586b2babeaa06640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceship_sprite_w322Xh408_7
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 3280
+        width: 322
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e7a271bc7b1e40698797a19f7adc668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceship_sprite_w322Xh408_8
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 3280
+        width: 322
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b331662fe1221466b8c11a000cb963d3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceship_sprite_w322Xh408_9
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 3280
+        width: 322
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37ecfbe89f8b84a3dab8e7076f53b10c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceship_sprite_w322Xh408_10
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 3280
+        width: 322
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 963a8098dbf2843eda7f360811494611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceship_sprite_w322Xh408_11
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 3280
+        width: 322
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4574e46d4fced47eab6896b531cfe824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceship_sprite_w322Xh408_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2872
+        width: 322
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6672236b926f41d2b047811016bdc54
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceship_sprite_w322Xh408_13
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 2872
+        width: 322
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e7afdb4823674023ad93acf25fda1c7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceship_sprite_w322Xh408_14
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 2872
+        width: 322
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99c101aed2c7449728eaab99c83fd87e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceship_sprite_w322Xh408_15
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 2872
+        width: 322
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17c98733003a64ac39167c9c9c214c23
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceship_sprite_w322Xh408_16
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 2872
+        width: 322
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daaee5ba259f343659b0717015b878c9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceship_sprite_w322Xh408_17
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 2872
+        width: 322
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55ad34b9669c84d6788ca4442b40e078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceship_sprite_w322Xh408_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2464
+        width: 322
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1704cb2b0a1fd4868a1a8dc0735274d9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceship_sprite_w322Xh408_19
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 2464
+        width: 322
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e4d04dd49a2342cfb1ae61a5cae1ecb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceship_sprite_w322Xh408_20
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 2464
+        width: 322
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d00aeb36a6504788998567ce5e0fde7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceship_sprite_w322Xh408_21
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 2464
+        width: 322
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac441e3313d71478b87e06490921caba
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceship_sprite_w322Xh408_22
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 2464
+        width: 322
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04dfa5645f2f746608637f7b6b6b694b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceship_sprite_w322Xh408_23
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 2464
+        width: 322
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 470fc0c612507403eaeca6da8c076f12
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceship_sprite_w322Xh408_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2056
+        width: 322
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5963ed19228f464eadf289a4b3b3a86
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceship_sprite_w322Xh408_25
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 2056
+        width: 322
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94f0221ff2f8e4423afb7bf0cf4e6c73
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceship_sprite_w322Xh408_26
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 2056
+        width: 322
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 235a0c0a8c5664d7899185d8a313da12
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceship_sprite_w322Xh408_27
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 2056
+        width: 322
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0e137accd9284f26b3e4a5b280c0141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceship_sprite_w322Xh408_28
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 2056
+        width: 322
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bbd1ea6f5c0d4e76bb36b142d04b947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceship_sprite_w322Xh408_29
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 2056
+        width: 322
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 165b74ec12e21427986fa9da065ee1e9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceship_sprite_w322Xh408_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1648
+        width: 322
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 586abecaa45db4cd19c5c90fdfe43a96
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceship_sprite_w322Xh408_31
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 1648
+        width: 322
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc2b3ea33c94d4fbbb31b13d9c2a320b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceship_sprite_w322Xh408_32
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 1648
+        width: 322
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84dc6aceb6a36471a8486913c1b06fc4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceship_sprite_w322Xh408_33
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 1648
+        width: 322
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7fa1b154cc984ee4a20694d7c8fc897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceship_sprite_w322Xh408_34
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 1648
+        width: 322
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c561871b71ab14cefa6a10357510c697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceship_sprite_w322Xh408_35
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 1648
+        width: 322
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e45c05bdf9c094d6fbf02edbaa5dc538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceship_sprite_w322Xh408_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1240
+        width: 322
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cd131bd4b8244a3191c7c7aa871f55f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceship_sprite_w322Xh408_37
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 1240
+        width: 322
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 774e77f1114194744b86f563a9e35305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceship_sprite_w322Xh408_38
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 1240
+        width: 322
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d775965bd7884c16890c1574bb5dbef
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceship_sprite_w322Xh408_39
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 1240
+        width: 322
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bccf24c1805e4c5fb13328de8e2641c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceship_sprite_w322Xh408_40
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 1240
+        width: 322
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75f5947ed3a3849108a8d47b6bf93c13
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 71d8f80463662476aac90c3e84ecbfae
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
