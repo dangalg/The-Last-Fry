@@ -115,6 +115,11 @@ namespace TheLastFry
         private void Start()
         {
 
+            //PlayerPrefs.DeleteAll();
+
+            //playerData.Coins = 1000000;
+            //DataHandler.SavePlayerData(playerData);
+
             // sign in to ad manager callbacks
             AdManager.instance.onSkippedAd = LoseLevel;
             AdManager.instance.onFailedAd = LoseLevel;

@@ -71,7 +71,7 @@ MonoBehaviour:
   shouldTurnTowardsTarget: 1
   turnTowardsAngle: 180
   rotateOnDeath: 0
-  flyOffScreenOnDeath: 0
+  flyOffScreenOnDeath: 1
   hitSounds:
   - {fileID: 8300000, guid: dfcc94165770f4a06afc69b949f0712c, type: 3}
   - {fileID: 8300000, guid: e24d6c09e08c846dbaa951d93fcf4e00, type: 3}

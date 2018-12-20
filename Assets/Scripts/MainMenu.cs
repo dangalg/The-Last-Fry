@@ -30,6 +30,8 @@ namespace TheLastFry
 
         [SerializeField] GameObject ItemStorePanel;
 
+        [SerializeField] GameObject LoadingPanel;
+
         //Awake is always called before any Start functions
         void Awake()
         {
@@ -68,6 +70,8 @@ namespace TheLastFry
         // Use this for initialization
         void Start()
         {
+
+            LoadingPanel.SetActive(false);
 
             // sign in for callback from ad manager
             AdManager.instance.onFinishedAd = onFinishedAd;
@@ -218,6 +222,9 @@ namespace TheLastFry
 
         void StartGame()
         {
+
+            LoadingPanel.SetActive(true);
+
             // set player to level 1
             playerData.Level = 1;
 

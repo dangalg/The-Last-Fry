@@ -79,7 +79,7 @@ namespace TheLastFry{
             if (!itemOwned)
             {
                 // I have enough coins to buy the item
-                if (ItemStore.playerData.Coins >= Price)
+                if (MainMenu.instance.playerData.Coins >= Price)
                 {
                     ItemStore.BoughtItem(Name, Price);
 
