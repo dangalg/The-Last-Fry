@@ -110,9 +110,6 @@ namespace TheLastFry
             ShopManager.instance.onPurchaseCoinsAction += onPurchaseCoins;
             ShopManager.instance.onPurchaseFailedAction += onPurchaseFailed;
 
-            // setup the game
-            StartCoroutine(SetupGame(playerData.Level));
-
         }
 
         private void Start()
@@ -122,6 +119,9 @@ namespace TheLastFry
             AdManager.instance.onSkippedAd = LoseLevel;
             AdManager.instance.onFailedAd = LoseLevel;
             AdManager.instance.onFinishedAd = ContinueAd;
+
+            // setup the game
+            StartCoroutine(SetupGame(playerData.Level));
         }
 
         void onPurchaseCoins(ShopManager.CoinAmount coinAmount)
@@ -130,19 +130,19 @@ namespace TheLastFry
             switch (coinAmount)
             {
                 case ShopManager.CoinAmount.HANDFUL:
-                    playerData.Coins += 10;
+                    playerData.Coins += 500;
                     break;
                 case ShopManager.CoinAmount.PILE:
-                    playerData.Coins += 20;
+                    playerData.Coins += 1200;
                     break;
                 case ShopManager.CoinAmount.SACK:
-                    playerData.Coins += 100;
+                    playerData.Coins += 4000;
                     break;
                 case ShopManager.CoinAmount.BAG:
-                    playerData.Coins += 200;
+                    playerData.Coins += 6500;
                     break;
                 case ShopManager.CoinAmount.CHEST:
-                    playerData.Coins += 500;
+                    playerData.Coins += 10000;
                     break;
             }
 
@@ -190,44 +190,60 @@ namespace TheLastFry
         IEnumerator SetupGame(int level)
         {
 
+            Debug.Log("LASTFRY: reset the spawners");
             // reset the spawners
+            Debug.Log("LASTFRY: reset ThiefSpawner");
             ThiefSpawner.instance.Reset();
+            Debug.Log("LASTFRY: reset UntouchableSpawner");
             UntouchableSpawner.instance.Reset();
+            Debug.Log("LASTFRY: reset OneUpSpawner");
             OneUpSpawner.instance.Reset();
 
+            Debug.Log("LASTFRY: enabled level text");
             //enabled level text
             levelText.enabled = true;
 
+            Debug.Log("LASTFRY: display level text");
             // display level text
             levelText.text = level.ToString();
 
+            Debug.Log("LASTFRY: set player points to 0");
             // set player points to 0
             playerData.Points = 0;
 
+            Debug.Log("LASTFRY: display stats");
             // display stats
             displayStats();
 
             yield return new WaitForSeconds(2f);
 
+            Debug.Log("LASTFRY: reset FoodSpawner");
             FoodSpawner.instance.Reset();
 
+            Debug.Log("LASTFRY: disable level text");
             // disable level text
             levelText.enabled = false;
+
+            Debug.Log("LASTFRY: setup food spawner");
 
             // setup food spawner
             FoodSpawner.instance.Setup(playerData.Level);
 
             yield return new WaitForSeconds(1f);
 
+            Debug.Log("LASTFRY: setup thief spawner");
             // set up thief spawner
             ThiefSpawner.instance.Setup(playerData.Level);
 
-            // set up thief spawner
+            Debug.Log("LASTFRY: setup untouchable spawner");
+            // set up untouchable spawner
             UntouchableSpawner.instance.Setup(playerData.Level);
 
+            Debug.Log("LASTFRY: setup one up spawner");
             // set up one up spawner
             OneUpSpawner.instance.Setup(playerData.Level);
 
+            Debug.Log("LASTFRY: play game music");
             // play game music
             SoundManager.instance.PlayMusic(GameMusic);
 

@@ -130,7 +130,7 @@ MonoBehaviour:
   foodIndex: 0
   moveSpeed: 3
   pointsForHit: 1
-  minCoinsForHit: 2
+  minCoinsForHit: 1
   maxCoinsForHit: 5
   timeBetweenCoinsToSpawn: 0.1
   lifeForFoodStolen: 1
@@ -147,6 +147,7 @@ MonoBehaviour:
   flyWhenHit: 0
   flyOffScreenSpeed: 1.5
   flySounds: []
+  shouldTurnTowardsTarget: 1
   turnTowardsAngle: 180
   rotateOnDeath: 0
   flyOffScreenOnDeath: 1

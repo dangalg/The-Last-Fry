@@ -699,6 +699,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 474002491}
+    - target: {fileID: 114742353216275096, guid: 7b2bf467401f14603963a6d6bfd39e68,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BuyChestOfCoins
+      objectReference: {fileID: 0}
     - target: {fileID: 223126588967541462, guid: 7b2bf467401f14603963a6d6bfd39e68,
         type: 3}
       propertyPath: m_Camera
@@ -714,16 +719,31 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 474002491}
+    - target: {fileID: 114683840914078930, guid: 7b2bf467401f14603963a6d6bfd39e68,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BuyBagOfCoins
+      objectReference: {fileID: 0}
     - target: {fileID: 114752941314830688, guid: 7b2bf467401f14603963a6d6bfd39e68,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 474002491}
+    - target: {fileID: 114752941314830688, guid: 7b2bf467401f14603963a6d6bfd39e68,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BuyHandfulOfCoins
+      objectReference: {fileID: 0}
+    - target: {fileID: 114320224278668716, guid: 7b2bf467401f14603963a6d6bfd39e68,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 474002491}
     - target: {fileID: 114320224278668716, guid: 7b2bf467401f14603963a6d6bfd39e68,
         type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 474002491}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BuyPileOfCoins
+      objectReference: {fileID: 0}
     - target: {fileID: 114947767285613480, guid: 7b2bf467401f14603963a6d6bfd39e68,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -758,6 +778,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_isInputParsingRequired
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2807843904122966422, guid: 7b2bf467401f14603963a6d6bfd39e68,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 474002491}
+    - target: {fileID: 2807843904122966422, guid: 7b2bf467401f14603963a6d6bfd39e68,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BuySackOfCoins
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b2bf467401f14603963a6d6bfd39e68, type: 3}

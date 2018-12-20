@@ -59,16 +59,23 @@ namespace TheLastFry
         {
             // clear items
             itemAmount = 0;
-            Items.Clear();
+
+            if(Items.Count > 0)
+            {
+                Items.Clear();
+            }
 
             // clear counters
             thiefGotFoodCounter = 0;
             thiefHitCounter = 0;
 
-            // destroy Items
-            foreach (Transform child in itemHolder.transform)
+            if(itemHolder != null && itemHolder.transform.childCount > 0)
             {
-                Destroy(child.gameObject);
+                // destroy Items
+                foreach (Transform child in itemHolder.transform)
+                {
+                    Destroy(child.gameObject);
+                }
             }
         }
 

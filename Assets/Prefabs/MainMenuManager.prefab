@@ -255,7 +255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: dog
-  Price: 100
+  Price: 1000
   BuyButton: {fileID: 114449928903078746}
   BuyButtonText: {fileID: 114370025785775836}
   Original: {fileID: 114008450262164556}
@@ -997,11 +997,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -1333,7 +1333,7 @@ RectTransform:
   - {fileID: 224391081801594992}
   - {fileID: 224125357378795874}
   m_Father: {fileID: 224697096817135836}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -1361,7 +1361,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: cow
-  Price: 20
+  Price: 2000
   BuyButton: {fileID: 114057043575280288}
   BuyButtonText: {fileID: 114056899135039956}
   Original: {fileID: 114977548561497838}
@@ -1724,7 +1724,7 @@ RectTransform:
   - {fileID: 224055554674788722}
   - {fileID: 224805847969662214}
   m_Father: {fileID: 224697096817135836}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -1752,7 +1752,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: elephant
-  Price: 500
+  Price: 1500
   BuyButton: {fileID: 114628605683858636}
   BuyButtonText: {fileID: 114209699916223330}
   Original: {fileID: 114319403417047262}
@@ -2475,12 +2475,12 @@ RectTransform:
   m_Children:
   - {fileID: 224851229050409660}
   - {fileID: 224773247192518700}
-  - {fileID: 224800291231931732}
   - {fileID: 224605369198177708}
   - {fileID: 224287289157578648}
   - {fileID: 224754753854979274}
-  - {fileID: 4635334061270162862}
   - {fileID: 442636495285462740}
+  - {fileID: 224800291231931732}
+  - {fileID: 4635334061270162862}
   - {fileID: 148078545751076471}
   - {fileID: 5950447770854728302}
   - {fileID: 8074234005899880467}
@@ -2838,7 +2838,7 @@ RectTransform:
   - {fileID: 224066540880097174}
   - {fileID: 224945366767395930}
   m_Father: {fileID: 224697096817135836}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -2866,7 +2866,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: girrafe
-  Price: 500
+  Price: 1500
   BuyButton: {fileID: 114643813491749900}
   BuyButtonText: {fileID: 114933159283159202}
   Original: {fileID: 114522852664478814}
@@ -3339,7 +3339,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: cat
-  Price: 100
+  Price: 1000
   BuyButton: {fileID: 114805645279507990}
   BuyButtonText: {fileID: 114631064704182284}
   Original: {fileID: 114098119559842558}
@@ -3961,7 +3961,7 @@ RectTransform:
   - {fileID: 224465949796438870}
   - {fileID: 224213130008610786}
   m_Father: {fileID: 224697096817135836}
-  m_RootOrder: 2
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -3989,7 +3989,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: pirate
-  Price: 1000
+  Price: 2000
   BuyButton: {fileID: 114207233588568548}
   BuyButtonText: {fileID: 114452835101183750}
   Original: {fileID: 114571586247974506}
@@ -5251,11 +5251,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -5777,7 +5777,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: spaceship
-  Price: 10
+  Price: 10000
   BuyButton: {fileID: 2753366785003997336}
   BuyButtonText: {fileID: 460747957301665664}
   Original: {fileID: 7118232898610325123}
@@ -5976,7 +5976,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: mosqi
-  Price: 10
+  Price: 6000
   BuyButton: {fileID: 6842107035037487873}
   BuyButtonText: {fileID: 8004918750256031822}
   Original: {fileID: 6197142927308834882}
@@ -6096,7 +6096,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: bat
-  Price: 10
+  Price: 5000
   BuyButton: {fileID: 3545515066086494144}
   BuyButtonText: {fileID: 8556358743001026653}
   Original: {fileID: 3282893891349413754}
@@ -7326,7 +7326,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: plane
-  Price: 10
+  Price: 10000
   BuyButton: {fileID: 2767789589651323012}
   BuyButtonText: {fileID: 984331333575630233}
   Original: {fileID: 8184898017892496090}
@@ -8123,7 +8123,7 @@ RectTransform:
   - {fileID: 7098926827951046849}
   - {fileID: 7398507883996024934}
   m_Father: {fileID: 224697096817135836}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -8151,7 +8151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: horse
-  Price: 500
+  Price: 1500
   BuyButton: {fileID: 2660501255841024655}
   BuyButtonText: {fileID: 2810734843119650895}
   Original: {fileID: 3857620075750940221}
@@ -8463,7 +8463,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: fly
-  Price: 10
+  Price: 6000
   BuyButton: {fileID: 7438091774966408240}
   BuyButtonText: {fileID: 4656740525913237083}
   Original: {fileID: 6623135386280548062}
@@ -9472,7 +9472,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: bird
-  Price: 10
+  Price: 5000
   BuyButton: {fileID: 6018516754651739}
   BuyButtonText: {fileID: 3810651435364608716}
   Original: {fileID: 8179452498315268674}
@@ -9564,11 +9564,11 @@ RectTransform:
   - {fileID: 896425844133814996}
   - {fileID: 674092749440300649}
   m_Father: {fileID: 224697096817135836}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 303.5, y: -650}
+  m_AnchoredPosition: {x: 303.5, y: -650.00006}
   m_SizeDelta: {x: 607, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4372697661005864082
@@ -9592,7 +9592,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: hippie
-  Price: 500
+  Price: 3000
   BuyButton: {fileID: 5068095461770873792}
   BuyButtonText: {fileID: 1121857665156106714}
   Original: {fileID: 41924944703862151}
@@ -9814,16 +9814,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6818055930948904604, guid: 9948b35c0be50417dba4bccda6d1e2fa,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 114252203723289812}
-    - target: {fileID: 6818055930948904604, guid: 9948b35c0be50417dba4bccda6d1e2fa,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: HideShop
-      objectReference: {fileID: 0}
     - target: {fileID: 6636582533061238988, guid: 9948b35c0be50417dba4bccda6d1e2fa,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9929,6 +9919,16 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6818055930948904604, guid: 9948b35c0be50417dba4bccda6d1e2fa,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 114252203723289812}
+    - target: {fileID: 6818055930948904604, guid: 9948b35c0be50417dba4bccda6d1e2fa,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HideShop
+      objectReference: {fileID: 0}
     - target: {fileID: 6814924241275698684, guid: 9948b35c0be50417dba4bccda6d1e2fa,
         type: 3}
       propertyPath: m_havePropertiesChanged
@@ -9941,15 +9941,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9948b35c0be50417dba4bccda6d1e2fa, type: 3}
---- !u!224 &2466582140830731014 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 6636582533061238988, guid: 9948b35c0be50417dba4bccda6d1e2fa,
-    type: 3}
-  m_PrefabInstance: {fileID: 9089090630262762442}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2387382476436941436 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6846386721452491190, guid: 9948b35c0be50417dba4bccda6d1e2fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 9089090630262762442}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &2466582140830731014 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6636582533061238988, guid: 9948b35c0be50417dba4bccda6d1e2fa,
     type: 3}
   m_PrefabInstance: {fileID: 9089090630262762442}
   m_PrefabAsset: {fileID: 0}

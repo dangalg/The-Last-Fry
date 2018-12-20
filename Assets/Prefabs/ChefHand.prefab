@@ -147,6 +147,7 @@ MonoBehaviour:
   flyWhenHit: 0
   flyOffScreenSpeed: 1.5
   flySounds: []
+  shouldTurnTowardsTarget: 1
   turnTowardsAngle: 180
   rotateOnDeath: 0
   flyOffScreenOnDeath: 1

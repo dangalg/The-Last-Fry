@@ -71,6 +71,7 @@ MonoBehaviour:
   flyOffScreenSpeed: 1.5
   flySounds:
   - {fileID: 8300000, guid: 40738508f1636434db56908cdf355098, type: 3}
+  shouldTurnTowardsTarget: 1
   turnTowardsAngle: 270
   rotateOnDeath: 1
   flyOffScreenOnDeath: 0
