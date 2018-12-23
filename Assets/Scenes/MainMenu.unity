@@ -454,5 +454,32 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 26822452}
+    - target: {fileID: 7218575677780159319, guid: 37a53013b9067433080b4cdd016fb689,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2010290277}
+    - target: {fileID: 7218575677780159319, guid: 37a53013b9067433080b4cdd016fb689,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HideMessagePanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 7218575677780159319, guid: 37a53013b9067433080b4cdd016fb689,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37a53013b9067433080b4cdd016fb689, type: 3}
+--- !u!114 &2010290277 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114252203723289812, guid: 37a53013b9067433080b4cdd016fb689,
+    type: 3}
+  m_PrefabInstance: {fileID: 1423000171}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c205080967f91478dac186df66c6e8b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

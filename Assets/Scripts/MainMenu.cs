@@ -80,6 +80,47 @@ namespace TheLastFry
             ShopManager.instance.onPurchaseFailedAction = onPurchaseFailed;
 
             SetupStartButton();
+
+            // sign in to shopManager
+            ShopManager.instance.onPurchaseCoinsAction += onPurchaseCoins;
+            ShopManager.instance.onPurchaseFailedAction += onPurchaseFailed;
+        }
+
+        /// <summary>
+        /// Ons the purchase coins.
+        /// </summary>
+        /// <param name="coinAmount">Coin amount.</param>
+        void onPurchaseCoins(ShopManager.CoinAmount coinAmount)
+        {
+            // give gems to player TODO make exciting animation
+            switch (coinAmount)
+            {
+                case ShopManager.CoinAmount.HANDFUL:
+                    playerData.Coins += 500;
+                    break;
+                case ShopManager.CoinAmount.PILE:
+                    playerData.Coins += 1200;
+                    break;
+                case ShopManager.CoinAmount.SACK:
+                    playerData.Coins += 4000;
+                    break;
+                case ShopManager.CoinAmount.BAG:
+                    playerData.Coins += 6500;
+                    break;
+                case ShopManager.CoinAmount.CHEST:
+                    playerData.Coins += 10000;
+                    break;
+            }
+
+            // save player data
+            DataHandler.SavePlayerData(playerData);
+
+            // hide shop panel
+            ShopPanel.SetActive(false);
+
+            // notify user of something wrong with purchase
+            Message.text = "Thank You For The Purchase!";
+            MessagePanel.SetActive(true);
         }
 
         /// <summary>
@@ -114,6 +155,15 @@ namespace TheLastFry
         {
             // close Instructions Panel
             ItemStorePanel.SetActive(false);
+        }
+
+        /// <summary>
+        /// Hides the message panel.
+        /// </summary>
+        public void HideMessagePanel()
+        {
+            // close Instructions Panel
+            MessagePanel.SetActive(false);
         }
 
         /// <summary>

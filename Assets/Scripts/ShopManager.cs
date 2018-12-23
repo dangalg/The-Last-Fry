@@ -54,6 +54,8 @@ namespace TheLastFry
 
         private void Init()
         {
+            purchaser.Initialize();
+
             purchaser.onRemoveAds = onRemoveAds;
             purchaser.onPurchaseCoins = onPurchaseCoins;
             purchaser.onPurchaseFailed = onPurchaseFailed;
