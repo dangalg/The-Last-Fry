@@ -46,7 +46,7 @@ namespace TheLastFry
                 Destroy(gameObject);
 
             //Sets this to not be destroyed when reloading scene
-            //DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(gameObject);
 
             // initialze shop manager
             Init();
@@ -59,6 +59,13 @@ namespace TheLastFry
             purchaser.onRemoveAds = onRemoveAds;
             purchaser.onPurchaseCoins = onPurchaseCoins;
             purchaser.onPurchaseFailed = onPurchaseFailed;
+        }
+
+        private void OnDestroy()
+        {
+            purchaser.onRemoveAds = null;
+            purchaser.onPurchaseCoins = null;
+            purchaser.onPurchaseFailed = null;
         }
 
         /// <summary>
@@ -108,6 +115,7 @@ namespace TheLastFry
         /// <param name="coinAmount">coin amount.</param>
         void onPurchaseCoins(CoinAmount coinAmount)
         {
+
             if(onPurchaseCoinsAction != null){
                 onPurchaseCoinsAction(coinAmount);
             }

@@ -50,26 +50,19 @@ namespace TheLastFry
             //Sets this to not be destroyed when reloading scene
             //DontDestroyOnLoad(gameObject);
 
-            //Call the InitGame function to initialize the first level 
-            InitMenu();
         }
 
-        /// <summary>
-        /// Inits the menu.
-        /// </summary>
-        void InitMenu()
+
+        // Use this for initialization
+        void Start()
         {
+
             // load player data
             playerData = DataHandler.LoadPlayerData();
 
             DataHandler.SaveIntToDB("hand", 1);
             DataHandler.SaveIntToDB("black", 1);
             DataHandler.SaveIntToDB("chinese", 1);
-        }
-
-        // Use this for initialization
-        void Start()
-        {
 
             LoadingPanel.SetActive(false);
 
@@ -84,6 +77,25 @@ namespace TheLastFry
             // sign in to shopManager
             ShopManager.instance.onPurchaseCoinsAction += onPurchaseCoins;
             ShopManager.instance.onPurchaseFailedAction += onPurchaseFailed;
+        }
+
+        private void OnDestroy()
+        {
+
+            if(AdManager.instance != null)
+            {
+                AdManager.instance.onFinishedAd = null;
+            }
+
+            if(ShopManager.instance != null)
+            {
+                ShopManager.instance.onRemoveAds = null;
+                ShopManager.instance.onPurchaseFailedAction = null;
+
+                ShopManager.instance.onPurchaseCoinsAction -= onPurchaseCoins;
+                ShopManager.instance.onPurchaseFailedAction -= onPurchaseFailed;
+            }
+
         }
 
         /// <summary>
@@ -286,6 +298,46 @@ namespace TheLastFry
 
             // load game
             SceneManager.LoadScene("Game");
+        }
+
+        /// <summary>
+        /// Buy the handful of gems.
+        /// </summary>
+        public void BuyHandfulOfCoins()
+        {
+            ShopManager.instance.BuyHandfulOfCoins();
+        }
+
+        /// <summary>
+        /// Buy the handful of gems.
+        /// </summary>
+        public void BuyPileOfCoins()
+        {
+            ShopManager.instance.BuyPileOfCoins();
+        }
+
+        /// <summary>
+        /// Buy the handful of gems.
+        /// </summary>
+        public void BuySackOfCoins()
+        {
+            ShopManager.instance.BuySackOfCoins();
+        }
+
+        /// <summary>
+        /// Buy the handful of gems.
+        /// </summary>
+        public void BuyBagOfCoins()
+        {
+            ShopManager.instance.BuyBagOfCoins();
+        }
+
+        /// <summary>
+        /// Buy the handful of gems.
+        /// </summary>
+        public void BuyChestOfCoins()
+        {
+            ShopManager.instance.BuyChestOfCoins();
         }
     }
 }

@@ -35,7 +35,7 @@ namespace TheLastFry
                 Destroy(gameObject);
 
             //Sets this to not be destroyed when reloading scene
-            //DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(gameObject);
             Advertisement.Initialize(gameID, true);
 
         }

@@ -1,21 +1,11 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &100100000
-Prefab:
-  m_ObjectHideFlags: 1
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications: []
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1678224438360846}
-  m_IsPrefabAsset: 1
 --- !u!1 &1678224438360846
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4838367221264844}
@@ -29,22 +19,24 @@ GameObject:
   m_IsActive: 1
 --- !u!4 &4838367221264844
 Transform:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1678224438360846}
-  m_LocalRotation: {x: -0, y: -0, z: 0.08072058, w: -0.99673676}
+  m_LocalRotation: {x: 0, y: 0, z: -0.08072077, w: 0.99673676}
   m_LocalPosition: {x: 11.2, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -9.26}
 --- !u!114 &114149422832006328
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1678224438360846}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -63,7 +55,7 @@ MonoBehaviour:
   ContinuePanel: {fileID: 0}
   MessagePanel: {fileID: 0}
   coinsForNextLevel: 300
-  lifeForContinue: 10
+  lifeForContinue: 2
   levelForTesting: 0
   GameMusic: {fileID: 8300000, guid: 6404f931d10374afc93d213d5d3b4f50, type: 3}
   WinSound: {fileID: 8300000, guid: 19f51af5020a84c41b0f23878df82c44, type: 3}

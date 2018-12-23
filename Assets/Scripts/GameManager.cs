@@ -106,10 +106,6 @@ namespace TheLastFry
             // show the coins
             CoinButtonText.text = coinsForNextLevel.ToString() + " Coins";
 
-            // sign in to shopManager
-            ShopManager.instance.onPurchaseCoinsAction += onPurchaseCoins;
-            ShopManager.instance.onPurchaseFailedAction += onPurchaseFailed;
-
         }
 
         private void Start()
@@ -125,8 +121,29 @@ namespace TheLastFry
             AdManager.instance.onFailedAd = LoseLevel;
             AdManager.instance.onFinishedAd = ContinueAd;
 
+            // sign in to shopManager
+            ShopManager.instance.onPurchaseCoinsAction += onPurchaseCoins;
+            ShopManager.instance.onPurchaseFailedAction += onPurchaseFailed;
+
             // setup the game
             StartCoroutine(SetupGame(playerData.Level));
+        }
+
+        private void OnDestroy()
+        {
+            if(AdManager.instance != null)
+            {
+                AdManager.instance.onSkippedAd = null;
+                AdManager.instance.onFailedAd = null;
+                AdManager.instance.onFinishedAd = null;
+            }
+
+            if(ShopManager.instance != null)
+            {
+                ShopManager.instance.onPurchaseCoinsAction -= onPurchaseCoins;
+                ShopManager.instance.onPurchaseFailedAction -= onPurchaseFailed;
+            }
+
         }
 
         void onPurchaseCoins(ShopManager.CoinAmount coinAmount)
@@ -154,8 +171,13 @@ namespace TheLastFry
             // save player data
             DataHandler.SavePlayerData(playerData);
 
+            // update coins text
+            displayStats();
+
             // hide shop panel
             ShopPanel.SetActive(false);
+
+            ContinuePanel.SetActive(true);
 
             // notify user of something wrong with purchase
             Message.text = "Thank You For The Purchase!";
@@ -555,6 +577,46 @@ namespace TheLastFry
 
             // start level
             StartLevel();
+        }
+
+        /// <summary>
+        /// Buy the handful of gems.
+        /// </summary>
+        public void BuyHandfulOfCoins()
+        {
+            ShopManager.instance.BuyHandfulOfCoins();
+        }
+
+        /// <summary>
+        /// Buy the handful of gems.
+        /// </summary>
+        public void BuyPileOfCoins()
+        {
+            ShopManager.instance.BuyPileOfCoins();
+        }
+
+        /// <summary>
+        /// Buy the handful of gems.
+        /// </summary>
+        public void BuySackOfCoins()
+        {
+            ShopManager.instance.BuySackOfCoins();
+        }
+
+        /// <summary>
+        /// Buy the handful of gems.
+        /// </summary>
+        public void BuyBagOfCoins()
+        {
+            ShopManager.instance.BuyBagOfCoins();
+        }
+
+        /// <summary>
+        /// Buy the handful of gems.
+        /// </summary>
+        public void BuyChestOfCoins()
+        {
+            ShopManager.instance.BuyChestOfCoins();
         }
 
     }
