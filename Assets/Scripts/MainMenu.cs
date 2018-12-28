@@ -18,6 +18,7 @@ namespace TheLastFry
 
         // the texts on screen
         [SerializeField] TMP_Text Message;
+        [SerializeField] TMP_Text HighestLevel;
 
         // buttons on screen
         [SerializeField] Button startButton;
@@ -28,9 +29,14 @@ namespace TheLastFry
 
         [SerializeField] GameObject ShopPanel;
 
-        [SerializeField] GameObject ItemStorePanel;
+        [SerializeField] ItemStoreScript ItemStorePanel;
 
         [SerializeField] GameObject LoadingPanel;
+
+        [SerializeField] GameObject StartArrow;
+        [SerializeField] GameObject InstructionsArrow;
+        [SerializeField] GameObject CoinShopArrow;
+        [SerializeField] GameObject ItemStoreArrow;
 
         //Awake is always called before any Start functions
         void Awake()
@@ -57,12 +63,17 @@ namespace TheLastFry
         void Start()
         {
 
+            // unpause game
+            Time.timeScale = 1;
+
             // load player data
             playerData = DataHandler.LoadPlayerData();
 
             DataHandler.SaveIntToDB("hand", 1);
             DataHandler.SaveIntToDB("black", 1);
             DataHandler.SaveIntToDB("chinese", 1);
+
+            HighestLevel.text = PlayerPrefs.GetInt(Constants.HIGHESTLEVEL).ToString();
 
             LoadingPanel.SetActive(false);
 
@@ -77,6 +88,42 @@ namespace TheLastFry
             // sign in to shopManager
             ShopManager.instance.onPurchaseCoinsAction += onPurchaseCoins;
             ShopManager.instance.onPurchaseFailedAction += onPurchaseFailed;
+
+            if(DataHandler.LoadIntFromDB(Constants.PLAYEDFIRSTTIME) < 1)
+            {
+                StartArrow.SetActive(true);
+            }
+            else
+            {
+                StartArrow.SetActive(false);
+            }
+
+            if (DataHandler.LoadIntFromDB(Constants.LOOKEDATINSTRUCTIONS) < 1)
+            {
+                InstructionsArrow.SetActive(true);
+            }
+            else
+            {
+                InstructionsArrow.SetActive(false);
+            }
+
+            if (DataHandler.LoadIntFromDB(Constants.WENTINCOINSHOP) < 1)
+            {
+                CoinShopArrow.SetActive(true);
+            }
+            else
+            {
+                CoinShopArrow.SetActive(false);
+            }
+
+            if (DataHandler.LoadIntFromDB(Constants.UNLOCKEDITEM) < 1)
+            {
+                ItemStoreArrow.SetActive(true);
+            }
+            else
+            {
+                ItemStoreArrow.SetActive(false);
+            }
         }
 
         private void OnDestroy()
@@ -141,6 +188,8 @@ namespace TheLastFry
         public void ShowInstructions()
         {
             InstructionsPanel.SetActive(true);
+
+            DataHandler.SaveIntToDB(Constants.LOOKEDATINSTRUCTIONS, 1);
         }
 
         /// <summary>
@@ -157,7 +206,7 @@ namespace TheLastFry
         /// </summary>
         public void ShowItemStore()
         {
-            ItemStorePanel.SetActive(true);
+            ItemStorePanel.Show();
         }
 
         /// <summary>
@@ -166,7 +215,7 @@ namespace TheLastFry
         public void HideItemStore()
         {
             // close Instructions Panel
-            ItemStorePanel.SetActive(false);
+            ItemStorePanel.Hide();
         }
 
         /// <summary>
@@ -183,6 +232,8 @@ namespace TheLastFry
         /// </summary>
         public void ShowShop()
         {
+            DataHandler.SaveIntToDB(Constants.WENTINCOINSHOP, 1);
+
             ShopPanel.SetActive(true);
         }
 
@@ -287,11 +338,17 @@ namespace TheLastFry
 
             LoadingPanel.SetActive(true);
 
-            // set player to level 1
+            // set player to level 10
             playerData.Level = 1;
 
-            // refill life
-            playerData.Life = 3;
+            // if it is the first login or player life has gone to 0 than reset life
+            if(DataHandler.LoadIntFromDB("notFirstTime") == 0 || playerData.Life == 0)
+            {
+                // refill life
+                playerData.Life = 2;
+
+                DataHandler.SaveIntToDB("notFirstTime", 1);
+            }
 
             // save player data
             DataHandler.SavePlayerData(playerData);

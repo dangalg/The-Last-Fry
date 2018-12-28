@@ -48,12 +48,17 @@ MonoBehaviour:
   lifeText: {fileID: 0}
   AdButton: {fileID: 0}
   CoinButton: {fileID: 0}
+  ExitButton: {fileID: 0}
+  YesButton: {fileID: 0}
+  NoButton: {fileID: 0}
+  YesNoText: {fileID: 0}
   ShopPanel: {fileID: 0}
   AdButtonText: {fileID: 0}
   CoinButtonText: {fileID: 0}
   Message: {fileID: 0}
   ContinuePanel: {fileID: 0}
   MessagePanel: {fileID: 0}
+  YesNoPanel: {fileID: 0}
   coinsForNextLevel: 300
   lifeForContinue: 2
   levelForTesting: 0

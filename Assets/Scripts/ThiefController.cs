@@ -119,11 +119,18 @@ namespace TheLastFry
 
         Animator animator;
 
+        AudioSource audioSource;
+
+        // sound effect when dying
+        [SerializeField] AudioClip deathSound;
+
         // Use this for initialization
         void Start()
         {
             // get the sprite renderer
             sr = GetComponentInChildren<SpriteRenderer>();
+
+            audioSource = GetComponent<AudioSource>();
 
             animator = GetComponent<Animator>();
         }
@@ -324,6 +331,12 @@ namespace TheLastFry
 
                 // show death image for flying object
                 sr.sprite = deadImage;
+
+                if(deathSound != null && audioSource != null)
+                {
+                    audioSource.clip = deathSound;
+                    audioSource.Play();
+                }
             }
         }
 

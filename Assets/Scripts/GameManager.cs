@@ -21,6 +21,12 @@ namespace TheLastFry
         // the buttons on screen
         [SerializeField] Button AdButton;
         [SerializeField] Button CoinButton;
+        [SerializeField] Button ExitButton;
+
+        // Yes No buttons and text
+        [SerializeField] Button YesButton;
+        [SerializeField] Button NoButton;
+        [SerializeField] TMP_Text YesNoText;
 
         // the shop buttons
         [SerializeField] GameObject ShopPanel;
@@ -33,6 +39,7 @@ namespace TheLastFry
         // The panels on screen
         [SerializeField] GameObject ContinuePanel;
         [SerializeField] GameObject MessagePanel;
+        [SerializeField] GameObject YesNoPanel;
 
         // the player data
         PlayerData playerData;
@@ -116,9 +123,14 @@ namespace TheLastFry
             //playerData.Coins = 1000000;
             //DataHandler.SavePlayerData(playerData);
 
+            DataHandler.SaveIntToDB(Constants.PLAYEDFIRSTTIME, 1);
+
+            // unpause game
+            Time.timeScale = 1;
+
             // sign in to ad manager callbacks
-            AdManager.instance.onSkippedAd = LoseLevel;
-            AdManager.instance.onFailedAd = LoseLevel;
+            AdManager.instance.onSkippedAd = OpenContinuePanel;
+            AdManager.instance.onFailedAd = OpenContinuePanel;
             AdManager.instance.onFinishedAd = ContinueAd;
 
             // sign in to shopManager
@@ -191,6 +203,46 @@ namespace TheLastFry
         {
             // close message panel
             MessagePanel.SetActive(false);
+        }
+
+        /// <summary>
+        /// Clicks the exit button.
+        /// </summary>
+        public void ClickExitButton()
+        {
+
+            // pause game
+            Time.timeScale = 0;
+
+            // set yes no panel text
+            YesNoText.text = "Leave Game?";
+
+            // open Yes No panel
+            YesNoPanel.SetActive(true);
+        }
+
+        /// <summary>
+        /// Exits the game.
+        /// </summary>
+        public void ExitGame()
+        {
+            // stop game music
+            SoundManager.instance.StopMusic();
+
+            // end game
+            EndGame();
+        }
+
+        /// <summary>
+        /// Closes the yes no panel.
+        /// </summary>
+        public void closeYesNoPanel()
+        {
+            // close Yes No panel
+            YesNoPanel.SetActive(false);
+
+            // unpause game
+            Time.timeScale = 1;
         }
 
         /// <summary>
@@ -382,7 +434,7 @@ namespace TheLastFry
                 playerData.Life = 0;
 
                 // go to continue screen
-                LoseLevel();
+                OpenContinuePanel();
             }
 
             // display stats
@@ -404,7 +456,7 @@ namespace TheLastFry
         /// <summary>
         /// Open the Continue panel to decide if to end or continue.
         /// </summary>
-        public void LoseLevel()
+        public void OpenContinuePanel()
         {
 
             // stop game music
@@ -418,6 +470,9 @@ namespace TheLastFry
 
             // display continue panel
             ContinuePanel.SetActive(true);
+
+            // Save Data
+            DataHandler.SavePlayerData(playerData);
         }
 
         /// <summary>
@@ -460,6 +515,11 @@ namespace TheLastFry
 
             // play win sound
             SoundManager.instance.PlayHitSingle(WinSound);
+
+            if (PlayerPrefs.GetInt(Constants.HIGHESTLEVEL) < playerData.Level)
+            {
+                PlayerPrefs.SetInt(Constants.HIGHESTLEVEL, playerData.Level);
+            }
 
             // start next level
             StartCoroutine(NextLevel());

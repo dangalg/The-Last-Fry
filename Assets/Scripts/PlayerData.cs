@@ -69,11 +69,11 @@ namespace TheLastFry
         public PlayerData()
         {
             energy = 3;
-            coins = 10;
+            coins = 500;
             points = 0;
             record = 0;
             level = 1;
-            life = 3;
+            life = 2;
             removeAds = false;
         }
 

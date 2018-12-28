@@ -1,0 +1,1403 @@
+fileFormatVersion: 2
+guid: 58b52dbb0986340bea70eb4a3134962f
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: leprechon_walk_explode_sack_of_coins_0
+    21300002: leprechon_walk_explode_sack_of_coins_1
+    21300004: leprechon_walk_explode_sack_of_coins_2
+    21300006: leprechon_walk_explode_sack_of_coins_3
+    21300008: leprechon_walk_explode_sack_of_coins_4
+    21300010: leprechon_walk_explode_sack_of_coins_5
+    21300012: leprechon_walk_explode_sack_of_coins_6
+    21300014: leprechon_walk_explode_sack_of_coins_7
+    21300016: leprechon_walk_explode_sack_of_coins_8
+    21300018: leprechon_walk_explode_sack_of_coins_9
+    21300020: leprechon_walk_explode_sack_of_coins_10
+    21300022: leprechon_walk_explode_sack_of_coins_11
+    21300024: leprechon_walk_explode_sack_of_coins_12
+    21300026: leprechon_walk_explode_sack_of_coins_13
+    21300028: leprechon_walk_explode_sack_of_coins_14
+    21300030: leprechon_walk_explode_sack_of_coins_15
+    21300032: leprechon_walk_explode_sack_of_coins_16
+    21300034: leprechon_walk_explode_sack_of_coins_17
+    21300036: leprechon_walk_explode_sack_of_coins_18
+    21300038: leprechon_walk_explode_sack_of_coins_19
+    21300040: leprechon_walk_explode_sack_of_coins_20
+    21300042: leprechon_walk_explode_sack_of_coins_21
+    21300044: leprechon_walk_explode_sack_of_coins_22
+    21300046: leprechon_walk_explode_sack_of_coins_23
+    21300048: leprechon_walk_explode_sack_of_coins_24
+    21300050: leprechon_walk_explode_sack_of_coins_25
+    21300052: leprechon_walk_explode_sack_of_coins_26
+    21300054: leprechon_walk_explode_sack_of_coins_27
+    21300056: leprechon_walk_explode_sack_of_coins_28
+    21300058: leprechon_walk_explode_sack_of_coins_29
+    21300060: leprechon_walk_explode_sack_of_coins_30
+    21300062: leprechon_walk_explode_sack_of_coins_31
+    21300064: leprechon_walk_explode_sack_of_coins_32
+    21300066: leprechon_walk_explode_sack_of_coins_33
+    21300068: leprechon_walk_explode_sack_of_coins_34
+    21300070: leprechon_walk_explode_sack_of_coins_35
+    21300072: leprechon_walk_explode_sack_of_coins_36
+    21300074: leprechon_walk_explode_sack_of_coins_37
+    21300076: leprechon_walk_explode_sack_of_coins_38
+    21300078: leprechon_walk_explode_sack_of_coins_39
+    21300080: leprechon_walk_explode_sack_of_coins_40
+    21300082: leprechon_walk_explode_sack_of_coins_41
+    21300084: leprechon_walk_explode_sack_of_coins_42
+    21300086: leprechon_walk_explode_sack_of_coins_43
+    21300088: leprechon_walk_explode_sack_of_coins_44
+    21300090: leprechon_walk_explode_sack_of_coins_45
+    21300092: leprechon_walk_explode_sack_of_coins_46
+    21300094: leprechon_walk_explode_sack_of_coins_47
+    21300096: leprechon_walk_explode_sack_of_coins_48
+    21300098: leprechon_walk_explode_sack_of_coins_49
+    21300100: leprechon_walk_explode_sack_of_coins_50
+    21300102: leprechon_walk_explode_sack_of_coins_51
+    21300104: leprechon_walk_explode_sack_of_coins_52
+    21300106: leprechon_walk_explode_sack_of_coins_53
+    21300108: leprechon_walk_explode_sack_of_coins_54
+    21300110: leprechon_walk_explode_sack_of_coins_55
+    21300112: leprechon_walk_explode_sack_of_coins_56
+    21300114: leprechon_walk_explode_sack_of_coins_57
+    21300116: leprechon_walk_explode_sack_of_coins_58
+    21300118: leprechon_walk_explode_sack_of_coins_59
+  externalObjects: {}
+  serializedVersion: 7
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: leprechon_walk_explode_sack_of_coins_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3579
+        width: 423
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56ed2f2491dd94fb6ad797fbfbf91b69
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leprechon_walk_explode_sack_of_coins_1
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 3579
+        width: 423
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c861afc9234041569fda025e9a8b0ef
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leprechon_walk_explode_sack_of_coins_2
+      rect:
+        serializedVersion: 2
+        x: 846
+        y: 3579
+        width: 423
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dabc4cfb0acb4be385f617c63a7ded0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leprechon_walk_explode_sack_of_coins_3
+      rect:
+        serializedVersion: 2
+        x: 1269
+        y: 3579
+        width: 423
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9674836eccc24b9ca2b268e483db94c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leprechon_walk_explode_sack_of_coins_4
+      rect:
+        serializedVersion: 2
+        x: 1692
+        y: 3579
+        width: 423
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06ac89e7720664502b0d965757b4e662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leprechon_walk_explode_sack_of_coins_5
+      rect:
+        serializedVersion: 2
+        x: 2115
+        y: 3579
+        width: 423
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3da76375ab51343b79355e2430b18935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leprechon_walk_explode_sack_of_coins_6
+      rect:
+        serializedVersion: 2
+        x: 2538
+        y: 3579
+        width: 423
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f35e42b880c614e9d951579ccfa17ff7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leprechon_walk_explode_sack_of_coins_7
+      rect:
+        serializedVersion: 2
+        x: 2961
+        y: 3579
+        width: 423
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14c2dff57048d429ab9ac2bcd87978ad
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leprechon_walk_explode_sack_of_coins_8
+      rect:
+        serializedVersion: 2
+        x: 3384
+        y: 3579
+        width: 423
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9867be4ac19e34a89918512b4738c164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leprechon_walk_explode_sack_of_coins_9
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 3062
+        width: 423
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c06d252020236445e8e9337a3af9f451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leprechon_walk_explode_sack_of_coins_10
+      rect:
+        serializedVersion: 2
+        x: 846
+        y: 3062
+        width: 423
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39c3acb23879f499e9986a56d25b6c02
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leprechon_walk_explode_sack_of_coins_11
+      rect:
+        serializedVersion: 2
+        x: 1269
+        y: 3062
+        width: 423
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb2950246c83d4a37b9ca442d0925961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leprechon_walk_explode_sack_of_coins_12
+      rect:
+        serializedVersion: 2
+        x: 1692
+        y: 3062
+        width: 423
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5605daf57d72843c3a95de76959bc991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leprechon_walk_explode_sack_of_coins_13
+      rect:
+        serializedVersion: 2
+        x: 2115
+        y: 3062
+        width: 423
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e94db959820745e5a175e245da5001e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leprechon_walk_explode_sack_of_coins_14
+      rect:
+        serializedVersion: 2
+        x: 2538
+        y: 3062
+        width: 423
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a0117da7ff2d41bd9d4d7d2e7a89829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leprechon_walk_explode_sack_of_coins_15
+      rect:
+        serializedVersion: 2
+        x: 2961
+        y: 3062
+        width: 423
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8acce8bf0670343f8a1e5dcda645293a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leprechon_walk_explode_sack_of_coins_16
+      rect:
+        serializedVersion: 2
+        x: 3384
+        y: 3062
+        width: 423
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47fcc1a09da5b4eb8a435f7eed6bb478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leprechon_walk_explode_sack_of_coins_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2545
+        width: 423
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f07d107beec540e4b9a689f480b2665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leprechon_walk_explode_sack_of_coins_18
+      rect:
+        serializedVersion: 2
+        x: 846
+        y: 2545
+        width: 423
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aeab094d3a5a84ae9b3fcd9fb72b67ec
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leprechon_walk_explode_sack_of_coins_19
+      rect:
+        serializedVersion: 2
+        x: 1269
+        y: 2545
+        width: 423
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c02d75e6d2774b399a0126dc335a615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leprechon_walk_explode_sack_of_coins_20
+      rect:
+        serializedVersion: 2
+        x: 1692
+        y: 2545
+        width: 423
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3487057049024b539cc5a3dbe318929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leprechon_walk_explode_sack_of_coins_21
+      rect:
+        serializedVersion: 2
+        x: 2115
+        y: 2545
+        width: 423
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66ca051f2ff9b4a8b9a24d3fab2c68e0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leprechon_walk_explode_sack_of_coins_22
+      rect:
+        serializedVersion: 2
+        x: 2538
+        y: 2545
+        width: 423
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba9c88376c6074f248b7d3bc9205ba05
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leprechon_walk_explode_sack_of_coins_23
+      rect:
+        serializedVersion: 2
+        x: 2961
+        y: 2545
+        width: 423
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 941dcb52abac14035844001072557e77
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leprechon_walk_explode_sack_of_coins_24
+      rect:
+        serializedVersion: 2
+        x: 3384
+        y: 2545
+        width: 423
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b8ee57cf38064f0b93678939ab59d09
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leprechon_walk_explode_sack_of_coins_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2028
+        width: 423
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 429c7f7c2c26c4e4fa1e4312293c2f19
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leprechon_walk_explode_sack_of_coins_26
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 2028
+        width: 423
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74766546cf7624581a3af469b46487f7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leprechon_walk_explode_sack_of_coins_27
+      rect:
+        serializedVersion: 2
+        x: 846
+        y: 2028
+        width: 423
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f28f2e85fab9d40db94cd929e5257813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leprechon_walk_explode_sack_of_coins_28
+      rect:
+        serializedVersion: 2
+        x: 1269
+        y: 2028
+        width: 423
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4733920079f04822ba7d5922647461d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leprechon_walk_explode_sack_of_coins_29
+      rect:
+        serializedVersion: 2
+        x: 1692
+        y: 2028
+        width: 423
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f185c49ce35c34335b0ac7096f901caa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leprechon_walk_explode_sack_of_coins_30
+      rect:
+        serializedVersion: 2
+        x: 2115
+        y: 2028
+        width: 423
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e31574afc4cdb44b2839a2affe35620f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leprechon_walk_explode_sack_of_coins_31
+      rect:
+        serializedVersion: 2
+        x: 2538
+        y: 2028
+        width: 423
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e2685015124542bd96b491d03be9687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leprechon_walk_explode_sack_of_coins_32
+      rect:
+        serializedVersion: 2
+        x: 2961
+        y: 2028
+        width: 423
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7bd0659f38804a6c9952d1c6eb03f33
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leprechon_walk_explode_sack_of_coins_33
+      rect:
+        serializedVersion: 2
+        x: 3384
+        y: 2028
+        width: 423
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 781ba272856ac4f1f99ef204c93448ef
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leprechon_walk_explode_sack_of_coins_34
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1511
+        width: 423
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9563ef40c9b064cc9a0d8c643b27534a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leprechon_walk_explode_sack_of_coins_35
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 1511
+        width: 423
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b26c426edbac74e7fae3a1c70068cb2c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leprechon_walk_explode_sack_of_coins_36
+      rect:
+        serializedVersion: 2
+        x: 846
+        y: 1511
+        width: 423
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9870beff57ede4cd9a50db85fc987801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leprechon_walk_explode_sack_of_coins_37
+      rect:
+        serializedVersion: 2
+        x: 1269
+        y: 1511
+        width: 423
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efeba3bdfacac4de5bf98174ee2133be
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leprechon_walk_explode_sack_of_coins_38
+      rect:
+        serializedVersion: 2
+        x: 1692
+        y: 1511
+        width: 423
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a53bd59e042649bb8b2a2e010e99e00
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leprechon_walk_explode_sack_of_coins_39
+      rect:
+        serializedVersion: 2
+        x: 2115
+        y: 1511
+        width: 423
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbefc599f933d46e4b545cfc9c6766fa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leprechon_walk_explode_sack_of_coins_40
+      rect:
+        serializedVersion: 2
+        x: 2538
+        y: 1511
+        width: 423
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e9c3eb75f494468f832062d132b441f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leprechon_walk_explode_sack_of_coins_41
+      rect:
+        serializedVersion: 2
+        x: 2961
+        y: 1511
+        width: 423
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b48d4e08eb8d94ca2ac4a8c2e22600e5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leprechon_walk_explode_sack_of_coins_42
+      rect:
+        serializedVersion: 2
+        x: 3384
+        y: 1511
+        width: 423
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 716c0a877cc2f4d7aa22c05825c4d17f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leprechon_walk_explode_sack_of_coins_43
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 994
+        width: 423
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fc0fd88631fe469ab5dcb8b96fb7675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leprechon_walk_explode_sack_of_coins_44
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 994
+        width: 423
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42c0d5f3192384e0ea5c0a61a2a38256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leprechon_walk_explode_sack_of_coins_45
+      rect:
+        serializedVersion: 2
+        x: 846
+        y: 994
+        width: 423
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b4865dd4cd2347d0a3248394bbce1a2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leprechon_walk_explode_sack_of_coins_46
+      rect:
+        serializedVersion: 2
+        x: 1269
+        y: 994
+        width: 423
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14608d9686c004c208ee818f1648e136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leprechon_walk_explode_sack_of_coins_47
+      rect:
+        serializedVersion: 2
+        x: 1692
+        y: 994
+        width: 423
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7187143edb4a74fa38baeff80f581ded
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leprechon_walk_explode_sack_of_coins_48
+      rect:
+        serializedVersion: 2
+        x: 2115
+        y: 994
+        width: 423
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 324cf1f332b4d4a28856c718a662a7e6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leprechon_walk_explode_sack_of_coins_49
+      rect:
+        serializedVersion: 2
+        x: 2538
+        y: 994
+        width: 423
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca37e4e7664074560bd6b476ba1357d0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leprechon_walk_explode_sack_of_coins_50
+      rect:
+        serializedVersion: 2
+        x: 2961
+        y: 994
+        width: 423
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b89b9290c5f914db0ae7cbb17d1799cd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leprechon_walk_explode_sack_of_coins_51
+      rect:
+        serializedVersion: 2
+        x: 3384
+        y: 994
+        width: 423
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fb35cd67f968408fbb6379ca3d10b79
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leprechon_walk_explode_sack_of_coins_52
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 477
+        width: 423
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 594cd13a9471e4e8b8570413e22dd061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leprechon_walk_explode_sack_of_coins_53
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 477
+        width: 423
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ff9789da24bd4130b68750959164c62
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leprechon_walk_explode_sack_of_coins_54
+      rect:
+        serializedVersion: 2
+        x: 846
+        y: 477
+        width: 423
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b3a0226018cb4076aead529dae407d4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leprechon_walk_explode_sack_of_coins_55
+      rect:
+        serializedVersion: 2
+        x: 1269
+        y: 477
+        width: 423
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc4938a92e2884cbb8c41ddf23a05037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leprechon_walk_explode_sack_of_coins_56
+      rect:
+        serializedVersion: 2
+        x: 1692
+        y: 477
+        width: 423
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c354c7a6c10834b7bbf695dce30a035e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leprechon_walk_explode_sack_of_coins_57
+      rect:
+        serializedVersion: 2
+        x: 2115
+        y: 477
+        width: 423
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47052534c8884480aa24af479fc9bfda
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leprechon_walk_explode_sack_of_coins_58
+      rect:
+        serializedVersion: 2
+        x: 2538
+        y: 477
+        width: 423
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d4d04ff5ffa04ba6beebb6424573a5b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leprechon_walk_explode_sack_of_coins_59
+      rect:
+        serializedVersion: 2
+        x: 2961
+        y: 477
+        width: 423
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cbc35274d7904c12ad3a34adaa2822c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 98367ab44aca54c7fbf7354690061ab2
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

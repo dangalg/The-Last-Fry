@@ -24,6 +24,18 @@ namespace TheLastFry
 
         }
 
+        public void Show()
+        {
+            coinsText.text = MainMenu.instance.playerData.Coins.ToString();
+
+            gameObject.SetActive(true);
+        }
+
+        public void Hide()
+        {
+            gameObject.SetActive(false);
+        }
+
         void onAfterPurchaseCoins(ShopManager.CoinAmount coinAmount)
         {
             // load the player data

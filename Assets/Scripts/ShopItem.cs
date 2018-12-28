@@ -26,7 +26,11 @@ namespace TheLastFry{
 
         [SerializeField] GameObject ItemStorePanel;
 
+        Image buttonImage;
+
         bool itemOwned = false;
+
+        [SerializeField] bool tutorialButton = false;
 
         // Use this for initialization
         void Start()
@@ -37,8 +41,24 @@ namespace TheLastFry{
 
             BuyButton.onClick.AddListener(BuyItem);
 
+            buttonImage = GetComponent<Image>();
+
             SetupImage();
         }
+
+        void Update()
+        {
+            if(tutorialButton && buttonImage != null)
+            {
+
+                if (DataHandler.LoadIntFromDB(Constants.UNLOCKEDITEM) < 1)
+                {
+                    buttonImage.color = Color.Lerp(Color.white, Color.yellow, Mathf.PingPong(Time.time, 0.5f));
+                }
+
+            }
+        }
+
 
         void SetupImage()
         {
@@ -88,6 +108,8 @@ namespace TheLastFry{
                     Original.gameObject.SetActive(true);
 
                     BuyButtonText.text = "Unlocked";
+
+                    DataHandler.SaveIntToDB(Constants.UNLOCKEDITEM, 1);
 
                     itemOwned = true;
 
