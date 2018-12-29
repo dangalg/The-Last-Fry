@@ -190,6 +190,8 @@ namespace TheLastFry
             InstructionsPanel.SetActive(true);
 
             DataHandler.SaveIntToDB(Constants.LOOKEDATINSTRUCTIONS, 1);
+
+            InstructionsArrow.SetActive(false);
         }
 
         /// <summary>
@@ -214,6 +216,11 @@ namespace TheLastFry
         /// </summary>
         public void HideItemStore()
         {
+            if (DataHandler.LoadIntFromDB(Constants.UNLOCKEDITEM) == 1)
+            {
+                ItemStoreArrow.SetActive(false);
+            }
+
             // close Instructions Panel
             ItemStorePanel.Hide();
         }
@@ -233,6 +240,8 @@ namespace TheLastFry
         public void ShowShop()
         {
             DataHandler.SaveIntToDB(Constants.WENTINCOINSHOP, 1);
+
+            CoinShopArrow.SetActive(false);
 
             ShopPanel.SetActive(true);
         }
@@ -345,9 +354,15 @@ namespace TheLastFry
             if(DataHandler.LoadIntFromDB("notFirstTime") == 0 || playerData.Life == 0)
             {
                 // refill life
-                playerData.Life = 2;
+                playerData.Life = 10;
 
                 DataHandler.SaveIntToDB("notFirstTime", 1);
+            }
+
+            if(playerData.Life == 0)
+            {
+                // refill life
+                playerData.Life = 3;
             }
 
             // save player data

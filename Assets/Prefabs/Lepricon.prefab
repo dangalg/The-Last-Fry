@@ -53,8 +53,8 @@ MonoBehaviour:
   foodIndex: 0
   moveSpeed: 2.5
   pointsForHit: 1
-  minCoinsForHit: 10
-  maxCoinsForHit: 20
+  minCoinsForHit: 15
+  maxCoinsForHit: 30
   timeBetweenCoinsToSpawn: 0.1
   lifeForFoodStolen: 1
   hitToDropFoodOn: 1
