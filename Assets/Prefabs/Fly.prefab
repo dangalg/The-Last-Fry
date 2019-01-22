@@ -74,10 +74,11 @@ MonoBehaviour:
   shouldTurnTowardsTarget: 1
   turnTowardsAngle: 270
   rotateOnDeath: 1
-  flyOffScreenOnDeath: 0
+  flyOffScreenOnDeath: 1
   hitSounds:
   - {fileID: 8300000, guid: c8677862719e441688678e6632161da9, type: 3}
   animateOnDeath: 0
+  deathSound: {fileID: 0}
 --- !u!60 &60964469040327016
 PolygonCollider2D:
   m_ObjectHideFlags: 0

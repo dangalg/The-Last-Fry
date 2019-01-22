@@ -694,6 +694,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1930535295169166, guid: 43fad67cd54404add9fec881d08faabc, type: 3}
+      propertyPath: m_Name
+      value: CoinManager
+      objectReference: {fileID: 0}
     - target: {fileID: 4452412755648084, guid: 43fad67cd54404add9fec881d08faabc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.434848
@@ -725,6 +729,18 @@ PrefabInstance:
     - target: {fileID: 4452412755648084, guid: 43fad67cd54404add9fec881d08faabc, type: 3}
       propertyPath: m_RootOrder
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452412755648084, guid: 43fad67cd54404add9fec881d08faabc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452412755648084, guid: 43fad67cd54404add9fec881d08faabc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452412755648084, guid: 43fad67cd54404add9fec881d08faabc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114690738487071296, guid: 43fad67cd54404add9fec881d08faabc,
         type: 3}
@@ -1920,11 +1936,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4213886237088872, guid: 4d7513ceba1da4c54b1c259d9d94f277, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.47
+      value: -2.11
       objectReference: {fileID: 0}
     - target: {fileID: 4213886237088872, guid: 4d7513ceba1da4c54b1c259d9d94f277, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.13
+      value: 4.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d7513ceba1da4c54b1c259d9d94f277, type: 3}
@@ -3203,11 +3219,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:

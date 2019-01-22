@@ -76,6 +76,9 @@ namespace TheLastFry
         // coin initial height
         float coinInitialY = 0;
 
+        // make message dissapear on click
+        bool messagePanelCloseOnClick = true;
+
         //Awake is always called before any Start functions
         void Awake()
         {
@@ -217,8 +220,12 @@ namespace TheLastFry
         /// </summary>
         public void clickMessagePanel()
         {
-            // close message panel
-            MessagePanel.SetActive(false);
+            if (messagePanelCloseOnClick)
+            {
+                // close message panel
+                MessagePanel.SetActive(false);
+            }
+
         }
 
         /// <summary>
@@ -547,6 +554,18 @@ namespace TheLastFry
         /// </summary>
         public IEnumerator NextLevel()
         {
+
+            // show message panel
+            Message.text = "Good Job!";
+            messagePanelCloseOnClick = false;
+            MessagePanel.SetActive(true);
+
+            yield return new WaitForSeconds(1.5f);
+
+            // hide message text
+            MessagePanel.SetActive(false);
+            messagePanelCloseOnClick = true;
+
             // stop the game but do not reset food spawner because the fries are needed
             ThiefSpawner.instance.Reset();
             UntouchableSpawner.instance.Reset();

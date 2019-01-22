@@ -1526,6 +1526,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Leprechon
       objectReference: {fileID: 0}
+    - target: {fileID: 4388975126582380004, guid: 33429ccfd3c22438c90e6244643e0307,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7472138911418256881, guid: 33429ccfd3c22438c90e6244643e0307,
         type: 3}
       propertyPath: m_LocalPosition.x
