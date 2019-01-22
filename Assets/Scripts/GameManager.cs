@@ -62,6 +62,20 @@ namespace TheLastFry
         // Audio lose jingle
         [SerializeField] AudioClip LoseSound;
 
+        // coin from screen on top bar
+        [SerializeField] GameObject coinOnTopBar;
+
+        // audio sound for coin
+        [SerializeField] AudioClip coinSound;
+
+        // id for coin bounce tween
+        int coinBounceTween = 12;
+        // id for coin bounce on complete tween
+        int coinBounceOnCompleteTween = 13;
+
+        // coin initial height
+        float coinInitialY = 0;
+
         //Awake is always called before any Start functions
         void Awake()
         {
@@ -117,6 +131,8 @@ namespace TheLastFry
 
         private void Start()
         {
+
+            coinInitialY = coinOnTopBar.transform.localPosition.y + 20;
 
             //PlayerPrefs.DeleteAll();
 
@@ -268,7 +284,7 @@ namespace TheLastFry
 
         IEnumerator SetupGame(int level)
         {
-
+        
             Debug.Log("LASTFRY: reset the spawners");
             // reset the spawners
             Debug.Log("LASTFRY: reset ThiefSpawner");
@@ -330,6 +346,7 @@ namespace TheLastFry
 
         private void Update()
         {
+
 #if UNITY_EDITOR
             if (Input.GetMouseButtonDown(0))
             {
@@ -351,7 +368,7 @@ namespace TheLastFry
         /// <param name="hitPosition">Hit position.</param>
         private void TryToHit(Vector3 hitPosition)
         {
-            // get the hit hand position on screen
+            // get the hit hand position on screecoinInitialYcoinInitialYn
             RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(hitPosition), Vector2.zero);
 
             //Converting Mouse Pos to 2D (vector2) World Pos
@@ -569,6 +586,17 @@ namespace TheLastFry
 
             // display stats
             displayStats();
+
+            LeanTween.cancel(coinBounceTween);
+            LeanTween.cancel(coinBounceOnCompleteTween);
+
+            // make coin bounce
+            coinBounceTween = LeanTween.moveLocalY(coinOnTopBar, coinInitialY+20f, 0.25f).setOnComplete(() =>{
+                coinBounceOnCompleteTween = LeanTween.moveLocalY(coinOnTopBar, coinInitialY -20f, 0.25f).setEaseOutBounce().id;
+              }).id;
+
+            // play coin sound
+            SoundManager.instance.PlaySingle(coinSound);
         }
 
         /// <summary>

@@ -94,8 +94,11 @@ namespace TheLastFry
         /// <summary>
         /// Called when a thief gets hit
         /// </summary>
-        void onThiefHit()
+        void onThiefHit(ThiefController thiefController)
         {
+
+            // add coins
+            SpawnCoinsAfterHandHit(thiefController);
 
             // increment thief got hit counter
             thiefHitCounter++;
@@ -192,6 +195,23 @@ namespace TheLastFry
 
                 yield return new WaitForSeconds(randomSpawnTime);
             }
+        }
+
+        /// <summary>
+        /// Spawns the coins after hand hit.
+        /// </summary>
+        /// <returns>The coins after hand hit.</returns>
+        void SpawnCoinsAfterHandHit(ThiefController thiefController)
+        {
+
+            // coins for hit
+            int coinsForHit = 1;
+
+            // get random coin amount by levelrotateOnDeath
+            coinsForHit = Random.Range(thiefController.minCoinsForHit, thiefController.maxCoinsForHit + 1);
+
+            GameManager.instance.AddCoin(coinsForHit);
+
         }
 
         /// <summary>

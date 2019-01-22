@@ -65,3 +65,5 @@ MonoBehaviour:
   GameMusic: {fileID: 8300000, guid: 6404f931d10374afc93d213d5d3b4f50, type: 3}
   WinSound: {fileID: 8300000, guid: 19f51af5020a84c41b0f23878df82c44, type: 3}
   LoseSound: {fileID: 8300000, guid: b881f5d503d534aadb6316d6f7362ced, type: 3}
+  coinOnTopBar: {fileID: 0}
+  coinSound: {fileID: 8300000, guid: f571fd369d8d143ff85ba68229363559, type: 3}

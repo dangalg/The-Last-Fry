@@ -589,6 +589,11 @@ PrefabInstance:
       propertyPath: YesNoPanel
       value: 
       objectReference: {fileID: 90198719}
+    - target: {fileID: 114149422832006328, guid: 400f0ce1032a6427dbe144e38193920a,
+        type: 3}
+      propertyPath: coinOnTopBar
+      value: 
+      objectReference: {fileID: 1042646116665966}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 400f0ce1032a6427dbe144e38193920a, type: 3}
 --- !u!1 &322126722 stripped

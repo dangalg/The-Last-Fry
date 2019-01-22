@@ -19,7 +19,7 @@ namespace TheLastFry
 
         // The callbacks
         public UnityAction thiefGotFood;
-        public UnityAction thiefGotHit;
+        public UnityAction<ThiefController> thiefGotHit;
 
         // the index in the food list of the target food
         public int foodIndex = 0;
@@ -242,11 +242,6 @@ namespace TheLastFry
             // if the thief was hit
             if (thiefHit)
             {
-                // fire callback
-                if (thiefGotHit != null)
-                {
-                    thiefGotHit();
-                }
 
                 // destroy thief
                 Destroy(gameObject);
@@ -298,8 +293,11 @@ namespace TheLastFry
                     // make food available to other thiefs again
                     FoodSpawner.instance.TakenFoodIndexes.Remove(foodIndex);
 
-                    // spawn coins for hit
-                    StartCoroutine(SpawnCoinsAfterHandHit());
+                    // fire callback
+                    if (thiefGotHit != null)
+                    {
+                        thiefGotHit(GetComponent<ThiefController>());
+                    }
                 }
 
                 // if the thief has a food
@@ -337,28 +335,6 @@ namespace TheLastFry
                     audioSource.clip = deathSound;
                     audioSource.Play();
                 }
-            }
-        }
-
-        /// <summary>
-        /// Spawns the coins after hand hit.
-        /// </summary>
-        /// <returns>The coins after hand hit.</returns>
-        IEnumerator SpawnCoinsAfterHandHit(){
-
-            // coins for hit
-            int coinsForHit = 1;
-
-            // get random coin amount by levelrotateOnDeath
-            coinsForHit = Random.Range(minCoinsForHit, maxCoinsForHit + 1);
-
-            for (int i = 0; i < coinsForHit; i++)
-            {
-                // create coin at thief position
-                CoinManager.instance.createCoin(gameObject);
-
-                // wait between coins
-                yield return new WaitForSeconds(timeBetweenCoinsToSpawn);
             }
         }
 
