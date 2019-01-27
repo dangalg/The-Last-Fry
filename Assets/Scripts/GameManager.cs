@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
@@ -67,6 +68,9 @@ namespace TheLastFry
 
         // audio sound for coin
         [SerializeField] AudioClip coinSound;
+
+        // a list of saying that show at end of level
+        [SerializeField] List<string> sayings = new List<string>();
 
         // id for coin bounce tween
         int coinBounceTween = 12;
@@ -555,8 +559,11 @@ namespace TheLastFry
         public IEnumerator NextLevel()
         {
 
-            // show message panel
-            Message.text = "Good Job!";
+            // get random message
+            int randomMessageIndex = Random.Range(0, sayings.Count-1);
+
+            // show message panel with random message
+            Message.text = sayings[randomMessageIndex];
             messagePanelCloseOnClick = false;
             MessagePanel.SetActive(true);
 
